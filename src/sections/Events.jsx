@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Events = () => {
   return (
-    <div className='my-8'>
-      <h2 className='text-3xl font-bold text-center mb-4'>Events</h2>
-      <p className="text-gray-700 text-center">Our Events...</p>
-    </div>
-  )
-}
+    <>
+      <section id="events" className="min-h-[100vh] flex justify-center items-center border-2">
+        Events
+      </section>
+    </>
+  );
+};
 
-export default Events
+export default Events;
