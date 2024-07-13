@@ -3,7 +3,7 @@ import React from "react";
 const Aboutus = () => {
   return (
     <>
-      <section id="absolute aboutus" className="min-h-[100vh] flex justify-center items-center border-2 flex-col">
+      <section id="aboutus" className="min-h-[100vh] flex justify-center items-center flex-col">
         <div className="relative image px-10 border-2 w-[95%] h-[50vh] mt-5 ">
 
         </div>
