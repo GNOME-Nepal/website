@@ -29,12 +29,12 @@ const faqs = [
 const FAQItem = ({ question, onClick, isActive }) => {
   return (
     <div
-      className={clsx("flex justify-between items-center p-4 cursor-pointer hover:bg-gray-100",
+      className={clsx("flex justify-between items-center px-4 py-6 cursor-pointer hover:bg-gray-100",
         { "bg-[#fafbff]": isActive }
       )}
       onClick={onClick}
     >
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row items-center gap-2">
         <div className={clsx('w-6 h-6 flex-shrink-0 rounded-full transition-colors', {
           'bg-[purple]': isActive,
           'bg-[#D19DE2]': !isActive,
@@ -70,11 +70,11 @@ const FAQDesktop = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="hidden lg:flex flex-row gap-4 w-full relative mt-12">
-      <div className="w-[40%] absolute inset-x-0 top-0 z-10 mt-12">
+    <div className="hidden lg:flex flex-row gap-4 w-full relative mt-8">
+      <div className="w-[40%] absolute inset-x-0 top-0 z-10 mt-6">
         <FAQList faqs={faqs} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
       </div>
-      <div className="w-[80%] p-4 bg-[#fafbff] min-h-[55vh] rounded-lg shadow-md ml-[30%] pl-[15%] pt-[5%]">
+      <div className="w-[80%] p-4 bg-[#fafbff] min-h-[70vh] rounded-lg shadow-md ml-[30%] pl-[15%] pt-[5%]">
         {activeIndex !== null && (
           <div >
             <h3 className="text-2xl font-semibold mb-2">{faqs[activeIndex].question}</h3>
@@ -92,7 +92,7 @@ const FAQ = () => {
     <>
       <section id="faq" className="min-h-[100vh] border-2 w-full h-full items-center justify-center flex flex-col lg:items-start px-4 sm:px-12 py-12">
         <div className="text-[purple] font-medium rounded-[50px] text-center py-2 p-4 bg-[#e7cdf0] border-r-[50%]">Something you are wondering</div>
-        <h1 className="text-2xl font-bold my-2 hidden lg:block">Frequently Asked Questions</h1>
+        <h1 className="text-4xl font-bold my-2 hidden lg:block">Frequently Asked Questions</h1>
         <h1 className="text-2xl font-bold my-2 block lg:hidden">FAQs</h1>
 
         <Accordian items={faqs} className="block lg:hidden mt-8" />
