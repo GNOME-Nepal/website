@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+import "stick-carousel/stick"
 
 @layer base {
   :root {
@@ -27,6 +28,7 @@
   }
 }
 
+<<<<<<< HEAD
 html{
   scroll-behavior: smooth;
 }
@@ -40,3 +42,8 @@ html{
     @apply bg-background text-foreground;
   }
 }
+=======
+html {
+    scroll-behavior: smooth;
+}
+>>>>>>> saksham
