@@ -1,4 +1,5 @@
 import React from "react";
+import GNOMENepal from '../assets/imgs/GNOMENepal.png';
 
 const Footer = () => {
   return (
@@ -18,10 +19,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full h-40 bg-[#241F31] flex justify-end items-center p-6 ">
+
+      <div className="relative w-full h-40 bg-[#241F31] flex justify-between items-center p-6 ">
 
         <div>
-          <button ></button>
+          <button className="bg-white w-44 h-16 rounded-lg hover:bg-gray" >
+            <img src={GNOMENepal} alt="Gnome Nepal Logo"></img>
+          </button>
         </div>
 
 <div className="space-x-5 ">
