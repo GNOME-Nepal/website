@@ -1,6 +1,6 @@
 import React from "react";
-import bgGnomeNepal from "../assets/imgs/bg-GnomeNepal.png";
-import homeDesign from "../assets/imgs/home-design.png"
+import bgGnomeNepal from "../assets/imgs/upper_section.svg";
+import homeDesign from "../assets/imgs/bottom_section.svg"
 
 const Hero = () => {
   return (
