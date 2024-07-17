@@ -195,8 +195,8 @@ const Events = () => {
     <>
       <section id="events" className="">
         {events.length > 0 ? (
-          <div className="flex flex-col md:flex-row h-screen">
-            <div className="w-full md:w-1/3 bg-background p-6 space-y-8 overflow-y-auto">
+          <div className="flex flex-col md:flex-row h-content">
+            <div className="w-full md:w-1/3 bg-background space-y-8">
               <div className="md:text-left text-center">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-2">
                   Upcoming Events
