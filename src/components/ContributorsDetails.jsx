@@ -72,6 +72,14 @@ const contributors = [
     x: "#",
     linkedin: "https://www.linkedin.com/in/bikash-mishra-07bb48226/",
   },
+  {
+    name: "Prabesh Shrestha",
+    photo: "/contributors/c9.webp",
+    position: "",
+    github: "https://github.com/Prabesh-Shrestha",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/prabesh-shrestha/",
+  },
 ];
 
 const ContributorsDetails = () => {
