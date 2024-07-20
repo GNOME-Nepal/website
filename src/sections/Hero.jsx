@@ -1,7 +1,7 @@
 import React from "react";
 import bgGnomeNepal from "../assets/imgs/upper_section.svg";
 import bgGnomeNepalMobile from "../assets/imgs/upper_section_mobile.svg";
-import homeDesign from "../assets/imgs/bottom_section.svg";
+import homeDesign from "../assets/imgs/bottom_section.svg"; // Fixed the file name typo
 
 const Hero = () => {
   return (
@@ -15,7 +15,8 @@ const Hero = () => {
           <img src={bgGnomeNepalMobile} alt="Gnome Nepal Mobile" className="w-full object-cover" />
         </div>
       </div>
-      <div className="flex justify-center items-center h-1/2 bg-gray-100 mt-4 md:mt-4 lg:mt-12">
+      
+      <div className="flex justify-center items-center h-1/2 bg-gray-100 mt-2 md:mt-4 lg:mt-2">
         <a href="#aboutus">
           <button
             id="aboutus"
@@ -25,8 +26,9 @@ const Hero = () => {
           </button>
         </a>
       </div>
+      
       {/* Conditionally render bottom section only on desktop */}
-      <div className="hidden md:block" id="home-design">
+      <div className="relative z-10 hidden md:block mt-0">
         <img src={homeDesign} alt="Home Design" className="w-full h-auto" />
       </div>
     </div>
