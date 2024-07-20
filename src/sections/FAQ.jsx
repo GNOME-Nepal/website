@@ -90,8 +90,8 @@ const FAQDesktop = () => {
 const FAQ = () => {
   return (
     <>
-      <section id="faq" className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-12 md:px-0 py-12">
-        <div className="text-[purple] font-medium rounded-[50px] text-center py-2 p-4 bg-[#e7cdf0] border-r-[50%]">Something you are wondering</div>
+      <section id="faq" className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-12">
+        <div className="text-[purple] text-sm md:text-lg font-medium rounded-[50px] text-center py-2 p-4 bg-[#e7cdf0] border-r-[50%]">Something you are wondering</div>
         <h1 className="text-4xl font-bold my-2 hidden lg:block">Frequently Asked Questions</h1>
         <h1 className="text-2xl font-bold my-2 block lg:hidden">FAQs</h1>
 

@@ -11,185 +11,185 @@ const Events = () => {
   };
 
   const events = [
-    {
-      title: "Tech Conference 2024",
-      date: "June 15, 2024",
-      description:
-        "Join us for the annual Tech Conference, where industry leaders and innovators come together to share their insights and vision for the future of technology.",
-      location: "San Francisco, CA",
-      time: "9:00 AM - 5:00 PM",
-      schedule: [
-        {
-          time: "9:00 AM - 10:00 AM",
-          event: "Registration and Breakfast",
-        },
-        {
-          time: "10:00 AM - 11:00 AM",
-          event: "Keynote Address",
-        },
-        {
-          time: "11:15 AM - 12:15 PM",
-          event: "Panel Discussion: The Future of AI",
-        },
-        {
-          time: "12:30 PM - 1:30 PM",
-          event: "Lunch Break",
-        },
-        {
-          time: "1:45 PM - 2:45 PM",
-          event: "Breakout Sessions",
-        },
-        {
-          time: "3:00 PM - 4:00 PM",
-          event: "Networking and Demos",
-        },
-        {
-          time: "4:15 PM - 5:00 PM",
-          event: "Closing Remarks",
-        },
-      ],
-      speakers: [
-        {
-          name: "John Doe",
-          profession: "Software Engineer",
-          twitter: "@johndoe",
-          linkedin: "linkedin.com/in/johndoe",
-        },
-        {
-          name: "Jane Smith",
-          profession: "Product Manager",
-          twitter: "@janesmith",
-          linkedin: "linkedin.com/in/janesmith",
-        },
-        {
-          name: "Bob Johnson",
-          profession: "Data Scientist",
-          twitter: "@bobjohnson",
-          linkedin: "linkedin.com/in/bobjohnson",
-        },
-      ],
-      hotTopics: [
-        "AI",
-        "Blockchain",
-        "Cloud Computing",
-        "UX Design",
-        "Accessibility",
-        "Prototyping",
-        "Renewable Energy",
-        "Circular Economy",
-        "Sustainable Practices",
-      ],
-    },
-    {
-      title: "Design Meetup",
-      date: "July 10, 2024",
-      description:
-        "Designers from all backgrounds are invited to this monthly meetup to network, share ideas, and collaborate on exciting projects.",
-      location: "New York City, NY",
-      time: "6:30 PM - 9:00 PM",
-      schedule: [
-        {
-          time: "6:30 PM - 7:00 PM",
-          event: "Registration and Networking",
-        },
-        {
-          time: "7:00 PM - 7:45 PM",
-          event: "Presentation: Designing for Accessibility",
-        },
-        {
-          time: "8:00 PM - 8:45 PM",
-          event: "Group Discussions and Brainstorming",
-        },
-        {
-          time: "8:45 PM - 9:00 PM",
-          event: "Closing Remarks and Next Steps",
-        },
-      ],
-      speakers: [
-        {
-          name: "Emily Lee",
-          profession: "UX Designer",
-          twitter: "@emilylee",
-          linkedin: "linkedin.com/in/emilylee",
-        },
-        {
-          name: "Michael Chen",
-          profession: "Graphic Designer",
-          twitter: "@michaelchen",
-          linkedin: "linkedin.com/in/michaelchen",
-        },
-        {
-          name: "Sarah Park",
-          profession: "Product Designer",
-          twitter: "@sarahpark",
-          linkedin: "linkedin.com/in/sarahpark",
-        },
-      ],
-      hotTopics: ["UX Design", "Accessibility", "Prototyping"],
-    },
-    {
-      title: "Sustainability Summit",
-      date: "September 1, 2024",
-      description:
-        "Explore the latest advancements in sustainable technologies and learn how to implement eco-friendly practices in your business or community.",
-      location: "Seattle, WA",
-      time: "8:00 AM - 4:00 PM",
-      schedule: [
-        {
-          time: "8:00 AM - 9:00 AM",
-          event: "Registration and Breakfast",
-        },
-        {
-          time: "9:15 AM - 10:15 AM",
-          event: "Keynote: The Future of Renewable Energy",
-        },
-        {
-          time: "10:30 AM - 11:30 AM",
-          event: "Panel Discussion: Sustainable Practices in Business",
-        },
-        {
-          time: "11:45 AM - 1:00 PM",
-          event: "Lunch and Networking",
-        },
-        {
-          time: "1:15 PM - 2:15 PM",
-          event: "Breakout Sessions: Circular Economy and Waste Reduction",
-        },
-        {
-          time: "2:30 PM - 3:30 PM",
-          event: "Hands-on Workshop: Sustainable Product Design",
-        },
-        {
-          time: "3:45 PM - 4:00 PM",
-          event: "Closing Remarks and Next Steps",
-        },
-      ],
-      speakers: [
-        {
-          name: "David Kim",
-          profession: "Sustainability Consultant",
-          twitter: "@davidkim",
-          linkedin: "linkedin.com/in/davidkim",
-        },
-        {
-          name: "Olivia Nguyen",
-          profession: "Environmental Engineer",
-          twitter: "@olivianguyen",
-          linkedin: "linkedin.com/in/olivianguyen",
-        },
-        {
-          name: "Tom Wilson",
-          profession: "Renewable Energy Specialist",
-          twitter: "@tomwilson",
-          linkedin: "linkedin.com/in/tomwilson",
-        },
-      ],
-      hotTopics: [
-        "Renewable Energy",
-        "Circular Economy",
-        "Sustainable Practices",
-      ],
-    },
+    // {
+    //   title: "Tech Conference 2024",
+    //   date: "June 15, 2024",
+    //   description:
+    //     "Join us for the annual Tech Conference, where industry leaders and innovators come together to share their insights and vision for the future of technology.",
+    //   location: "San Francisco, CA",
+    //   time: "9:00 AM - 5:00 PM",
+    //   schedule: [
+    //     {
+    //       time: "9:00 AM - 10:00 AM",
+    //       event: "Registration and Breakfast",
+    //     },
+    //     {
+    //       time: "10:00 AM - 11:00 AM",
+    //       event: "Keynote Address",
+    //     },
+    //     {
+    //       time: "11:15 AM - 12:15 PM",
+    //       event: "Panel Discussion: The Future of AI",
+    //     },
+    //     {
+    //       time: "12:30 PM - 1:30 PM",
+    //       event: "Lunch Break",
+    //     },
+    //     {
+    //       time: "1:45 PM - 2:45 PM",
+    //       event: "Breakout Sessions",
+    //     },
+    //     {
+    //       time: "3:00 PM - 4:00 PM",
+    //       event: "Networking and Demos",
+    //     },
+    //     {
+    //       time: "4:15 PM - 5:00 PM",
+    //       event: "Closing Remarks",
+    //     },
+    //   ],
+    //   speakers: [
+    //     {
+    //       name: "John Doe",
+    //       profession: "Software Engineer",
+    //       twitter: "@johndoe",
+    //       linkedin: "linkedin.com/in/johndoe",
+    //     },
+    //     {
+    //       name: "Jane Smith",
+    //       profession: "Product Manager",
+    //       twitter: "@janesmith",
+    //       linkedin: "linkedin.com/in/janesmith",
+    //     },
+    //     {
+    //       name: "Bob Johnson",
+    //       profession: "Data Scientist",
+    //       twitter: "@bobjohnson",
+    //       linkedin: "linkedin.com/in/bobjohnson",
+    //     },
+    //   ],
+    //   hotTopics: [
+    //     "AI",
+    //     "Blockchain",
+    //     "Cloud Computing",
+    //     "UX Design",
+    //     "Accessibility",
+    //     "Prototyping",
+    //     "Renewable Energy",
+    //     "Circular Economy",
+    //     "Sustainable Practices",
+    //   ],
+    // },
+    // {
+    //   title: "Design Meetup",
+    //   date: "July 10, 2024",
+    //   description:
+    //     "Designers from all backgrounds are invited to this monthly meetup to network, share ideas, and collaborate on exciting projects.",
+    //   location: "New York City, NY",
+    //   time: "6:30 PM - 9:00 PM",
+    //   schedule: [
+    //     {
+    //       time: "6:30 PM - 7:00 PM",
+    //       event: "Registration and Networking",
+    //     },
+    //     {
+    //       time: "7:00 PM - 7:45 PM",
+    //       event: "Presentation: Designing for Accessibility",
+    //     },
+    //     {
+    //       time: "8:00 PM - 8:45 PM",
+    //       event: "Group Discussions and Brainstorming",
+    //     },
+    //     {
+    //       time: "8:45 PM - 9:00 PM",
+    //       event: "Closing Remarks and Next Steps",
+    //     },
+    //   ],
+    //   speakers: [
+    //     {
+    //       name: "Emily Lee",
+    //       profession: "UX Designer",
+    //       twitter: "@emilylee",
+    //       linkedin: "linkedin.com/in/emilylee",
+    //     },
+    //     {
+    //       name: "Michael Chen",
+    //       profession: "Graphic Designer",
+    //       twitter: "@michaelchen",
+    //       linkedin: "linkedin.com/in/michaelchen",
+    //     },
+    //     {
+    //       name: "Sarah Park",
+    //       profession: "Product Designer",
+    //       twitter: "@sarahpark",
+    //       linkedin: "linkedin.com/in/sarahpark",
+    //     },
+    //   ],
+    //   hotTopics: ["UX Design", "Accessibility", "Prototyping"],
+    // },
+    // {
+    //   title: "Sustainability Summit",
+    //   date: "September 1, 2024",
+    //   description:
+    //     "Explore the latest advancements in sustainable technologies and learn how to implement eco-friendly practices in your business or community.",
+    //   location: "Seattle, WA",
+    //   time: "8:00 AM - 4:00 PM",
+    //   schedule: [
+    //     {
+    //       time: "8:00 AM - 9:00 AM",
+    //       event: "Registration and Breakfast",
+    //     },
+    //     {
+    //       time: "9:15 AM - 10:15 AM",
+    //       event: "Keynote: The Future of Renewable Energy",
+    //     },
+    //     {
+    //       time: "10:30 AM - 11:30 AM",
+    //       event: "Panel Discussion: Sustainable Practices in Business",
+    //     },
+    //     {
+    //       time: "11:45 AM - 1:00 PM",
+    //       event: "Lunch and Networking",
+    //     },
+    //     {
+    //       time: "1:15 PM - 2:15 PM",
+    //       event: "Breakout Sessions: Circular Economy and Waste Reduction",
+    //     },
+    //     {
+    //       time: "2:30 PM - 3:30 PM",
+    //       event: "Hands-on Workshop: Sustainable Product Design",
+    //     },
+    //     {
+    //       time: "3:45 PM - 4:00 PM",
+    //       event: "Closing Remarks and Next Steps",
+    //     },
+    //   ],
+    //   speakers: [
+    //     {
+    //       name: "David Kim",
+    //       profession: "Sustainability Consultant",
+    //       twitter: "@davidkim",
+    //       linkedin: "linkedin.com/in/davidkim",
+    //     },
+    //     {
+    //       name: "Olivia Nguyen",
+    //       profession: "Environmental Engineer",
+    //       twitter: "@olivianguyen",
+    //       linkedin: "linkedin.com/in/olivianguyen",
+    //     },
+    //     {
+    //       name: "Tom Wilson",
+    //       profession: "Renewable Energy Specialist",
+    //       twitter: "@tomwilson",
+    //       linkedin: "linkedin.com/in/tomwilson",
+    //     },
+    //   ],
+    //   hotTopics: [
+    //     "Renewable Energy",
+    //     "Circular Economy",
+    //     "Sustainable Practices",
+    //   ],
+    // },
   ];
   return (
     <>
@@ -341,7 +341,7 @@ const Events = () => {
             )}
           </div>
         ) : (
-          <div className="flex flex-col md:flex-row h-screen">
+          <div className="flex flex-col md:flex-row h-content">
             <div className="w-full bg-background p-6 space-y-8">
               <div className="md:text-left text-center">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-2">

@@ -11,45 +11,50 @@ const Navbar = () => {
     ? "items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
     : " items-center justify-between w-full hidden lg:flex lg:w-auto lg:order-1";
 
-  const links=[
+  const links = [
     {
       to: "#",
-      text: "Home"
+      text: "Home",
     },
     {
       to: "#aboutus",
-      text: "About us"
+      text: "About us",
     },
     {
       to: "#events",
-      text: "Events"
+      text: "Events",
     },
     {
       to: "#contributors",
-      text: "Contributors"
+      text: "Contributors",
     },
     {
       to: "#faq",
-      text: "FAQ"
-    }
-  ]
+      text: "FAQ",
+    },
+  ];
   return (
     <>
       <nav className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray px-8 md:px-14 lg:px-28">
         <div className="max-w-screen-xl min-w-full flex flex-wrap items-center justify-between mx-auto py-4">
-          <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a
+            href=""
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
             {/* <img src="" className="h-8" alt="Gnome Logo"/> */}
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
               Gnome Nepal
             </span>
           </a>
           <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse gap-4">
-            <button
-              type="button"
-              className="hidden md:flex text-black bg-white hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-md px-4 py-2 text-center rounded-full border-black border-2"
-            >
-              Become a Member!
-            </button>
+            <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank">
+              <button
+                type="button"
+                className="hidden md:flex text-black bg-white hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-md px-4 py-2 text-center rounded-full border-black border-2"
+              >
+                Become a Member!
+              </button>
+            </a>
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -80,12 +85,9 @@ const Navbar = () => {
           </div>
           <div className={style} id="navbar-sticky">
             <ul className="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white lg:items-center ">
-
-              {
-                links.map((link, index) => (
-                  <Links key={index} to={link.to} text={link.text} />
-                ))
-              }
+              {links.map((link, index) => (
+                <Links key={index} to={link.to} text={link.text} />
+              ))}
             </ul>
           </div>
         </div>
