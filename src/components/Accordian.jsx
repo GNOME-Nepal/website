@@ -22,7 +22,7 @@ const Accordian = ({ items, className, ...props }) => {
               className="w-full p-4 text-left"
               onClick={() => handleToggle(index)}
             >
-              <div className="flex justify-between items-center border-2">
+              <div className="flex justify-between items-center">
                 <div className="flex flex-row gap-2 items-center ">
                   <div
                     className={clsx(

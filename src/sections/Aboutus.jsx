@@ -37,8 +37,6 @@ const Aboutus = () => {
                 <br />
                 "Organize Events and Workshops"
                 <br />
-                "Organize Events and Workshops"
-                <br />
                 "Engage with International Open-Source Communities"
               </div>
             </p>
