@@ -13,10 +13,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Button and homeDesign container */}
-      <div className="relative flex flex-col items-center h-1/2 bg-gray-100 mt-32 md:mt-4 lg:mt-0">
+      <div className="relative z-20 flex flex-col items-center h-1/2 bg-gray-100 mt-32 md:mt-4 lg:mt-0">
         <div className="relative flex flex-col items-center mt-8 md:mt-4 lg:mt-0 transform -translate-y-16 md:-translate-y-24">
-          <a href="#aboutus">
+          <a href="#aboutus" >
             <button
               id="aboutus"
               className="relative z-10 py-3 px-10 bg-black text-white rounded-full transition duration-200 ease-in-out transform hover:scale-105 hover:bg-gray-700 hover:text-white shadow-md hover:shadow-lg text-xl md:text-2xl md:translate-y-16"
