@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const links = [
         {
-            to: "#",
+            to: "#home",
             text: "Home",
         },
         {
