@@ -1,31 +1,33 @@
 // import React from "react";
 import Hero from "../sections/Hero";
 import { Aboutus, Contributors, FAQ, Events } from "../sections";
+import SectionObserver from "@/components/Observer";
 
 const Home = () => {
-  return (
-    <>
-      <Hero />
+    return (
+        <>
+            <SectionObserver id={"home"}>
+                <Hero />
+            </SectionObserver>
+            <div className="container mx-auto py-8 flex flex-col gap-8">
+                <SectionObserver id="aboutus" className="md:pt-32">
+                    <Aboutus />
+                </SectionObserver>
 
-      <div className="container mx-auto py-8 flex flex-col gap-8">
-        <section id="aboutus" className="pb-8 md:pt-32">
-          <Aboutus />
-        </section>
+                <SectionObserver id="events" >
+                    <Events />
+                </SectionObserver>
 
-        <section id="events" className="py-8">
-          <Events />
-        </section>
+                <SectionObserver id="contributors">
+                    <Contributors />
+                </SectionObserver>
 
-        <section id="contributors" className="py-8">
-          <Contributors />
-        </section>
-
-        <section id="faq" className="py-8">
-          <FAQ />
-        </section>
-      </div>
-    </>
-  );
+                <SectionObserver id="faq">
+                    <FAQ />
+                </SectionObserver>
+            </div>
+        </>
+    );
 };
 
 export default Home;

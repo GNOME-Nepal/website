@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const links = [
         {
-            to: "#",
+            to: "#home",
             text: "Home",
         },
         {
@@ -50,7 +50,7 @@ const Navbar = () => {
                         <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank">
                             <button
                                 type="button"
-                                className="hidden md:flex text-black bg-white hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-md px-4 py-2 text-center rounded-full border-black border-2"
+                                className="hidden md:flex text-black bg-white hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-md px-4 py-2 text-center border-black border-2"
                             >
                                 Become a Member!
                             </button>
@@ -75,9 +75,9 @@ const Navbar = () => {
                             >
                                 <path
                                     stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     d="M1 1h15M1 7h15M1 13h15"
                                 />
                             </svg>
