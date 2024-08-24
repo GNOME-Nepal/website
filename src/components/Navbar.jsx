@@ -41,7 +41,6 @@ const Navbar = () => {
                         href=""
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
-                        {/* <img src="" className="h-8" alt="Gnome Logo"/> */}
                         <span className="self-center text-2xl font-semibold whitespace-nowrap">
                             Gnome Nepal
                         </span>
