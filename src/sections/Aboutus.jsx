@@ -2,7 +2,7 @@ import React from "react";
 
 const Aboutus = () => {
     return (
-        <>
+        <SectionObserver id="aboutus" className="md:pt-32">
             <div
                 id="aboutus-wrapper"
                 className="min-h-[100vh] flex justify-center items-center flex-col"
@@ -43,7 +43,7 @@ const Aboutus = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </SectionObserver>
     );
 };
 

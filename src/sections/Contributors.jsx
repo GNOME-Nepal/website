@@ -3,8 +3,8 @@ import ContributorsDetails from "../components/ContributorsDetails";
 
 function Contributors() {
     return (
-        <>
-            <section
+        <SectionObserver id="contributors">
+            <div
                 id="contributors"
                 className="min-h-content flex flex-col items-center"
             >
@@ -17,8 +17,8 @@ function Contributors() {
                     </h1>
                 </header>
                 <ContributorsDetails />
-            </section>
-        </>
+            </div>
+        </SectionObserver>
     );
 }
 
