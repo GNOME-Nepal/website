@@ -1,5 +1,6 @@
 import React from "react";
-import GNOMENepal from "../assets/imgs/GNOMENepal.png";
+import Image from "./Image";
+
 const Footer = () => {
     return (
         <footer className="relative w-full">
@@ -19,7 +20,7 @@ const Footer = () => {
             <div className="relative w-full h-40 bg-[#241F31] flex justify-between items-center p-6 ">
                 <div>
                     <button className="bg-white w-44 h-16 rounded-lg hover:bg-gray" aria-label="Gnome Logo">
-                        <img src={GNOMENepal} alt="Gnome Nepal Logo"></img>
+                        <Image src={"images/GNOMENepal.png"} alt="Gnome Nepal Logo" height="53px" width="173px" />
                     </button>
                 </div>
 

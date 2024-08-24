@@ -3,11 +3,11 @@ import NavFoot from "./layout/NavFoot";
 import { Hero } from "./pages";
 
 export default function Router() {
-  return useRoutes([
-    {
-      path: "/",
-      element: <NavFoot />,
-      children: [{ path: "", element: <Hero /> }],
-    }
-  ]);
+    return useRoutes([
+        {
+            path: "/",
+            element: <NavFoot />,
+            children: [{ path: "", element: <Hero /> }],
+        }
+    ]);
 }

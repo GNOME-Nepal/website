@@ -1,17 +1,17 @@
 import React from "react";
 import bgGnomeNepal from "../assets/imgs/upper_section.svg";
 import bgGnomeNepalMobile from "../assets/imgs/upper_section_mobile.svg";
-import homeDesign from "../assets/imgs/bottom_section.webp";
 import SectionObserver from "@/components/Observer";
+import Image from "@/components/Image";
 
 const Hero = () => {
     return (
         <SectionObserver id={"home"}>
             <div className="relative hero-section h-screen flex flex-col justify-between">
                 <div className="relative z-10 flex-grow">
-                    <img src={bgGnomeNepal} alt="Gnome Nepal" className="hidden md:block w-full h-auto" />
+                    <Image src={bgGnomeNepal} alt="Gnome Nepal" className="hidden md:block w-full h-auto aspect-[1293/326]" />
                     <div className="block md:hidden w-full h-auto flex items-center justify-center mt-32 mx-auto">
-                        <img src={bgGnomeNepalMobile} alt="Gnome Nepal Mobile" className="w-full object-cover" />
+                        <Image src={bgGnomeNepalMobile} alt="Gnome Nepal Mobile" className="w-full object-cover aspect-[1293/326]" />
                     </div>
                 </div>
 
@@ -28,7 +28,13 @@ const Hero = () => {
 
                         {/* Conditionally render bottom section only on desktop */}
                         <div className="w-full h-auto hidden md:block mt-8">
-                            <img src={homeDesign} alt="Home Design" className="w-full h-auto object-cover" />
+                            <Image
+                                srcSet="/images/bottom_section-small.webp 400w, /images/bottom_section-medium.webp 800w , /images/bottom_section.webp 1200w "
+                                src={"/images/bottom_section.webp"}
+                                alt="Home Design"
+                                height="312px"
+                                width="1200px"
+                                className="w-full h-auto object-cover" />
                         </div>
                     </div>
                 </div>

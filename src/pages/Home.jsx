@@ -1,4 +1,3 @@
-// import React from "react";
 import Hero from "../sections/Hero";
 import { Aboutus, Contributors, FAQ, Events } from "../sections";
 

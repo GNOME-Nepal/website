@@ -93,8 +93,8 @@ const ContributorsDetails = () => {
                                 <img
                                     src={contributor.photo}
                                     alt={contributor.name}
-                                    width={200}
-                                    height={200}
+                                    width={150}
+                                    height={150}
                                     className="object-cover w-full h-full"
                                 />
                             </div>
