@@ -18,24 +18,24 @@ const Footer = () => {
 
             <div className="relative w-full h-40 bg-[#241F31] flex justify-between items-center p-6 ">
                 <div>
-                    <button className="bg-white w-44 h-16 rounded-lg hover:bg-gray">
+                    <button className="bg-white w-44 h-16 rounded-lg hover:bg-gray" aria-label="Gnome Logo">
                         <img src={GNOMENepal} alt="Gnome Nepal Logo"></img>
                     </button>
                 </div>
 
                 <div className="space-x-5 flex ">
-                    <a href="https://np.linkedin.com/company/gnomenepal" target="_blank">
-                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center">
+                    <a href="https://np.linkedin.com/company/gnomenepal" target="_blank" aria-label="Gnome Nepal's Linkedin">
+                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center" aria-label="Linkedin Logo">
                             <LinkedinIcon className="w-6 h-6" />
                         </button>
                     </a>
-                    <a href="https://www.instagram.com/gnomenepal/" target="_blank">
-                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center">
+                    <a href="https://www.instagram.com/gnomenepal/" target="_blank" aria-label="Gnome Nepal's Instagram">
+                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center" aria-label="Instagram Logo">
                             <InstagramIcon className="w-6 h-6" />
                         </button>
                     </a>
-                    <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank">
-                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center">
+                    <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank" aria-label="Gnome Nepal's Discord">
+                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center" aria-label="Discord Logo">
                             <DiscordIcon className="w-6 h-6" />
                         </button>
                     </a>

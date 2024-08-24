@@ -3,8 +3,8 @@ import React from "react";
 const Aboutus = () => {
     return (
         <>
-            <section
-                id="aboutus"
+            <div
+                id="aboutus-wrapper"
                 className="min-h-[100vh] flex justify-center items-center flex-col"
             >
                 <div className="relative image px-10 w-auto h-[auto] mt-5 rounded-lg">
@@ -42,7 +42,7 @@ const Aboutus = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     );
 };
