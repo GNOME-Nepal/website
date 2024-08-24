@@ -1,3 +1,4 @@
+import SectionObserver from "@/components/Observer";
 import React from "react";
 
 const Aboutus = () => {

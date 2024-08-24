@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordian from "../components/Accordian";
 import ArrowIcon from "../assets/ArrowIcon";
 import clsx from "clsx";
+import SectionObserver from "@/components/Observer";
 
 const faqs = [
     {

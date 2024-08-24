@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import SectionObserver from "@/components/Observer";
 
 const Events = () => {
     const [expandedCard, setExpandedCard] = useState(0);

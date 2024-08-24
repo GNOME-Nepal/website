@@ -2,6 +2,7 @@ import React from "react";
 import bgGnomeNepal from "../assets/imgs/upper_section.svg";
 import bgGnomeNepalMobile from "../assets/imgs/upper_section_mobile.svg";
 import homeDesign from "../assets/imgs/bottom_section.webp";
+import SectionObserver from "@/components/Observer";
 
 const Hero = () => {
     return (
