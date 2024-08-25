@@ -9,9 +9,17 @@ const Hero = () => {
         <SectionObserver id={"home"}>
             <div className="relative hero-section h-screen flex flex-col justify-between">
                 <div className="relative z-10 flex-grow">
-                    <Image src={bgGnomeNepal} alt="Gnome Nepal" className="hidden md:block w-full h-auto aspect-[1293/326]" />
+                    <Image src={bgGnomeNepal} alt="Gnome Nepal" className="hidden md:block w-full h-auto aspect-[1293/326]"
+                        height={326}
+                        width={1293}
+                    />
                     <div className="block md:hidden w-full h-auto flex items-center justify-center mt-32 mx-auto">
-                        <Image src={bgGnomeNepalMobile} alt="Gnome Nepal Mobile" className="w-full object-cover aspect-[1293/326]" />
+                        <Image
+                            src={bgGnomeNepalMobile}
+                            alt="Gnome Nepal Mobile"
+                            height={326}
+                            width={1293}
+                            className="w-full object-cover" />
                     </div>
                 </div>
 
