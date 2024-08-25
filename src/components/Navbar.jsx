@@ -41,13 +41,12 @@ const Navbar = () => {
                         href=""
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
-                        {/* <img src="" className="h-8" alt="Gnome Logo"/> */}
                         <span className="self-center text-2xl font-semibold whitespace-nowrap">
                             Gnome Nepal
                         </span>
                     </a>
                     <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse gap-4">
-                        <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank">
+                        <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank" aria-label="Discord invite">
                             <button
                                 type="button"
                                 className="hidden md:flex text-black bg-white hover:bg-gray-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-md px-4 py-2 text-center border-black border-2"
@@ -61,11 +60,11 @@ const Navbar = () => {
                             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
                             aria-controls="navbar-sticky"
                             aria-expanded="false"
+                            aria-label="Open main menu"
                             onClick={() => {
                                 openNav();
                             }}
                         >
-                            <span className="sr-only">Open main menu</span>
                             <svg
                                 className="w-5 h-5"
                                 aria-hidden="true"

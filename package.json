@@ -22,11 +22,8 @@
     "embla-carousel-react": "^8.1.6",
     "lucide-react": "^0.407.0",
     "react": "^18.3.1",
-    "react-clip-path": "^0.0.6",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.0",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },

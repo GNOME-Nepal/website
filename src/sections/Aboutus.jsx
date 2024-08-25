@@ -1,14 +1,22 @@
+import Image from "@/components/Image";
+import SectionObserver from "@/components/Observer";
 import React from "react";
 
 const Aboutus = () => {
     return (
-        <>
-            <section
-                id="aboutus"
+        <SectionObserver id="aboutus" className="md:pt-32">
+            <div
+                id="aboutus-wrapper"
                 className="min-h-[100vh] flex justify-center items-center flex-col"
             >
                 <div className="relative image px-10 w-auto h-[auto] mt-5 rounded-lg">
-                    <img src="/aboutus.jpg" className="object-contain w-full h-full" />
+                    <Image
+                        srcSet="/aboutus-small.jpg 400w, /aboutus-medium.jpg 800w, /aboutus.jpg 1200w"
+                        src="/aboutus.jpg"
+                        width="1200px"
+                        height="472px"
+                        className="object-contain w-full h-full"
+                        alt="Gnome Nepal Team gathering in one palce" />
                 </div>
                 <div className="about px-12 w-[100%]">
                     <h1 className="text-2xl flex justify-center font-bold mt-7">
@@ -42,8 +50,8 @@ const Aboutus = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </SectionObserver>
     );
 };
 
