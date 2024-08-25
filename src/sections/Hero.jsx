@@ -28,7 +28,7 @@ const Hero = () => {
                         <a href="#aboutus" aria-label="About section">
                             <button
                                 id="aboutus-button"
-                                className="relative z-10 py-3 px-10 bg-black text-white rounded-full transition duration-200 ease-in-out transform hover:scale-105 hover:bg-gray-700 hover:text-white shadow-md hover:shadow-lg text-xl md:text-2xl md:translate-y-16"
+                                className="relative z-10 py-3 px-10 bg-black text-white rounded-full transition duration-200 ease-in-out transform hover:scale-105 hover:bg-gray-700 hover:text-white shadow-md hover:shadow-lg text-xl md:text-2xl md:translate-y-12 xl:translate-y-16"
                             >
                                 About us
                             </button>
