@@ -11,7 +11,7 @@ const faqs = [
     },
     {
         question: 'How can I join this community?',
-        answer: 'Join Our Community on Discord!',
+        answer: 'Join our community on Discord!',
     },
     {
         question: 'What is Open Source??',
@@ -23,7 +23,7 @@ const faqs = [
     },
     {
         question: 'Are there any exciting events coming up?',
-        answer: 'Check out our upcoming events in the events sections.',
+        answer: 'Check out upcoming events in the events section.',
     },
 ];
 
