@@ -355,7 +355,7 @@ const Events = () => {
                                     No Upcoming Events
                                 </h3>
                                 <p className="text-muted-foreground mt-2">
-                                    Check back later for new events.
+                                    Please check back later for updates on new events.
                                 </p>
                             </div>
                         </div>
