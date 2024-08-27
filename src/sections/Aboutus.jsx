@@ -15,7 +15,7 @@ const Aboutus = () => {
                         src="/aboutus.jpg"
                         width="1200px"
                         height="472px"
-                        className="object-contain w-full h-full"
+                        className="object-contain w-full h-full rounded-lg"
                         alt="Gnome Nepal Team gathering in one palce" />
                 </div>
                 <div className="about px-12 w-[100%]">

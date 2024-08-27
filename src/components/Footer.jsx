@@ -1,30 +1,34 @@
 import React from "react";
 import Image from "./Image";
+import { GithubIcon } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className="relative w-full">
-            <div className="bg-gray-900 text-white p-6 flex flex-col items-center space-y-6">
-                <div className="absolute bottom-[60%] left-1/2 transform -translate-x-1/2 z-10 bg-gradient-to-r from-teal-400 to-blue-500 p-4 rounded-lg flex justify-center items-center space-y-8 w-[70vw] h-[150px] mx-auto">
-                    <div className="flex items-center justify-between w-full px-2 md:px-8">
-                        <h2 className="text-2xl md:text-5xl font-bold">
+        <footer className="w-full">
+                <div className="mb-8 bg-gradient-to-r from-teal-400 to-blue-500 p-4 rounded-lg flex justify-center items-center space-y-8 w-[90vw] h-[150px] mx-auto">
+                    <div className="flex  items-center justify-between w-full px-2 md:px-8 gap-4">
+                        <h2 className="text-2xl md:text-5xl font-bold text-white">
                             Become a Sponsor?
                         </h2>
-                        <button className="bg-white text-black text-sm w-40 h-8 md:w-48 md:h-12 rounded-full md:text-xl font-poppins">
+                        <button className="bg-white text-black text-sm w-40 h-8 md:w-48 md:h-12 rounded-lg md:text-xl font-poppins">
                             Click here
                         </button>
                     </div>
                 </div>
-            </div>
 
-            <div className="relative w-full h-40 bg-[#241F31] flex justify-between items-center p-6 ">
+            <div className="w-full h-[30vh]  bg-[#241F31] flex  p-8 flex-col space-y-8 md:flex-row items-baseline md:justify-between">
                 <div>
                     <button className="bg-white w-44 h-16 rounded-lg hover:bg-gray" aria-label="Gnome Logo">
                         <Image src={"images/GNOMENepal.png"} alt="Gnome Nepal Logo" height="53px" width="173px" />
                     </button>
                 </div>
 
-                <div className="space-x-5 flex ">
+                <div className="space-x-5 flex">
+                    <a href="https://github.com/GNOME-Nepal" target="_blank" aria-label="Gnome Nepal's Github">
+                        <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center" aria-label="Discord Logo">
+                            <GithubIcon className="w-6 h-6" />
+                        </button>
+                    </a>
                     <a href="https://np.linkedin.com/company/gnomenepal" target="_blank" aria-label="Gnome Nepal's Linkedin">
                         <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center" aria-label="Linkedin Logo">
                             <LinkedinIcon className="w-6 h-6" />

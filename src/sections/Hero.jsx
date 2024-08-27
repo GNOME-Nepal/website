@@ -13,7 +13,7 @@ const Hero = () => {
                         height={326}
                         width={1293}
                     />
-                    <div className="block md:hidden w-full h-auto flex items-center justify-center mt-32 mx-auto">
+                    <div className="flex md:hidden w-full h-auto items-center justify-center mt-32 mx-auto">
                         <Image
                             src={bgGnomeNepalMobile}
                             alt="Gnome Nepal Mobile"
