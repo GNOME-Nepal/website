@@ -6,24 +6,24 @@ import SectionObserver from "@/components/Observer";
 
 const faqs = [
     {
-        question: 'What is Gnome Nepal',
-        answer: 'Gnome Nepal is the open source organization whose main motive is to spread collaboration and open source in Nepal.',
+        question: 'What is GNOME Nepal',
+        answer: 'GNOME Nepal is an open source organization whose main motive is to spread collaboration and open source in Nepal.',
     },
     {
-        question: 'How we can join this Community?',
-        answer: 'Join the community with our discord!!',
+        question: 'How can I join this community?',
+        answer: 'Join our community on Discord!',
     },
     {
-        question: 'What is Opensource?',
-        answer: 'Open-source software is computer software that is released under a license in which the copyright holder grants users the rights to use, study, change, and distribute the software and its source code to anyone and for any purpose',
+        question: 'What is Open Source??',
+        answer: 'Open source software is software that can be freely accessed, used, changed, and shared (in modified or unmodified form) by anyone.',
     },
     {
-        question: 'Can I Contribute to the org?',
-        answer: 'Yes, You can!!',
+        question: 'Can I Contribute to the project?',
+        answer: 'Absolutely! We welcome contributions from everyone. To get started, check out our GitHub organization. If you have any questions or need help, feel free to join our community on Discord. You can connect with other contributors, ask questions, and collaborate with the team.',
     },
     {
-        question: 'Is there are exciting event?',
-        answer: 'Check out our upcoming events in the events sections.',
+        question: 'Are there any exciting events coming up?',
+        answer: 'Check out upcoming events in the events section.',
     },
 ];
 
