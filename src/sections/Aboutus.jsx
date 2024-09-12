@@ -32,6 +32,15 @@ const Aboutus = () => {
                         </p>
                     </div>
                     <h1 className="text-2xl mt-7 flex justify-center font-bold">
+                        Our Vision
+                    </h1>
+                    <div className="text">
+                        <div className="flex flex-col justify-center text-center">
+                            To encourage the use of GNOME and related open-source projects in Nepal and
+                            empower the local contributors to represent Nepal's Open source internationally.
+                        </div>
+                    </div>
+                    <h1 className="text-2xl mt-7 flex justify-center font-bold">
                         Our Mission
                     </h1>
                     <div className="text">
