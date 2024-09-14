@@ -1,0 +1,110 @@
+
+export const contributors = [
+  {
+    name: "Utsav Bhattarai",
+    photo: "/contributors/c8.webp",
+    position: "",
+    github: "https://github.com/utsavdotdev",
+    x: "https://x.com/utsavdotdev",
+    linkedin: "https://www.linkedin.com/in/utsavdotdev/",
+  },
+  {
+    name: "Manjul Tamrakar",
+    photo: "/contributors/c1.jpg",
+    position: "",
+    github: "https://github.com/Tamrakar182",
+    x: "https://x.com/tamrakar999",
+    linkedin: "https://www.linkedin.com/in/manjul-tamrakar/",
+  },
+  {
+    name: "Anuroj Baskota",
+    photo: "/contributors/c3.jpg",
+    position: "",
+    github: "#",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/anuroj-baskota-57bb661b1/",
+  },
+  {
+    name: "Ananda Chaudhary",
+    photo: "/contributors/c5.jpg",
+    position: "",
+    github: "https://github.com/anandacdr",
+    x: "https://x.com/anandacdr",
+    linkedin: "https://www.linkedin.com/in/ananda-chaudhary",
+  },
+  {
+    name: "Ashwini Subedi",
+    photo: "/contributors/c2.jpg",
+    position: "",
+    github: "https://github.com/notashwinii",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/notashwinii/",
+  },
+  {
+    name: "Saksham Humagain",
+    photo: "/contributors/c4.jpg",
+    position: "",
+    github: "https://github.com/Saksham444444",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/saksham-humagain-260b02257/",
+  },
+  {
+    name: "Supreme Bhandari",
+    photo: "/contributors/c6.jpg",
+    position: "",
+    github: "https://github.com/supremex04",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/supreme-bhandari-49b47b231/",
+  },
+  {
+    name: "Bikash Mishra",
+    photo: "/contributors/c7.jpg",
+    position: "",
+    github: "https://github.com/bikashmishraa",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/bikash-mishra-07bb48226/",
+  },
+  {
+    name: "Prabesh Shrestha",
+    photo: "/contributors/c9.webp",
+    position: "",
+    github: "https://github.com/Prabesh-Shrestha",
+    x: "#",
+    linkedin: "https://www.linkedin.com/in/prabesh-shrestha/",
+  },
+  {
+    name: "Sailesh Singh",
+    photo: "/contributors/c10.jpeg",
+    position: "",
+    github: "#",
+    x: "#",
+    linkedin: "www.linkedin.com/in/saileshsingh36",
+  },
+];
+
+
+export const events = [
+  {
+    title: "GNOME Asia Summit 2024",
+    date: "Dec 6 - 8, 2024",
+    description:
+      "Join us at GNOME.Asia 2024 to connect with the GNOME community, learn from experts, and explore the future of open-source technology. Don't miss out!",
+    location: "Bengaluru, India",
+    time: "",
+    schedule: [],
+    speakers: [],
+    hotTopics: [
+      "Open-Source",
+      "Collaboration",
+      "GNOME Desktop",
+      "Linux Kernel",
+      "Fedora",
+      "Ubuntu",
+      "OpenSUSE",
+      "FreeBSD",
+    ],
+    rsvp: "https://foundation.gnome.org/2024/09/12/gnome-asia-2024-in-bengaluru-india/",
+    calendar:
+      "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDdqMTgxaWtuYWxvNzBnbmtwcWRwdmxrNDEgdXRzYXZkb3RkZXZAbQ&tmsrc=utsavdotdev%40gmail.com",
+  },
+];

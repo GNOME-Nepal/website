@@ -6,81 +6,9 @@ import {
     CarouselNext,
 } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
+import {contributors} from "@/data/data";
 
-const contributors = [
-    {
-        name: "Utsav Bhattarai",
-        photo: "/contributors/c8.webp",
-        position: "",
-        github: "https://github.com/utsavdotdev",
-        x: "https://x.com/utsavdotdev",
-        linkedin: "https://www.linkedin.com/in/utsavdotdev/",
-    },
-    {
-        name: "Manjul Tamrakar",
-        photo: "/contributors/c1.jpg",
-        position: "",
-        github: "https://github.com/Tamrakar182",
-        x: "https://x.com/tamrakar999",
-        linkedin: "https://www.linkedin.com/in/manjul-tamrakar/",
-    },
-    {
-        name: "Anuroj Baskota",
-        photo: "/contributors/c3.jpg",
-        position: "",
-        github: "#",
-        x: "#",
-        linkedin: "https://www.linkedin.com/in/anuroj-baskota-57bb661b1/",
-    },
-    {
-        name: "Ananda Chaudhary",
-        photo: "/contributors/c5.jpg",
-        position: "",
-        github: "https://github.com/anandacdr",
-        x: "https://x.com/anandacdr",
-        linkedin: "https://www.linkedin.com/in/ananda-chaudhary",
-    },
-    {
-        name: "Ashwini Subedi",
-        photo: "/contributors/c2.jpg",
-        position: "",
-        github: "https://github.com/notashwinii",
-        x: "#",
-        linkedin: "https://www.linkedin.com/in/notashwinii/",
-    },
-    {
-        name: "Saksham Humagain",
-        photo: "/contributors/c4.jpg",
-        position: "",
-        github: "https://github.com/Saksham444444",
-        x: "#",
-        linkedin: "https://www.linkedin.com/in/saksham-humagain-260b02257/",
-    },
-    {
-        name: "Supreme Bhandari",
-        photo: "/contributors/c6.jpg",
-        position: "",
-        github: "https://github.com/supremex04",
-        x: "#",
-        linkedin: "https://www.linkedin.com/in/supreme-bhandari-49b47b231/",
-    },
-    {
-        name: "Bikash Mishra",
-        photo: "/contributors/c7.jpg",
-        position: "",
-        github: "https://github.com/bikashmishraa",
-        x: "#",
-        linkedin: "https://www.linkedin.com/in/bikash-mishra-07bb48226/",
-    },
-    {
-        name: "Prabesh Shrestha",
-        photo: "/contributors/c9.webp",
-        position: "",
-        github: "https://github.com/Prabesh-Shrestha",
-        x: "#",
-        linkedin: "https://www.linkedin.com/in/prabesh-shrestha/",
-    },
-];
+
 
 const ContributorsDetails = () => {
     return (
