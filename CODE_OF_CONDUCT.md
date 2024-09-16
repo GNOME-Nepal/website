@@ -108,9 +108,7 @@ If a participant engages in behavior that violates this code of conduct, the GNO
 
 ## License
 
-The GNOME Code of Conduct is licensed under a <u>[Creative Commons Attribution Share-Alike 3.0 Unported License](https://conduct.gnome.org/committee/)</u>
-
-[![Creative Commons](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)
+The GNOME Nepal Code of Conduct is licensed under <u>[MIT](https://github.com/GNOME-Nepal/website/blob/main/LICENSE)</u>.
 
 ## Attribution
 
