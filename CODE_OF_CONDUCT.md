@@ -11,9 +11,9 @@ This Code of Conduct applies to all GNOME Nepal community spaces, including, but
 - Code repositories
 - Mailing lists
 - Wikis
-- Chat and forums GNOME Nepal Telegram channels, and GNOME-nepal groups and channels on Matrix.org (including bridges to GNOME-nepal IRC channels)
+- Chat and forums GNOME Nepal Telegram channels, and GNOME Nepal groups and channels etc.
 - Community spaces hosted on nepal.gnome.org infrastructure
-- Any other channels or groups which exist in order to discuss GNOME-nepal project activities
+- Any other channels or groups which exist in order to discuss GNOME Nepal project activities
 - All event venues and associated spaces, including conferences, hackfests, release parties, workshops and other small events
 - All areas related to event venues: vendor exhibit halls, staff and meal areas, connecting infrastructure like walkways, hallways, elevators, and stairs
 - Sponsor events, either on-site or off-site
@@ -21,13 +21,13 @@ This Code of Conduct applies to all GNOME Nepal community spaces, including, but
 - Social events around the main event
 - Private conversations taking place in official conference hotels
 
-Communication channels and private conversations that are normally out of scope may be considered in scope if a GNOME-nepal participant is being stalked or harassed. Social media conversations may be considered in-scope if the incident occurred under a GNOME-nepal event hashtag, or when an official GNOME-nepal account on social media is tagged, or within any other discussion about GNOME-nepal. The GNOME-nepal Foundation reserves the right to take actions against behaviors that happen in any context, if they are deemed to be relevant to the GNOME-nepal project and its participants.
+Communication channels and private conversations that are normally out of scope may be considered in scope if a GNOME Nepal participant is being stalked or harassed. Social media conversations may be considered in-scope if the incident occurred under a GNOME Nepal event hashtag, or when an official GNOME Nepal account on social media is tagged, or within any other discussion about GNOME Nepal. The GNOME Nepal Foundation reserves the right to take actions against behaviors that happen in any context, if they are deemed to be relevant to the GNOME Nepal project and its participants.
 
-All participants in GNOME-nepal community spaces are subject to the Code of Conduct. This includes GNOME-nepal Foundation board members, corporate sponsors, and paid employees. This also includes volunteers, maintainers, leaders, contributors, contribution reviewers, issue reporters, GNOME-nepal users, and anyone participating in discussion in GNOME-nepal community spaces. For in-person events, this also includes all attendees, exhibitors, vendors, speakers, panelists, organizers, staff, and volunteers.
+All participants in GNOME Nepal community spaces are subject to the Code of Conduct. This includes GNOME Nepal Foundation board members, corporate sponsors, and paid employees. This also includes volunteers, maintainers, leaders, contributors, contribution reviewers, issue reporters, GNOME Nepal users, and anyone participating in discussion in GNOME Nepal community spaces. For in-person events, this also includes all attendees, exhibitors, vendors, speakers, panelists, organizers, staff, and volunteers.
 
 ## Our Standards
 
-The GNOME-nepal community is dedicated to providing a positive experience for everyone, regardless of:
+The GNOME Nepal community is dedicated to providing a positive experience for everyone, regardless of:
 
 - age
 - body size
@@ -69,7 +69,7 @@ Examples of behavior that contributes to creating a positive environment include
 
 Community members asked to stop any inappropriate behavior are expected to comply immediately.
 
-We want all participants in the GNOME-nepal community have the best possible experience they can. In order to be clear what that means, we’ve provided a list of examples of behaviors that are inappropriate for GNOME-nepal community spaces:
+We want all participants in the GNOME Nepal community have the best possible experience they can. In order to be clear what that means, we’ve provided a list of examples of behaviors that are inappropriate for GNOME Nepal community spaces:
 
 - **Deliberate intimidation, stalking, or following.**
 
@@ -87,11 +87,11 @@ We want all participants in the GNOME-nepal community have the best possible exp
 
 - **Influencing or encouraging inappropriate behavior.** If you influence or encourage another person to violate the Code of Conduct, you may face the same consequences as if you had violated the Code of Conduct.
 
-- **Possession of an offensive weapon at a GNOME-nepal event.** This includes anything deemed to be a weapon by the event organizers.
+- **Possession of an offensive weapon at a GNOME Nepal event.** This includes anything deemed to be a weapon by the event organizers.
 
 ###### Safety versus Comfort
 
-The GNOME-nepal community prioritizes marginalized people’s safety over privileged people’s comfort, for example in situations involving:
+The GNOME Nepal community prioritizes marginalized people’s safety over privileged people’s comfort, for example in situations involving:
 
 - “Reverse”-isms, including “reverse racism,” “reverse sexism,” and “cisphobia”.
 - Reasonable communication of boundaries, such as “leave me alone,” “go away,” or “I’m not discussing this with you.”
@@ -104,15 +104,17 @@ Outreach and diversity efforts directed at under-represented groups are permitte
 
 Basic expectations for conduct are not covered by the “reverse-ism clause” and would be enforced irrespective of the demographics of those involved. For example, racial discrimination will not be tolerated, irrespective of the race of those involved. Nor would unwanted sexual attention be tolerated, whatever someone’s gender or sexual orientation. Members of our community have the right to expect that participants in the project will uphold these standards.
 
-If a participant engages in behavior that violates this code of conduct, the GNOME-nepal Code of Conduct committee may take any action they deem appropriate.
+If a participant engages in behavior that violates this code of conduct, the GNOME Nepal Code of Conduct committee may take any action they deem appropriate.
 
 ## License
 
-The GNOME-nepal Code of Conduct is licensed under <u>[MIT](https://github.com/GNOME-Nepal/website/blob/main/LICENSE)</u>.
+The GNOME Code of Conduct is licensed under a <u>[Creative Commons Attribution Share-Alike 3.0 Unported License](https://conduct.gnome.org/committee/)</u>
+
+[![Creative Commons](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)
 
 ## Attribution
 
-The GNOME-nepal Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers, which is under a Creative Commons Zero license.
+The GNOME Nepal Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers, which is under a Creative Commons Zero license.
 
 Additional language was incorporated and modified from the following Codes of Conduct:
 
