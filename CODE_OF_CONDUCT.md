@@ -4,16 +4,16 @@ Our [company values](https://nepal.gnome.org/#home) guide us in our day-to-day i
 
 ## Scope
 
-This Code of Conduct applies to all GNOME community spaces, including, but not limited to:
+This Code of Conduct applies to all GNOME Nepal community spaces, including, but not limited to:
 
-- Issue tracking systems – bugzilla.gnome.org
-- Documentation and tutorials – developer.gnome.org
-- Code repositories – git.gnome.org and gitlab.gnome.org
-- Mailing lists – mail.gnome.org
-- Wikis – wiki.gnome.org
-- Chat and forums – irc.gnome.org, discourse.gnome.org, GNOME Telegram channels, and GNOME groups and channels on Matrix.org (including bridges to GNOME IRC channels)
-- Community spaces hosted on gnome.org infrastructure
-- Any other channels or groups which exist in order to discuss GNOME project activities
+- Issue tracking systems
+- Documentation and tutorials
+- Code repositories
+- Mailing lists
+- Wikis
+- Chat and forums GNOME Nepal Telegram channels, and GNOME-nepal groups and channels on Matrix.org (including bridges to GNOME-nepal IRC channels)
+- Community spaces hosted on nepal.gnome.org infrastructure
+- Any other channels or groups which exist in order to discuss GNOME-nepal project activities
 - All event venues and associated spaces, including conferences, hackfests, release parties, workshops and other small events
 - All areas related to event venues: vendor exhibit halls, staff and meal areas, connecting infrastructure like walkways, hallways, elevators, and stairs
 - Sponsor events, either on-site or off-site
@@ -21,17 +21,13 @@ This Code of Conduct applies to all GNOME community spaces, including, but not l
 - Social events around the main event
 - Private conversations taking place in official conference hotels
 
-Communication channels and private conversations that are normally out of scope may be considered in scope if a GNOME participant is being stalked or harassed. Social media conversations may be considered in-scope if the incident occurred under a GNOME event hashtag, or when an official GNOME account on social media is tagged, or within any other discussion about GNOME. The GNOME Foundation reserves the right to take actions against behaviors that happen in any context, if they are deemed to be relevant to the GNOME project and its participants.
+Communication channels and private conversations that are normally out of scope may be considered in scope if a GNOME-nepal participant is being stalked or harassed. Social media conversations may be considered in-scope if the incident occurred under a GNOME-nepal event hashtag, or when an official GNOME-nepal account on social media is tagged, or within any other discussion about GNOME-nepal. The GNOME-nepal Foundation reserves the right to take actions against behaviors that happen in any context, if they are deemed to be relevant to the GNOME-nepal project and its participants.
 
-All participants in GNOME community spaces are subject to the Code of Conduct. This includes GNOME Foundation board members, corporate sponsors, and paid employees. This also includes volunteers, maintainers, leaders, contributors, contribution reviewers, issue reporters, GNOME users, and anyone participating in discussion in GNOME community spaces. For in-person events, this also includes all attendees, exhibitors, vendors, speakers, panelists, organizers, staff, and volunteers.
-
-## Reporting an Incident
-
-If you believe that someone is violating the Code of Conduct, or have any other concerns, please [ contact the Code of Conduct committee.](https://conduct.gnome.org/reporter-guide/).
+All participants in GNOME-nepal community spaces are subject to the Code of Conduct. This includes GNOME-nepal Foundation board members, corporate sponsors, and paid employees. This also includes volunteers, maintainers, leaders, contributors, contribution reviewers, issue reporters, GNOME-nepal users, and anyone participating in discussion in GNOME-nepal community spaces. For in-person events, this also includes all attendees, exhibitors, vendors, speakers, panelists, organizers, staff, and volunteers.
 
 ## Our Standards
 
-The GNOME community is dedicated to providing a positive experience for everyone, regardless of:
+The GNOME-nepal community is dedicated to providing a positive experience for everyone, regardless of:
 
 - age
 - body size
@@ -73,7 +69,7 @@ Examples of behavior that contributes to creating a positive environment include
 
 Community members asked to stop any inappropriate behavior are expected to comply immediately.
 
-We want all participants in the GNOME community have the best possible experience they can. In order to be clear what that means, we’ve provided a list of examples of behaviors that are inappropriate for GNOME community spaces:
+We want all participants in the GNOME-nepal community have the best possible experience they can. In order to be clear what that means, we’ve provided a list of examples of behaviors that are inappropriate for GNOME-nepal community spaces:
 
 - **Deliberate intimidation, stalking, or following.**
 
@@ -91,55 +87,32 @@ We want all participants in the GNOME community have the best possible experienc
 
 - **Influencing or encouraging inappropriate behavior.** If you influence or encourage another person to violate the Code of Conduct, you may face the same consequences as if you had violated the Code of Conduct.
 
-- **Possession of an offensive weapon at a GNOME event.** This includes anything deemed to be a weapon by the event organizers.
+- **Possession of an offensive weapon at a GNOME-nepal event.** This includes anything deemed to be a weapon by the event organizers.
 
 ###### Safety versus Comfort
 
-The GNOME community prioritizes marginalized people’s safety over privileged people’s comfort, for example in situations involving:
+The GNOME-nepal community prioritizes marginalized people’s safety over privileged people’s comfort, for example in situations involving:
 
 - “Reverse”-isms, including “reverse racism,” “reverse sexism,” and “cisphobia”.
 - Reasonable communication of boundaries, such as “leave me alone,” “go away,” or “I’m not discussing this with you.”
 - Criticizing racist, sexist, cissexist, or otherwise oppressive behavior or assumptions
 - Communicating boundaries or criticizing oppressive behavior in a “tone” you don’t find congenial
 
-The examples listed above are not against the Code of Conduct. If you have questions about the above statements,<u>[please read our document on Supporting Diversity](https://conduct.gnome.org/supporting-diversity/).</u>
+The examples listed above are not against the Code of Conduct.
 
 Outreach and diversity efforts directed at under-represented groups are permitted under the code of conduct. For example, a social event for women would not be classified as being outside the Code of Conduct under this provision.
 
 Basic expectations for conduct are not covered by the “reverse-ism clause” and would be enforced irrespective of the demographics of those involved. For example, racial discrimination will not be tolerated, irrespective of the race of those involved. Nor would unwanted sexual attention be tolerated, whatever someone’s gender or sexual orientation. Members of our community have the right to expect that participants in the project will uphold these standards.
 
-If a participant engages in behavior that violates this code of conduct, the GNOME Code of Conduct committee may take any action they deem appropriate. Examples of consequences are outlined in the <u>[Committee Procedures Guide](https://conduct.gnome.org/committee-procedures/)..</u>
-
-## Procedure for Handling Incidents
-
-- <u>[Reporter Guide](https://conduct.gnome.org/reporter-guide/)</u>
-
-- <u>[Moderator Procedures](https://conduct.gnome.org/moderator-procedures/)</u>
-
-- <u>[Committee Procedures Guide](https://conduct.gnome.org/committee-procedures/)</u>
-
-## Code of Conduct Committee
-
-The <u>[Code of Conduct Committee’s](https://conduct.gnome.org/committee/)</u> appointed members are:
-
-- Aarti Ramkrishna
-- Anisa Kuci
-- Christopher Davis
-- Federico Mena Quintero
-- Michael Downey
-- Rosanna Yuen
-
-Please see the <u>[Committee page](https://conduct.gnome.org/committee/)</u> for more information.
+If a participant engages in behavior that violates this code of conduct, the GNOME-nepal Code of Conduct committee may take any action they deem appropriate.
 
 ## License
 
-The GNOME Code of Conduct is licensed under a <u>[Creative Commons Attribution Share-Alike 3.0 Unported License](https://conduct.gnome.org/committee/)</u>
-
-[![Creative Commons](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-sa/3.0/)
+The GNOME-nepal Code of Conduct is licensed under <u>[MIT](https://github.com/GNOME-Nepal/website/blob/main/LICENSE)</u>.
 
 ## Attribution
 
-The GNOME Code of Conduct was forked from the example policy from the <u>[Geek Feminism wiki, created by the Ada Initiative and other volunteers,](https://conduct.gnome.org/committee-procedures/)</u> which is under a Creative Commons Zero license.
+The GNOME-nepal Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers, which is under a Creative Commons Zero license.
 
 Additional language was incorporated and modified from the following Codes of Conduct:
 
@@ -150,7 +123,6 @@ Additional language was incorporated and modified from the following Codes of Co
 - The <u>[Django Project Code of Conduct](https://www.djangoproject.com/conduct/)</u> is licensed under a <u>[Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/)</u>.
 - The <u>[Fedora Code of Conduct](http://fedoraproject.org/code-of-conduct)</u>.
 - The <u>[Geek Feminism Anti-harassment Policy](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy)</u> is under a <u>[Creative Commons Zero license](https://creativecommons.org/publicdomain/zero/1.0/)</u>.
-- The <u>[GNOME Foundation Code of Conduct](https://wiki.gnome.org/action/recall/Foundation/CodeOfConduct?action=recall&rev=48)</u>.
 - The <u>[LGBTQ in Technology Slack Code of Conduct](https://lgbtq.technology/coc.html)</u> is licensed <u>[Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/)</u>.
 - The <u>[Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/)</u> are licensed <u>[Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/)</u>.
 - The <u>[Python Mentors Code of Conduct](http://pythonmentors.com/)</u>.
