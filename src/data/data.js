@@ -85,6 +85,166 @@ export const contributors = [
 
 export const events = [
   {
+    title: "Software Freedom Day 2024",
+    date: "Sep 21, 2024",
+    description:
+      "Join us for Software Freedom Day (SFD), hosted by Kathmandu University Open Source Community (KUOSC) with support from Gnome Nepal! Celebrate and promote Free and Open Source Software (FOSS) in Nepal with engaging talks, a panel discussion, and great networking opportunities",
+    location: "Dhulikhel, Nepal",
+    time: "11:00 AM to 4:00 PM",
+    schedule: [
+      {
+        time: "11:00 - 11:15",
+        event: "Introduction to KUOSC, FOSS and SFD",
+        emoji: "🎤",
+      },
+      {
+        time: "11:15 - 11:30",
+        event: "Introduction to Gnome Nepal",
+        emoji: "🎤",
+      },
+      {
+        time: "11:30 - 11:45",
+        event: "The Origin of KUOSC",
+        emoji: "🎤",
+      },
+      {
+        time: "11:45 - 12:10",
+        event: "DFF’s Legacy and the Role of Local Communities",
+        emoji: "🎤",
+      },
+      {
+        time: "12:10 - 12:40",
+        event: "Fun Event",
+        emoji: "🏏",
+      },
+      {
+        time: "12:40 - 13:00",
+        event: "A Talk on Open Data",
+        emoji: "🎤",
+      },
+      {
+        time: "13:00 - 13:30",
+        event: "Tea Break / Open Discussion",
+        emoji: "🍵",
+      },
+      {
+        time: "13:30-14:30",
+        event: "Panel Discussion",
+        emoji: "🎤",
+      },
+      {
+        time: "14:30 - 14:50",
+        event: "Open Source Licenses",
+        emoji: "🎤",
+      },
+      {
+        time: "14:50 - 15:10",
+        event: "Containers and Virtualization",
+        emoji: "🎤",
+      },
+      {
+        time: "15:10 - 15:30",
+        event: "Intro to Localization + Bahmni Localization Prize Distribution",
+        emoji: "🏆",
+      },
+      {
+        time: "15:30 - 15:45",
+        event: "Top Contributor Prize Distribution",
+        emoji: "🏆",
+      },
+      {
+        time: "15:45 - 16:00",
+        event: "Cake cutting and photo session",
+        emoji: "🎂",
+      },
+    ],
+    speakers: [
+      {
+        name: "Sugat Sujakhu",
+        profession: "Current KUOSC Coordinator",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Aaditya Singh",
+        profession: "President, Gnome Nepal",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Probin Gautam",
+        profession: "Founding Coordinator, KUOSC",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Jurgen Gaemeron",
+        profession: "Board Member, Digital Freedom Foundation",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Aayush Pokharel",
+        profession: "Past General Secretary, KUCC",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Sunidhi Sharma",
+        profession: "Student",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Saroj Dahal",
+        profession: "Founder at 28 Software | EverydayKarma",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Damodar Lohani",
+        profession: "Developer, Appwrite",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Chiranjibi Adhikari",
+        profession: "General Secretary, CAN Federation",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Sanjog Sigdel",
+        profession: "Past Vice President, KUCC",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Nikesh Balami",
+        profession: "Civic entrepreneur",
+        twitter: "",
+        linkedin: "",
+      },
+      {
+        name: "Ashwini Subedi",
+        profession: "Student",
+        twitter: "",
+        linkedin: "",
+      },
+    ],
+    hotTopics: [
+      "Open-Source",
+      "Collaboration",
+      "FOSS",
+      "Networking",
+      "GNOME",
+      "KUOSC",
+      "SFD",
+    ],
+    rsvp: "https://sfd.kuosc.org.np",
+    calendar: "",
+  },
+  {
     title: "GNOME Asia Summit 2024",
     date: "Dec 6 - 8, 2024",
     description:

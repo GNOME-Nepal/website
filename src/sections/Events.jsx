@@ -47,7 +47,7 @@ const Events = () => {
             {expandedCard !== null && (
               <div className="flex-1 bg-background p-6 overflow-y-auto">
                 <div className="bg-card p-6 rounded-lg shadow-md transition-all duration-500 ease-in-out">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between pb-2">
                     <div>
                       <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-2">
                         Event Details
@@ -115,8 +115,11 @@ const Events = () => {
                               (item, index) => (
                                 <div
                                   key={index}
-                                  className="bg-muted p-4 rounded-lg"
+                                  className="bg-muted p-4 rounded-lg relative overflow-visible	"
                                 >
+                                  <span className="absolute top-[-5px] right-0 text-xl">
+                                    {item.emoji}
+                                  </span>
                                   <div className="font-semibold">
                                     {item.time}
                                   </div>
@@ -203,11 +206,13 @@ const Events = () => {
                         RSVP
                       </a>
                     </Button>
-                    <Button variant="secondary">
-                      <a target="_blank" href={events[expandedCard].calendar}>
-                        Add to Calendar
-                      </a>
-                    </Button>
+                    {events[expandedCard].calendar && (
+                      <Button variant="secondary">
+                        <a target="_blank" href={events[expandedCard].calendar}>
+                          Add to Calendar
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
