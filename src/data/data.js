@@ -1,4 +1,3 @@
-
 export const contributors = [
   {
     name: "Utsav Bhattarai",
@@ -82,8 +81,33 @@ export const contributors = [
   },
 ];
 
-
 export const events = [
+  {
+    title: "GNOME Asia Summit 2024",
+    date: "Dec 6 - 8, 2024",
+    description:
+      "Join us at GNOME.Asia 2024 to connect with the GNOME community, learn from experts, and explore the future of open-source technology. Don't miss out!",
+    location: "Bengaluru, India",
+    time: "",
+    schedule: [],
+    speakers: [],
+    hotTopics: [
+      "Open-Source",
+      "Collaboration",
+      "GNOME Desktop",
+      "Linux Kernel",
+      "Fedora",
+      "Ubuntu",
+      "OpenSUSE",
+      "FreeBSD",
+    ],
+    rsvp: "https://foundation.gnome.org/2024/09/12/gnome-asia-2024-in-bengaluru-india/",
+    calendar:
+      "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDdqMTgxaWtuYWxvNzBnbmtwcWRwdmxrNDEgdXRzYXZkb3RkZXZAbQ&tmsrc=utsavdotdev%40gmail.com",
+  },
+];
+
+const draftEvents = [
   {
     title: "Software Freedom Day 2024",
     date: "Sep 21, 2024",
@@ -243,28 +267,5 @@ export const events = [
     ],
     rsvp: "https://sfd.kuosc.org.np",
     calendar: "",
-  },
-  {
-    title: "GNOME Asia Summit 2024",
-    date: "Dec 6 - 8, 2024",
-    description:
-      "Join us at GNOME.Asia 2024 to connect with the GNOME community, learn from experts, and explore the future of open-source technology. Don't miss out!",
-    location: "Bengaluru, India",
-    time: "",
-    schedule: [],
-    speakers: [],
-    hotTopics: [
-      "Open-Source",
-      "Collaboration",
-      "GNOME Desktop",
-      "Linux Kernel",
-      "Fedora",
-      "Ubuntu",
-      "OpenSUSE",
-      "FreeBSD",
-    ],
-    rsvp: "https://foundation.gnome.org/2024/09/12/gnome-asia-2024-in-bengaluru-india/",
-    calendar:
-      "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDdqMTgxaWtuYWxvNzBnbmtwcWRwdmxrNDEgdXRzYXZkb3RkZXZAbQ&tmsrc=utsavdotdev%40gmail.com",
   },
 ];

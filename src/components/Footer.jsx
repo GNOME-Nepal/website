@@ -4,8 +4,8 @@ import Image from "./Image";
 const Footer = () => {
     return (
         <footer className="relative w-full">
-            <div className="bg-gray-900 text-white p-6 flex flex-col items-center space-y-6">
-                <div className="absolute bottom-[60%] left-1/2 transform -translate-x-1/2 z-10 bg-gradient-to-r from-teal-400 to-blue-500 p-4 rounded-lg flex justify-center items-center space-y-8 w-[70vw] h-[150px] mx-auto">
+            <div className="bg-gray-900 text-white p-6 flex flex-col items-center space-y-6 hidden md:block">
+                <div className="absolute bottom-[60%] left-1/2 transform -translate-x-1/2 z-10 bg-gradient-to-r from-teal-400 to-blue-500 p-4 rounded-lg flex justify-center items-center space-y-8 w-[70vw] h-[150px] mx-auto ">
                     <div className="flex items-center justify-between w-full px-2 md:px-8">
                         <h2 className="text-2xl md:text-5xl font-bold">
                             Become a Sponsor?
