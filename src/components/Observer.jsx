@@ -24,7 +24,9 @@ const SectionObserver = ({ id, className, ...rest }) => {
             entries.forEach(entry => {
                 const isInView = entry.isIntersecting;
                 if (isInView)
-                    navigate(`/#${id}`);
+                    navigate(`/#${id}`, {
+                        replace: true
+                    });
             });
         }, intersectionOptions);
 
