@@ -7,15 +7,15 @@ import SectionObserver from "@/components/Observer";
 const faqs = [
     {
         question: 'What is GNOME Nepal',
-        answer: 'GNOME Nepal is an open source organization whose main motive is to spread collaboration and open source in Nepal.',
+        answer: 'GNOME Nepal is a local chapter of the GNOME Foundation in Nepal whose main motive is to encourage the use of GNOME & related open-source projects.',
     },
     {
         question: 'How can I join this community?',
-        answer: 'Join our community on Discord!',
+        answer: 'Join our community on Discord! It is completely free and open to everyone.',
     },
     {
-        question: 'What is Open Source??',
-        answer: 'Open source software is software that can be freely accessed, used, changed, and shared (in modified or unmodified form) by anyone.',
+        question: 'What is Open Source?',
+        answer: 'Open source software is software whose code is publicly available, allowing anyone to view, modify, and distribute it freely.',
     },
     {
         question: 'Can I Contribute to the project?',
