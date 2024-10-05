@@ -35,7 +35,7 @@ const Footer = () => {
                             <InstagramIcon className="w-6 h-6" />
                         </button>
                     </a>
-                    <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank" aria-label="Gnome Nepal's Discord">
+                    <a  href="https://discord.com/invite/tpsVFJN8WC" target="_blank" aria-label="Gnome Nepal's Discord">
                         <button className="bg-white w-10 h-10 text-black rounded-lg hover:bg-gray flex items-center justify-center" aria-label="Discord Logo">
                             <DiscordIcon className="w-6 h-6" />
                         </button>
