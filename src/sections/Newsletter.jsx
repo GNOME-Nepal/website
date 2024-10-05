@@ -41,14 +41,15 @@ const Newsletter = () => {
                     />
                   </div>
                   <div>
-                    <Button
-                      type="submit"
-                      className={`w-full sm:w-auto ${isEmailValid ? 'bg-black hover:bg-gray-800 text-white' : 'opacity-50 cursor-not-allowed'}`}
-                      style={{
-                        backgroundColor: isEmailValid ? 'var(--primary)' : 'var(--disabled-background)',
-                        color: isEmailValid ? 'var(--primary-foreground)' : 'var(--disabled-foreground)',
-                      }}
-                      disabled={!isEmailValid} 
+                  <Button
+                    type="button" 
+                    className={`w-full sm:w-auto flex items-center justify-center text-center {'hover:opacity-90' : 'opacity-50 cursor-not-allowed'}`}
+                    style={{
+                      backgroundColor:'var(--button-background)',
+                      color:'var(--button-text)',
+                      padding: '12px 24px', 
+                      borderRadius: '8px', 
+                    }}
                     >
                       Subscribe
                     </Button>
@@ -67,3 +68,4 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
