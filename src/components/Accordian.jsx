@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import ArrowIcon from '../assets/ArrowIcon';
 
-const Accordian = ({ items, className, ...props }) => {
+const Accordion = ({ items, className, ...props }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleToggle = (index) => {
@@ -12,7 +12,7 @@ const Accordian = ({ items, className, ...props }) => {
     return (
       <div
         className={clsx(
-          "w-full max-w-lg mx-auto border border-[#d9d9d9] rounded-md",
+          "w-full max-w-lg mx-auto border border-[#444444] bg-[#1a1a1a] rounded-md",
           className
         )}
       >
@@ -33,7 +33,7 @@ const Accordian = ({ items, className, ...props }) => {
                       }
                     )}
                   />
-                  <span className="text-lg font-medium text-gray-900">
+                  <span className="text-lg font-medium text-white"> 
                     {item.question}
                   </span>
                 </div>
@@ -53,8 +53,8 @@ const Accordian = ({ items, className, ...props }) => {
               </div>
             </button>
             {activeIndex === index && (
-              <div className="p-4 bg-gray-50">
-                <p className="text-gray-700">{item.answer}</p>
+              <div className="p-4 bg-[#242424]"> 
+                <p className="text-gray-300">{item.answer}</p> 
               </div>
             )}
           </div>
@@ -63,4 +63,4 @@ const Accordian = ({ items, className, ...props }) => {
     );
 };
 
-export default Accordian;
+export default Accordion;

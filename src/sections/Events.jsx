@@ -29,8 +29,8 @@ const Events = () => {
               {events.map((event, index) => (
                 <div
                   key={index}
-                  className={`bg-card p-4 rounded-lg shadow-md cursor-pointer transition-all hover:shadow-lg ${
-                    index === expandedCard ? "bg-card-foreground text-card" : ""
+                  className={`bg-card p-4 rounded-lg shadow-lg cursor-pointer transition-all hover:shadow-lg ${
+                    index === expandedCard ? "text-card-foreground bg-card-background" : ""
                   }`}
                   onClick={() => handleCardClick(index)}
                 >

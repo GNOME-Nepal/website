@@ -30,11 +30,20 @@ To install and run the GNOME Nepal website locally, follow these steps:
     ```bash
     yarn install
     ```
+     ```bash
+    npm i 
+    ```
 
 4. Start the development server:
 
     ```bash
     yarn run dev
+    ```
+
+    
+
+    ```bash
+    npm run dev
     ```
 
 # Contributing
