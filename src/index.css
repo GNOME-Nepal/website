@@ -25,8 +25,8 @@
     --input: 240 5.9% 90%; 
     --ring: 240 5.9% 10%; 
     --radius: 0.5rem; 
-    --button-background:teal;  
-    --button-text: black;  
+    --button-background:black;  
+    --button-text: white;  
   }
 
   .dark {
@@ -50,8 +50,8 @@
     --border: 240 10% 30%; 
     --input: 240 10% 30%; 
     --ring: 0 0% 98%; 
-    --button-background: black;  
-    --button-text: white; 
+    --button-background: white;  
+    --button-text: black; 
   }
 }
 
