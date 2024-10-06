@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Links from "./Links";
-import { ModeToggle } from "./mode-toggle"; 
+import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -19,6 +19,7 @@ const Navbar = () => {
         { to: "#contributors", text: "Contributors" },
         { to: "#faq", text: "FAQ" },
     ];
+
     return (
         <>
             <nav className="fixed w-full z-50 top-0 start-0 border-b border-gray-300 bg-background dark:bg-gray-900 px-8 md:px-14 lg:px-28">
@@ -26,7 +27,7 @@ const Navbar = () => {
                     <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span 
                             className="self-center text-2xl font-semibold whitespace-nowrap"
-                            style={{ color: 'var(--text-color)' }} 
+                            style={{ color: 'var(--text-color)' }}
                         >
                             GNOME Nepal
                         </span>
@@ -34,12 +35,12 @@ const Navbar = () => {
                     <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse gap-4">
                         <ModeToggle />
                         <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank" aria-label="Discord invite">
-                      <button
-        type="button"
-        className="hidden md:flex text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-gray-200 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 border-2 border-[var(--foreground)] dark:border-[var(--primary-foreground)]"
-    >
-        Become a Member!
-    </button>
+                            <button
+                                type="button"
+                                className="hidden md:flex text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-gray-200 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 border-2 border-[var(--foreground)] dark:border-[var(--primary-foreground)]"
+                            >
+                                Become a Member!
+                            </button>
                         </a>
                         <button
                             data-collapse-toggle="navbar-sticky"
