@@ -28,7 +28,7 @@ const Navbar = () => {
                             className="self-center text-2xl font-semibold whitespace-nowrap"
                             style={{ color: 'var(--text-color)' }} 
                         >
-                            Gnome Nepal
+                            GNOME Nepal
                         </span>
                     </a>
                     <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse gap-4">
