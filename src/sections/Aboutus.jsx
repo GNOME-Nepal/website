@@ -1,6 +1,6 @@
 import Image from "@/components/Image";
 import SectionObserver from "@/components/Observer";
-import { ArrowRight, ChevronRight, Shrub } from "lucide-react";
+import {  ChevronRight } from "lucide-react";
 import React from "react";
 
 const Aboutus = () => {
