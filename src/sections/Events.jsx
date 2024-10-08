@@ -13,7 +13,6 @@ const Events = () => {
     setExpandedCard(index);
   };
 
-  
   return (
     <SectionObserver id="events">
       <section id="events" className="">
@@ -21,16 +20,18 @@ const Events = () => {
           <div className="flex flex-col md:flex-row h-content">
             <div className="w-full md:w-1/3 bg-background space-y-8">
               <div className="md:text-left text-center">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-2">
-                  Upcoming Events
-                </div>
                 <h2 className="text-3xl font-bold">Events Calendar</h2>
+              </div>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm ">
+                Upcoming Events
               </div>
               {events.map((event, index) => (
                 <div
                   key={index}
                   className={`bg-card p-4 rounded-lg shadow-lg cursor-pointer transition-all hover:shadow-lg ${
-                    index === expandedCard ? "text-card-foreground bg-card-background" : ""
+                    index === expandedCard
+                      ? "text-card-foreground bg-card-background"
+                      : ""
                   }`}
                   onClick={() => handleCardClick(index)}
                 >
