@@ -22,8 +22,8 @@ const Aboutus = () => {
             alt="Gnome Nepal Team gathering in one palce"
           />
         </div>
-        <div className="about flex flex-col gap-4 pt-8 ">
-          <h3 className="text-2xl flex  font-bold">Who We Are</h3>
+        <div className="about flex flex-col gap-4 pt-8 lg:w-[80%] ">
+          <h3 className="text-2xl flex font-bold">Who We Are</h3>
           <p className="lg:text-lg">
             GNOME Nepal is an organization dedicated to promoting open-source
             initiatives within Nepal. Our core objective is to foster a vibrant
@@ -45,8 +45,8 @@ const Aboutus = () => {
             </h3>
             <ul className="grid font-semibold gap-1">
               {missions.map((mission, index) => (
-                <li className="flex gap-2 items-center" key={index}>
-                  <ChevronRight className="size-4" /> {mission}
+                <li className="list-disc pl-5 flex gap-2 items-center" key={index}>
+                  {mission}
                 </li>
               ))}
             </ul>

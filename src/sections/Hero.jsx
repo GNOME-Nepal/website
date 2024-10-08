@@ -7,7 +7,7 @@ import Image from "@/components/Image";
 const Hero = () => {
   return (
     <SectionObserver id={"home"}>
-      <div className="relative hero-section flex flex-col justify-between">
+      <div className="relative hero-section flex flex-col justify-between lg:h-lvh">
         <div className="relative z-10">
           <Image
             src={bgGnomeNepal}
@@ -32,7 +32,7 @@ const Hero = () => {
               <button
                 id="aboutus-button"
                 className="relative z-10 py-3 px-10 bg-black text-white rounded-full 
-                lg:px-16 md:text-2xl
+                md:text-2xl
                 transition duration-200 ease-in-out transform 
                 hover:scale-105 hover:bg-gray-700 hover:text-white shadow-md hover:shadow-lg 
                 text-xl "

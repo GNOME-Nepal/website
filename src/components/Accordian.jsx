@@ -12,7 +12,7 @@ const Accordion = ({ items, className, ...props }) => {
     return (
       <div
         className={clsx(
-          "w-full max-w-lg mx-auto border border-[#444444] bg-[#1a1a1a] rounded-md",
+          "w-full max-w-lg mx-auto border border-[#444444]  bg-[#1a1a1a]  rounded-md",
           className
         )}
       >
@@ -53,7 +53,7 @@ const Accordion = ({ items, className, ...props }) => {
               </div>
             </button>
             {activeIndex === index && (
-              <div className="p-4 bg-[#242424]"> 
+              <div className="p-4 bg-slate-50 text-black"> 
                 <p className="text-gray-300">{item.answer}</p> 
               </div>
             )}

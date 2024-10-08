@@ -32,7 +32,7 @@ const FAQItem = ({ question, onClick, isActive }) => {
     const { theme } = useTheme();
     return (
         <div
-            className={clsx("flex justify-between items-center px-4 rounded-full py-6 cursor-pointer hover:bg-gray-100",
+            className={clsx("flex justify-between items-center  rounded-full p-4  cursor-pointer hover:bg-gray-100",
                 {
                     "bg-slate-200": theme === "light" && isActive, 
                     "bg-gray-700": theme === "dark" && isActive, 
@@ -63,7 +63,7 @@ const FAQItem = ({ question, onClick, isActive }) => {
 const FAQList = ({ faqs, activeIndex, setActiveIndex }) => {
     const { theme } = useTheme();
     return (
-        <div className={clsx("shadow-sm rounded-lg", {
+        <div className={clsx("shadow-sm rounded-lg p-4", {
             "bg-white": theme === "light",
             "bg-gray-800": theme === "dark",
         })}>
@@ -85,7 +85,7 @@ const FAQDesktop = () => {
 
     return (
         <div className="hidden lg:flex flex-row gap-4 w-full relative mt-8">
-            <div className="w-[40%] absolute inset-x-0 top-0 z-10 mt-6">
+            <div className="w-[40%] absolute inset-x-0 top-0 z-10 mt-6 ">
                 <FAQList faqs={faqs} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
             </div>
             <div className={clsx("w-[80%] p-4 min-h-[70vh] rounded-lg shadow-md ml-[30%] pl-[15%] pt-[5%]", {
