@@ -1,0 +1,32 @@
+name: "📝 Docs Improvement"
+description: "Suggest improvements or additions to the documentation"
+title: "[Docs]: "
+labels: ["documentation"]
+assignees: []
+
+body:
+    - type: markdown
+        attributes:
+            value: |
+                Thanks for taking the time to help improve our documentation! Please provide the following details:
+
+    - type: input
+        id: current_section
+        attributes:
+            label: "Current Section"
+            description: "Which section of the documentation needs improvement?"
+            placeholder: "e.g., Installation Guide"
+
+    - type: textarea
+        id: improvement_suggestion
+        attributes:
+            label: "Improvement Suggestion"
+            description: "Describe the improvement or addition you are suggesting."
+            placeholder: "e.g., Add more details about setting up the environment."
+
+    - type: textarea
+        id: additional_context
+        attributes:
+            label: "Additional Context"
+            description: "Any additional context or information that might be helpful."
+            placeholder: "e.g., Links to related documentation, screenshots, etc."
