@@ -13,24 +13,25 @@ const Events = () => {
     setExpandedCard(index);
   };
 
-  
   return (
     <SectionObserver id="events">
-      <section id="events" className="">
+      <section id="events" className="justify-center">
         {events.length > 0 ? (
-          <div className="flex flex-col md:flex-row h-content">
-            <div className="w-full md:w-1/3 bg-background space-y-8">
+          <div className="flex flex-col md:flex-row md:gap-4 h-content ">
+            <div className="flex flex-col  items-center md:items-start w-full md:w-1/3 bg-background space-y-8 ">
+              <div className="text-red-400  font-medium rounded-[50px] text-center py-2  bg-red-100 border-r-[50%] w-60">
+              Upcoming Events
+              </div>
               <div className="md:text-left text-center">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-2">
-                  Upcoming Events
-                </div>
                 <h2 className="text-3xl font-bold">Events Calendar</h2>
               </div>
               {events.map((event, index) => (
                 <div
                   key={index}
-                  className={`bg-card p-4 rounded-lg shadow-lg cursor-pointer transition-all hover:shadow-lg ${
-                    index === expandedCard ? "text-card-foreground bg-card-background" : ""
+                  className={`bg-card p-4 rounded-lg shadow-md cursor-pointer transition-all hover:shadow-lg ${
+                    index === expandedCard
+                      ? "text-card-foreground bg-card-background"
+                      : ""
                   }`}
                   onClick={() => handleCardClick(index)}
                 >
@@ -45,7 +46,7 @@ const Events = () => {
               ))}
             </div>
             {expandedCard !== null && (
-              <div className="flex-1 bg-background p-6 overflow-y-auto">
+              <div className="flex-1  mt-12 shadow-md overflow-y-auto dark:border-2 dark:rounded-lg">
                 <div className="bg-card p-6 rounded-lg shadow-md transition-all duration-500 ease-in-out">
                   <div className="flex items-center justify-between pb-2">
                     <div>

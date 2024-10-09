@@ -34,11 +34,9 @@ const Navbar = () => {
                             GNOME Nepal
                         </span>
                     </a>
-                    <div className="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse gap-4">
-
+                    <div className="flex lg:order-2  lg:space-x-0 rtl:space-x-reverse gap-2 md:gap-4">
                         <ModeToggle />
-                        <a href="https://discord.com/invite/3dpGWPbrMc" target="_blank" aria-label="Discord invite">
-
+                        <a href="https://discord.com/invite/tpsVFJN8WC" target="_blank" aria-label="Discord invite">
                             <button
                                 type="button"
                                 className="hidden md:flex text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-gray-200 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 border-2 border-[var(--foreground)] dark:border-[var(--primary-foreground)]"
