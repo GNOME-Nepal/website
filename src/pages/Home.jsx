@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <div className="container mx-auto py-8 flex flex-col gap-8">
+            <div className="container mx-auto flex flex-col">
                 <Aboutus />
                 <Events />
                 <Contributors />
