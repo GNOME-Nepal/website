@@ -1,5 +1,21 @@
 export const contributors = [
   {
+    name: "Saroj Regmi",
+    photo: "/contributors/c11.jpeg",
+    position: "",
+    github: "https://github.com/sarojregmi200",
+    x: "https://x.com/sarojregmi200",
+    linkedin: "https://www.linkedin.com/in/sarojregmi200/",
+  },
+  {
+    name: "Prarambha Bashyal",
+    photo: "/contributors/c12.jpeg",
+    position: "",
+    github: "https://github.com/Prarambha369",
+    x: "",
+    linkedin: "https://www.linkedin.com/in/misterbashyal/",
+  },
+  {
     name: "Utsav Bhattarai",
     photo: "/contributors/c8.webp",
     position: "",
@@ -7,6 +23,17 @@ export const contributors = [
     x: "https://x.com/utsavdotdev",
     linkedin: "https://www.linkedin.com/in/utsavdotdev/",
   },
+  {
+    name: "Sailesh Singh",
+    photo: "/contributors/c10.jpeg",
+    position: "",
+    github: "#",
+    x: "#",
+    linkedin: "www.linkedin.com/in/saileshsingh36",
+  },
+];
+
+const draftContributors = [
   {
     name: "Manjul Tamrakar",
     photo: "/contributors/c1.jpg",
@@ -70,14 +97,6 @@ export const contributors = [
     github: "https://github.com/Prabesh-Shrestha",
     x: "#",
     linkedin: "https://www.linkedin.com/in/prabesh-shrestha/",
-  },
-  {
-    name: "Sailesh Singh",
-    photo: "/contributors/c10.jpeg",
-    position: "",
-    github: "#",
-    x: "#",
-    linkedin: "www.linkedin.com/in/saileshsingh36",
   },
 ];
 
