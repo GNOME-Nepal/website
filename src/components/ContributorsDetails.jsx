@@ -11,13 +11,13 @@ import { contributors } from "@/data/data";
 const ContributorsDetails = () => {
   return (
     <Carousel className="w-full mt-12">
-      <CarouselContent className="flex justify-center">
+      <CarouselContent className="flex">
         {contributors.map((contributor, index) => (
           <CarouselItem
-            className="basis-1/2 md:basis-1/3 lg:basis-1/5 py-1 ml-2 md:ml-12"
+            className="basis-1/2 md:basis-1/3 lg:basis-1/5 py-1  md:ml-12"
             key={index}
           >
-            <Card className="flex flex-col gap-6 p-3 sm:p-4">
+            <Card className="flex h-full flex-col gap-6 p-3 sm:p-4">
               <div className="aspect-square overflow-hidden rounded-lg w-62 h-62">
                 <img
                   src={contributor.photo}
