@@ -4,6 +4,7 @@ on:
   schedule:
     # Runs every 5 hours
     - cron: '0 */5 * * *'
+  workflow_dispatch:
 
 jobs:
   run_script:
