@@ -3,6 +3,7 @@
 
 import requests
 import json
+import os
 
 # Replace with your GitHub token
 ORG_NAME = "GNOME-Nepal"
@@ -11,6 +12,7 @@ BASE_URL = "https://api.github.com"
 headers = {
     "Accept": "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
+    "Authorization": f"Bearer {os.getenv('MAINTAINERS_POLLING_TOKEN')}",
 }
 
 # Get repositories of the organization
@@ -18,6 +20,7 @@ repos_url = f"{BASE_URL}/orgs/{ORG_NAME}/repos"
 repos_response = requests.get(repos_url, headers=headers)
 
 contributor_contribution_dict = {}
+
 
 if repos_response.status_code == 200:
     repos = repos_response.json()

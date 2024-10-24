@@ -25,6 +25,9 @@ jobs:
 
     - name: Run script
       run: python script.py  # Run your script
+      env:
+        MAINTAINERS_POLLING_TOKEN: ${{secrets.MAINTAINERS_POLLING_TOKEN}}
+
 
     - name: Commit changes
       run: |
