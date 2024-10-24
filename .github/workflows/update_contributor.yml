@@ -1,0 +1,43 @@
+name: Run Python Script and Commit Changes
+
+on:
+  schedule:
+    # Runs every 5 hours
+    - cron: '0 */5 * * *'
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Specify the Python version you want
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Adjust if you have specific requirements
+
+    - name: Run script
+      run: python script.py  # Run your script
+
+    - name: Commit changes
+      run: |
+        git config --local user.name "GitHub Actions"
+        git config --local user.email "actions@github.com"
+
+        # Get the current date in a human-readable format
+        DATE=$(date +"%Y-%m-%d %H:%M:%S")
+
+        # Stage all changes
+        git add .
+
+        # Commit the changes
+        git commit -m "refreshing contributor list ${DATE}" || echo "No changes to commit"
+
+        # Push the changes to the contributor branch
+        git push origin contributor
