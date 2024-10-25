@@ -17,7 +17,7 @@ const ContributorsDetails = () => {
   useEffect(() => {
     async function fetchContributors() {
       const contributionResponse = await axios.get(
-        "https://raw.githubusercontent.com/GNOME-Nepal/website/refs/heads/contributor/contributors.json",
+        "https://raw.githubusercontent.com/GNOME-Nepal/contributors/refs/heads/main/contributors.json",
       );
       setContributors(contributionResponse.data);
       setLoading(false);
