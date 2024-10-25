@@ -10,7 +10,7 @@ import { contributors } from "@/data/data";
 
 const ContributorsDetails = () => {
   return (
-    <Carousel className="w-full mt-12">
+    <Carousel className="w-full lg:mt-12 mt-2">
       <CarouselContent className="flex">
         {contributors.map((contributor, index) => (
           <CarouselItem

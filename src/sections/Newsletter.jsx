@@ -17,7 +17,7 @@ const Newsletter = () => {
 
   return (
     <section
-      className="w-full py-8 md:py-16 lg:py-20"
+      className="w-full pb-4 md:py-16 lg:py-20"
       style={{ backgroundColor: "var(--background)" }}
     >
       <div className="container px-4 md:px-6">

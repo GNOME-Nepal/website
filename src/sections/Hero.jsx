@@ -7,7 +7,7 @@ import Image from "@/components/Image";
 const Hero = () => {
   return (
     <SectionObserver id={"home"}>
-      <div className="relative hero-section flex flex-col justify-between lg:h-lvh">
+      <div className="relative hero-section flex flex-col md:justify-between xl:h-lvh">
         <div className="relative z-10">
           <Image
             src={bgGnomeNepal}
@@ -26,7 +26,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="bg-gray-100 mt-12">
+        <div className="bg-gray-100 md:mt-12 mt-6">
           <div className="grid justify-items-center">
             <a href="#aboutus" aria-label="About section">
               <button
