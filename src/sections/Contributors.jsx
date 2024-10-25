@@ -10,7 +10,7 @@ function Contributors() {
         className="min-h-content flex flex-col items-center"
       >
         <header className="w-full flex flex-col items-center md:items-start">
-          <div className="font-medium rounded-[50px] text-center py-2 p-4 bg-green-light border-r-[50%] w-60">
+          <div className="font-medium rounded-[50px] text-center py-2 p-4 bg-green-100 dark:text-black border-r-[50%] w-60">
             People behind the magic
           </div>
           <h1 className="text-3xl md:text-4xl font-bold my-[8px] lg:block">
