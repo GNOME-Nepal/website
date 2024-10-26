@@ -1,6 +1,6 @@
 import Image from "@/components/Image";
 import SectionObserver from "@/components/Observer";
-import {  ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import React from "react";
 
 const Aboutus = () => {
@@ -13,7 +13,7 @@ const Aboutus = () => {
 
   return (
     <SectionObserver id="aboutus">
-      <div id="aboutus-wrapper" className="flex flex-col">
+      <div id="aboutus-wrapper" className="flex flex-col 2xl:mt-10">
         <div className="relative image rounded-lg">
           <Image
             srcSet="/aboutus-small.jpg 400w, /aboutus-medium.jpg 800w, /aboutus.jpg 1200w"
@@ -22,7 +22,7 @@ const Aboutus = () => {
             alt="Gnome Nepal Team gathering in one palce"
           />
         </div>
-        <div className="about flex flex-col gap-4 pt-8 ">
+        <div className="about flex flex-col md:gap-4 gap-2 lg:pt-8 pt-4">
           <h3 className="text-2xl flex font-bold">Who We Are</h3>
           <p className="lg:text-lg">
             GNOME Nepal is an organization dedicated to promoting open-source
@@ -45,7 +45,7 @@ const Aboutus = () => {
             </h3>
             <ul className="list-disc grid font-semibold gap-1">
               {missions.map((mission, index) => (
-                <li className="flex gap-2 items-center" key={index}>
+                <li className="flex text-sm gap-2 items-center" key={index}>
                   <ChevronRight className="size-4" /> {mission}
                 </li>
               ))}
