@@ -305,7 +305,7 @@ const Events = () => {
                     </TabsContent>
                   </Tabs>
                   <div className="mt-4 flex gap-2">
-                    <Button variant="outline">
+                    <Button>
                       <a target="_blank" href={events[expandedCard].rsvp}>
                         RSVP
                       </a>
