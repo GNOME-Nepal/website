@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Links from "./Links";
 import { ModeToggle } from "./mode-toggle";
 
@@ -80,6 +80,19 @@ const Navbar = () => {
               {links.map((link, index) => (
                 <Links key={index} to={link.to} text={link.text} />
               ))}
+                 <a
+              href="https://discord.com/invite/tpsVFJN8WC"
+              target="_blank"
+              aria-label="Discord invite"
+              className="border-t border-gray-200 dark:border-gray-800 mt-4 md:mt-0 mt:border-none "
+            >
+              <button
+                type="button"
+                className=" md:hidden mt-4 mx-auto flex text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-gray-200 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 border-2 border-[var(--foreground)] dark:border-[var(--primary-foreground)]"
+              >
+                Become a Member!
+              </button>
+            </a>
             </ul>
           </div>
         </div>
