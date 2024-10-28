@@ -23,9 +23,9 @@ const Newsletter = () => {
     try {
       setLoading(true);
       const res = await getBaseId();
-      const baseid = res.bases[0].id;
+      const baseid = res.bases[0]?.id;
       const emails = await getEmails(baseid);
-      const found = emails.records.find(
+      const found = emails.records?.find(
         (record) => record.fields.Email === email,
       );
       if (found) {
@@ -65,7 +65,7 @@ const Newsletter = () => {
       });
       setLoading(false);
       setEmail("");
-      console.error(error);
+      console.log(error);
     }
   };
 

@@ -1,5 +1,6 @@
 import axios from "../lib/axios.js";
 const token = import.meta.env.VITE_AIRTABLE_TOKEN;
+console.log(token)
 export const getBaseId = async () => {
   const res = await axios.get("/meta/bases", {
     headers: {
