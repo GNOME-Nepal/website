@@ -102,7 +102,7 @@ body:
     attributes:
       label: 🔗 Are you willing to submit PR?
       description: This is absolutely not required, but we are happy to guide you in the contribution process.
-      options: # Added options key
+      options:
         - "Yes, I am willing to submit a PR!"
         - "No"
     validations:
