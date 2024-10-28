@@ -1,15 +1,80 @@
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { addEmail, getBaseId, getEmails } from "@/lib/function";
+import { useToast } from "@/hooks/use-toast";
+import { RefreshCw } from "lucide-react";
+
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted email:", email);
+    if (!isValidEmail()) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email",
+      });
+      return;
+    }
+    try {
+      setLoading(true);
+      const res = await getBaseId();
+      const baseid = res.bases[0]?.id;
+      const emails = await getEmails(baseid);
+      const found = emails.records?.find(
+        (record) => record.fields.Email === email,
+      );
+      if (found) {
+        toast({
+          title: "Response",
+          description: (
+            <pre className="w-[340px] rounded-md bg-slate-950 p-2">
+              <code className="text-white">
+                {JSON.stringify(msg("Email already Exist", 201),null,2)}
+              </code>
+            </pre>
+          ),
+        });
+        setLoading(false);
+        setEmail("");
+        return;
+      }
+      const resStatus = await addEmail(baseid, email);
+      if (resStatus === 200) {
+        toast({
+          title: "Response",
+          description: (
+            <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+              <code className="text-white">
+                {JSON.stringify(msg("Subscribed ✅", 200), null, 2)}
+              </code>
+            </pre>
+          ),
+        });
+        setLoading(false);
+        setEmail("");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong",
+      });
+      setLoading(false);
+      setEmail("");
+      console.log(error);
+    }
   };
 
+  const msg = (message, code) => {
+    return {
+      message,
+      code,
+    };
+  };
   const isValidEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -44,10 +109,7 @@ const Newsletter = () => {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form
-                  onSubmit={handleSubmit}
-                  className="flex flex-col gap-2 sm:flex-row"
-                >
+                <form className="flex flex-col gap-2 sm:flex-row">
                   <div className="flex-1">
                     <Input
                       className="w-full text-black placeholder-gray-400 border-gray-200"
@@ -65,6 +127,7 @@ const Newsletter = () => {
                   <div>
                     <Button
                       type="button"
+                      onClick={handleSubmit}
                       className={`w-full sm:w-auto flex items-center justify-center text-center {'hover:opacity-90' : 'opacity-50 cursor-not-allowed'}`}
                       style={{
                         backgroundColor: "var(--button-background)",
@@ -72,8 +135,12 @@ const Newsletter = () => {
                         padding: "12px 24px",
                         borderRadius: "8px",
                       }}
+                      disabled={loading}
                     >
-                      Subscribe
+                      {loading && (
+                        <RefreshCw className="h-4 w-4 animate-spin" />
+                      )}
+                      {loading ? "Loading" : "Subscribe"}
                     </Button>
                   </div>
                 </form>
