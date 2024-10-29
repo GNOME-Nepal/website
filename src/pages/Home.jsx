@@ -1,5 +1,6 @@
 import Hero from "../sections/Hero";
 import { Aboutus, Contributors, FAQ, Events, Newsletter } from "../sections";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
