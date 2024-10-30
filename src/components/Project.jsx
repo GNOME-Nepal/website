@@ -15,14 +15,14 @@ const Project = ({ project_name, link_to_img, path_to_activate, contributors = [
     const headerClass = "my-3 font-sans text-lg font-bold cursor-default";
     const headerStyle = {};
 
-    const ImgClass = "project_main_img center_div shadow-lg cursor-pointer";
+    const ImgClass = "center_div project_main_img shadow-lg cursor-pointer";
     const ImgStyle = {};
 
     // const contributorsClass = "project_make_pos_rel hide";
-    const contributorsClass = "project_make_pos_rel center_div";
+    const contributorsClass = "project_make_pos_rel center_div box-shadow";
     const contributorsStyle = {
         height: "35rem",
-        width: "35rem"
+        width: "35rem",
     };
 
     const ContsPfpClass = " conts_pfp";
@@ -30,19 +30,12 @@ const Project = ({ project_name, link_to_img, path_to_activate, contributors = [
         // display: "inline"
     };
 
-
-    let [_is_being_hovered_, setState] = useState(true);
+    let [_is_being_hovered_, setState] = useState(false);
 
     const ContsPfpToLoad = [];
     // console.log(contributors);
-    contributors.map((ent, ind) => {
-        // const contributor = fetchContributor(ent);
-        // console.log(contributor);
-        ContsPfpToLoad.push(<Image key={ind} src={fetchContributor(ent).link_to_img} className={ind.toString() + ContsPfpClass + (_is_being_hovered_ ? " rush_up" : "")} style={ContsPfpStyle} />);
-    })
 
     const IsHovered = () => {
-        console.log("Hover");
 
     };
 
@@ -73,12 +66,22 @@ const Project = ({ project_name, link_to_img, path_to_activate, contributors = [
     return (
         <a style={anchorStyle} href={path_to_activate} className={anchorClass} {...props}>
             <div style={{ width: "100%", height: "100%" }}>
-                <Image onMouseOver={hoverCallBack} onMouseLeave={hoverLeft} src={link_to_img} className={ImgClass} style={ImgStyle} />
-                <div className={contributorsClass} style={contributorsStyle}>
-                    <h5 className={headerClass} style={headerStyle}>{project_name}</h5>
-                    <h5 className={headerClass} style={headerStyle}>Contributors</h5>
+                <Image src={link_to_img} className={ImgClass} style={ImgStyle} />
+                <div onMouseOver={hoverCallBack} onMouseLeave={hoverLeft} className={contributorsClass + (_is_being_hovered_ ? " update_bg" : " rm_bg hide")} style={contributorsStyle}>
+                    <h5 className={headerClass} style={headerStyle}>
+                        {project_name}
+                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " underline-effect" : "")}></p>
+                    </h5>
+                    <h5 className={headerClass} style={headerStyle}>
+                        Contributors
+                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " underline-effect" : "")}></p>
+                    </h5>
                     <div className="flex flex-row flex-wrap justify-evenly">
-                        {ContsPfpToLoad.map((elem) => { return elem; })}
+                        {contributors.map((ent, ind) => {
+                            // const contributor = fetchContributor(ent);
+                            // console.log(contributor);
+                            return (<Image key={ind} src={fetchContributor(ent).link_to_img} className={ind.toString() + ContsPfpClass + (_is_being_hovered_ ? " rush_up" : "")} style={ContsPfpStyle} />);
+                        })}
                     </div>
                 </div>
             </div>

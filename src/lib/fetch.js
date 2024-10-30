@@ -25,7 +25,73 @@ const contributor_list = {
         socials: {
             // Links to social medias(could be useful in future)
         }
-    }
+    },
+    "a": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "b": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "c": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "d": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "e": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "f": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "g": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "h": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "i": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "j": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
+    "k": {
+        link_to_img: "/contributors/c3.jpg",
+        socials: {
+            // Links to social medias(could be useful in future)
+        }
+    },
 };
 
 // get this data as well
@@ -35,7 +101,7 @@ const projects_list = {
             github_link: "www.xyz.com",
             link_to_img: "/images/logo.png",
             site_link: "www.pqr.com",
-            contributors: ["John Doe", "Krish Raul", "Boxer Aashish"],
+            contributors: ["John Doe", "Krish Raul", "Boxer Aashish", "a", "b", "c", "d", "e" , "f", "g", "h", "i", "j", "k", "k", "k", "k", "k"],
             status: "COMPLETED", // could be "IN PROGRESS or ABANDONED"
         }
     }
