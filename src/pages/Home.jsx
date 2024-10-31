@@ -1,5 +1,5 @@
 import Hero from "../sections/Hero";
-import { Aboutus, Contributors, FAQ, Events, Newsletter } from "../sections";
+import { Aboutus, Contributors, FAQ, Events, Newsletter, Sponsors } from "../sections";
 
 const Home = () => {
     return (
@@ -11,6 +11,7 @@ const Home = () => {
                 <Contributors />
                 <FAQ />
                 <Newsletter />
+                <Sponsors/> 
             </div>
         </>
     );

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "./Image";
 import {Instagram, Github, Linkedin } from 'lucide-react'
 
+const sponsor_url = import.meta.env.VITE_SPONSOR_URL;
 
 const Footer = () => {
     return (
@@ -87,7 +88,7 @@ const Footer = () => {
               </div>
               <div className="bg-gradient-to-r from-blue-400 to-green-500 rounded-full px-4 py-2">
                 <a
-                  href="https://nepal.gnome.org"
+                  href={sponsor_url}
                   className="text-white font-semibold hover:text-gray-200 transition-colors"
                 >
                   Become a Sponsor

@@ -21,6 +21,10 @@ export default {
           normal: "#33D17A",
           light: "rgba(69, 239, 145, 0.22)",
         },
+        blue: {
+          normal: "#3C82F6",
+          light: "rgba(60, 130, 246, 0.22)",
+        },
         gray: "rgba(217, 217, 217, 1)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

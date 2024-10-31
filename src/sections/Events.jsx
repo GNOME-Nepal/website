@@ -18,11 +18,11 @@ const Events = () => {
       <section id="events" className="justify-center">
         {events.length > 0 ? (
           <div className="flex flex-col md:flex-row md:gap-4 h-content mt-2">
-            <div className="flex flex-col  items-center md:items-start w-full md:w-1/3 bg-background space-y-8 ">
+            <div className="flex flex-col items-center md:items-start w-full md:w-1/3 bg-background">
               <div className="text-red-400  font-medium rounded-[50px] text-center py-2  bg-red-100 dark:bg-[#a41b0e21] dark:text-[#D72323] border-r-[50%] w-60">
                 Upcoming Events
               </div>
-              <div className="md:text-left text-center">
+              <div className="md:text-left text-center mt-2 mb-4">
                 <h2 className="text-3xl font-bold">Events Calendar</h2>
               </div>
               {events.map((event, index) => (
