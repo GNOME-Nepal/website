@@ -5,6 +5,8 @@ import { addEmail, getBaseId, getEmails } from "@/lib/function";
 import { useToast } from "@/hooks/use-toast";
 import { RefreshCw } from "lucide-react";
 
+const msg = (message, code) => ({ message, code });
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -55,29 +57,17 @@ const Newsletter = () => {
             </pre>
           ),
         });
-        setLoading(false);
-        setEmail("");
       }
     } catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong",
       });
-      setLoading(false);
-      setEmail("");
       console.log(error);
+    } finally {
+      setEmail("");
+      setLoading(false);
     }
-  };
-
-  const msg = (message, code) => {
-    return {
-      message,
-      code,
-    };
-  };
-  const isValidEmail = () => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
   };
 
   return (
