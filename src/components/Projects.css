@@ -1,34 +1,39 @@
-.project_anchor_pos {
+.GNOMEproject_div_pos {
     display: flex;
     justify-content: center;
-    height: 40rem;
+    height: 35rem;
     width: 100%;
     padding: 2rem 0rem 2rem 0rem;
 }
 
-.project_make_pos_rel {
+.GNOMEproject_make_pos_rel {
     position: relative;
 }
 
-.project_main_img {
-    height: 35rem;
-    width: 35rem;
+.GNOMEproject_main_img {
+    height: 30rem;
+    width: 30rem;
 }
 
-.center_div {
+.GNOMEcenter_div {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.box-shadow {
+/* specifically for one element */
+.GNOMEIncZIND {
+    z-index: 2;
+}
+
+.GNOMEbox-shadow {
     box-shadow: 5px 6px 20px gray;
 }
 
-.conts_pfp {
-    width: 2.5rem;
-    height: 2.5rem;
-    transform: translateY(25rem);
+.GNOMEconts_pfp {
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(20rem);
     opacity: 0;
     transition: transform 0.9s ease-in, opacity 0.5s ease-out 0.5s;
     /* position: absolute;
@@ -36,118 +41,92 @@
     right: 0; */
 }
 
-.rush_up {
+.GNOMErush_up {
     transform: translateY(0);
     opacity: 1;
     transition: transform 1.4s ease-out, opacity 0.8s ease-out;
 }
 
-.hide {
+.GNOMEhide {
     opacity: 0;
-    background: unset;
+    animation: GNOMEreceed 2s cubic-bezier(0.645, 0.045, 0.355, 1);
     /* transition: background-color 3s ease-in 5s; */
-    transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), background 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    /* background: white; */
+    transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1) 1.2s, animation 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.underline-effect {
+.GNOMEunderline-effect {
     width: 3rem !important;
     height: 1.5px !important;
-    background-color: black;
+    background-color: white;
     transition: width 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
 }
 
-.update_bg {
+.GNOMEupdate_bg {
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #7f04ea, #097ed7, #b8e018, #86da26, #34f21a, #ee5c12);
     background-size: 400% 400%;
-    animation: gradientIntro 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
-    animation: resetGradient 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1;
-    animation: gradientAnimation 6s cubic-bezier(0.215, 0.610, 0.355, 1) 1;
+    animation:
+    GNOMEanimate 6s cubic-bezier(0.215, 0.610, 0.355, 1) 2 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* background-color: cyan;
+    transition: background-color 0.1s ease-out 12.01s; */
 }
 
-@keyframes gradientIntro {
-    0% {
-        background-position: 0% 100%;
-    }
+@keyframes GNOMEanimate {
 
-    50% {
-        background-position: 50% 50%;
-    }
-
-    75% {
-        background-position: 75% 25%;
-    }
-
-    80% {
-        background-position: 80% 20%;
-    }
-
-    88% {
-        background-position: 88% 12%;
-    }
-
-    95% {
-        background-position: 95% 5%;
-    }
-
+    0%,
     100% {
-        background-position: 100% 0%;
-    }
-}
-
-@keyframes resetGradient {
-    0% {
-        background-position: 100% 0%;
-    }
-
-    50% {
-        background-position: 50% 50%;
-    }
-
-    75% {
-        background-position: 75% 25%;
-    }
-
-    100% {
-        background-position: 0% 100%;
-    }
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 100%;
+        background-color: blue;
     }
 
     12.5% {
-        background-position: 15% 85%;
+        background-color: rgb(43, 43, 243);
     }
 
     25% {
-        background-position: 30% 70%;
+        background-color: rgb(43, 213, 243);
     }
 
     37.5% {
-        background-position: 45% 55%;
+        background-color: rgb(73, 243, 43);
     }
 
     50% {
-        background-position: 50% 50%;
+        background-color: rgb(166, 242, 24);
     }
 
     62.5% {
-        background-position: 45% 55%;
+        background-color: rgb(24, 110, 209);
     }
 
     75% {
-        background-position: 30% 70%;
+        background-color: rgb(95, 24, 209);
     }
 
     87.5% {
-        background-position: 15% 85%;
+        background-color: rgb(6, 67, 164);
     }
+}
 
+@keyframes GNOMEreceed {
+
+    0%,
     100% {
-        background-position: 0% 100%;
+        background-color: transparent;
     }
+}
+
+.GNOMEButtonLinkHover:hover {
+    background-color: rgb(110, 108, 108);
+    transition: background-color 1s ease-in;
+}
+
+.GNOMECave-in {
+    perspective: 1000px;
+    perspective-origin: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+    transform: translateZ(-200px);
+    position: relative;
+    z-index: 0;
 }

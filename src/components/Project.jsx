@@ -5,35 +5,44 @@ import { useEffect, useState } from "react";
 import "@/components/Projects.css";
 
 
-const Project = ({ project_name, link_to_img, path_to_activate, contributors = [], ...props }) => {
+const Project = ({ project_name, link_to_img, path_to_activate, github_link, contributors = [], ...props }) => {
 
-    const anchorClass = "my-2 mx-3 project_anchor_pos project_make_pos_rel cursor-default";
+    const anchorClass = "my-2 mx-3 cursor-pointer";
     const anchorStyle = {
-
+        color: "white"
     };
 
-    const headerClass = "my-3 font-sans text-lg font-bold cursor-default";
-    const headerStyle = {};
+    const headerClass = "m-3 font-sans text-lg font-bold cursor-default";
+    const headerStyle = {
+        color: "white"
+    };
 
-    const ImgClass = "center_div project_main_img shadow-lg cursor-pointer";
+    const ImgClass = "GNOMEcenter_div GNOMEproject_main_img shadow-lg cursor-default";
     const ImgStyle = {};
 
     // const contributorsClass = "project_make_pos_rel hide";
-    const contributorsClass = "project_make_pos_rel center_div box-shadow";
+    const contributorsClass = "GNOMEproject_make_pos_rel GNOMEcenter_div box-shadow GNOMEIncZIND";
     const contributorsStyle = {
-        height: "35rem",
-        width: "35rem",
+        height: "30rem",
+        width: "30rem",
     };
 
-    const ContsPfpClass = " conts_pfp";
+    const ContsPfpClass = " GNOMEconts_pfp m-1";
     const ContsPfpStyle = {
         // display: "inline"
+        borderRadius: "50%",
     };
 
     let [_is_being_hovered_, setState] = useState(false);
 
     const ContsPfpToLoad = [];
     // console.log(contributors);
+
+    const buttonClass = "ml-2 p-4 GNOMEButtonLinkHover";
+    const buttonStyle = {
+        border: "1px solid white",
+        borderRadius: "2px",
+    };
 
     const IsHovered = () => {
 
@@ -64,28 +73,32 @@ const Project = ({ project_name, link_to_img, path_to_activate, contributors = [
     }
 
     return (
-        <a style={anchorStyle} href={path_to_activate} className={anchorClass} {...props}>
+        <div {...props} className="GNOMEproject_div_pos">
             <div style={{ width: "100%", height: "100%" }}>
                 <Image src={link_to_img} className={ImgClass} style={ImgStyle} />
-                <div onMouseOver={hoverCallBack} onMouseLeave={hoverLeft} className={contributorsClass + (_is_being_hovered_ ? " update_bg" : " rm_bg hide")} style={contributorsStyle}>
+                <div onMouseOver={hoverCallBack} onMouseLeave={hoverLeft} className={contributorsClass + (_is_being_hovered_ ? " GNOMEupdate_bg" : " GNOMErm_bg GNOMEhide")} style={contributorsStyle}>
                     <h5 className={headerClass} style={headerStyle}>
                         {project_name}
-                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " underline-effect" : "")}></p>
+                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " GNOMEunderline-effect" : "")}></p>
+                    </h5>
+                    <h5>
+                        <button className={buttonClass} style={buttonStyle}><a style={anchorStyle} href={github_link} className={anchorClass}>Go to GitHub</a></button>
+                        <button className={buttonClass} style={buttonStyle}><a style={anchorStyle} href={path_to_activate} className={anchorClass}>Go to Website</a></button>
                     </h5>
                     <h5 className={headerClass} style={headerStyle}>
                         Contributors
-                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " underline-effect" : "")}></p>
+                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " GNOMEunderline-effect" : "")}></p>
                     </h5>
-                    <div className="flex flex-row flex-wrap justify-evenly">
+                    <div className="flex flex-row flex-wrap px-4">
                         {contributors.map((ent, ind) => {
                             // const contributor = fetchContributor(ent);
                             // console.log(contributor);
-                            return (<Image key={ind} src={fetchContributor(ent).link_to_img} className={ind.toString() + ContsPfpClass + (_is_being_hovered_ ? " rush_up" : "")} style={ContsPfpStyle} />);
+                            return (<Image key={ind} src={fetchContributor(ent).link_to_img} className={ind.toString() + ContsPfpClass + (_is_being_hovered_ ? " GNOMErush_up" : "")} style={ContsPfpStyle} />);
                         })}
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
     );
 };
 
