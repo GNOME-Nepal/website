@@ -1,41 +1,64 @@
 // This represents one project
 import Image from "@/components/Image";
 import { fetchContributor } from "@/lib/fetch";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import "@/components/Projects.css";
 
+const Project = forwardRef(({ project_name, link_to_img, path_to_activate, github_link, details_1, details_2, kind, contributors = [], ...props }, ref) => {
 
-const Project = ({ project_name, link_to_img, path_to_activate, github_link, contributors = [], ...props }) => {
-
-    const anchorClass = "my-2 mx-3 cursor-pointer";
-    const anchorStyle = {
-        color: "white"
-    };
-
-    const headerClass = "m-3 font-sans text-lg font-bold cursor-default";
+    const headerClass = "m-3 font-sans text-lg sm:text-sm GNOMESmallerText font-bold cursor-default";
     const headerStyle = {
         color: "white"
     };
 
-    const ImgClass = "GNOMEcenter_div GNOMEproject_main_img shadow-lg cursor-default";
-    const ImgStyle = {};
+    const linkClass = "";
+    const linkStyle = {};
 
-    // const contributorsClass = "project_make_pos_rel hide";
-    const contributorsClass = "GNOMEproject_make_pos_rel GNOMEcenter_div box-shadow GNOMEIncZIND";
-    const contributorsStyle = {
-        height: "30rem",
-        width: "30rem",
+    // const linkClass = "my-2 mx-3 cursor-pointer";
+    // const linkStyle = {
+    //     color: "white"
+    // };
+
+    // const projImgClass = "GNOMEcenter_div GNOMEproject_main_img shadow-lg cursor-default";
+    const projImgClass = " GNOMEProjImg ";
+    const projImgStyle = {
+        backgroundColor: "grey"
     };
 
-    const ContsPfpClass = " GNOMEconts_pfp m-1";
-    const ContsPfpStyle = {
+    const commonDivClass = " GNOMEDivSize GNOMEDivCommonProps GNOMEbox-shadow ";
+    // const commonDivStyle = {};
+
+    // const mainDivClass = " GNOMEPosRel GNOMEMainClassRem GNOMEMainClassGet GNOMEMainClassOutro  ";
+    const mainDivClass = " GNOMEPosRel " + (kind === "COMPLETED" ? " GNOMEMainAnimateCOMPLETED " : (kind === "IN PROGRESS") ? " GNOMEMainAnimateINPROGRESS " : " GNOMEMainAnimateABAN ");
+    const mainDivStyle = {
+    };
+
+    // const detailsClass = " GNOMEDetailsClassRem GNOMEDetailsClassGet GNOMEDetailsClassOutro GNOMEGiveAnimation ";
+    const detailsClass = " GNOMEDets " + (kind === "COMPLETED" ? " GNOMEDetailsAnimateCOMPLETED " : (kind === "IN PROGRESS") ? " GNOMEDetailsAnimateINPROGRESS " : " GNOMEDetailsAnimateABAN ");
+    const detailsStyle = {
+        // backgroundColor: "#af0f9f",
+    };
+
+    const moreDetailsClass = " GNOMEMoreDets " + (kind === "COMPLETED" ? " GNOMEMoreDetailsAnimateCOMPLETED " : (kind === "IN PROGRESS") ? " GNOMEMoreDetailsAnimateINPROGRESS " : " GNOMEMoreDetailsAnimateABAN ");
+    const moreDetailsStyle = {};
+
+    // const contributorsClass = "GNOMEproject_make_pos_rel GNOMEcenter_div box-shadow";
+    const contributorsClass = " ";
+    const contributorsStyle = {
+        // height: "30rem",
+        // width: "30rem",
+    };
+
+    // const contsPfpClass = " GNOMEconts_pfp m-1";
+    const contsPfpClass = " GNOMEConts_PFP m-1 ";
+    const contsPfpStyle = {
         // display: "inline"
         borderRadius: "50%",
     };
 
     let [_is_being_hovered_, setState] = useState(false);
 
-    const ContsPfpToLoad = [];
+    // const ContsPfpToLoad = [];
     // console.log(contributors);
 
     const buttonClass = "ml-2 p-4 GNOMEButtonLinkHover";
@@ -44,12 +67,15 @@ const Project = ({ project_name, link_to_img, path_to_activate, github_link, con
         borderRadius: "2px",
     };
 
+    // const detailsClass = "";
+    // const detailsStyle = {};
+
     const IsHovered = () => {
 
     };
 
     const IsNotHovered = () => {
-        console.log("no Hover");
+        // console.log("no Hover");
     };
 
     useEffect(() => {
@@ -73,33 +99,46 @@ const Project = ({ project_name, link_to_img, path_to_activate, github_link, con
     }
 
     return (
-        <div {...props} className="GNOMEproject_div_pos">
-            <div style={{ width: "100%", height: "100%" }}>
-                <Image src={link_to_img} className={ImgClass} style={ImgStyle} />
-                <div onMouseOver={hoverCallBack} onMouseLeave={hoverLeft} className={contributorsClass + (_is_being_hovered_ ? " GNOMEupdate_bg" : " GNOMErm_bg GNOMEhide")} style={contributorsStyle}>
+        <div {...props} ref={ref} className={` GNOMEproject_div_pos `}>
+            <div className={commonDivClass + moreDetailsClass} style={moreDetailsStyle}>
+                <h3 className={headerClass} style={headerStyle}>More Details</h3>
+                <p>
+                    {details_2}
+                </p>
+            </div>
+            <div onMouseOver={hoverCallBack} onMouseLeave={hoverLeft} style={mainDivStyle} className={commonDivClass + mainDivClass}>
+                <Image src={link_to_img} className={projImgClass + (_is_being_hovered_ ? "" : " ")} style={projImgStyle} />
+                <div className={contributorsClass + (_is_being_hovered_ ? " GNOMEContributorClass " : " GNOMEHide")} style={contributorsStyle}>
                     <h5 className={headerClass} style={headerStyle}>
                         {project_name}
-                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " GNOMEunderline-effect" : "")}></p>
+                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " GNOMEUnderline-effect" : "")}></p>
                     </h5>
                     <h5>
-                        <button className={buttonClass} style={buttonStyle}><a style={anchorStyle} href={github_link} className={anchorClass}>Go to GitHub</a></button>
-                        <button className={buttonClass} style={buttonStyle}><a style={anchorStyle} href={path_to_activate} className={anchorClass}>Go to Website</a></button>
+                        <button className={buttonClass} style={buttonStyle}><a style={linkStyle} href={github_link} className={linkClass}>Go to GitHub</a></button>
+                        <button className={buttonClass} style={buttonStyle}><a style={linkStyle} href={path_to_activate} className={linkClass}>Go to Website</a></button>
                     </h5>
                     <h5 className={headerClass} style={headerStyle}>
                         Contributors
-                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " GNOMEunderline-effect" : "")}></p>
+                        <p style={{ width: "0", height: "0" }} className={(_is_being_hovered_ ? " GNOMEUnderline-effect" : "")}></p>
                     </h5>
                     <div className="flex flex-row flex-wrap px-4">
                         {contributors.map((ent, ind) => {
-                            // const contributor = fetchContributor(ent);
-                            // console.log(contributor);
-                            return (<Image key={ind} src={fetchContributor(ent).link_to_img} className={ind.toString() + ContsPfpClass + (_is_being_hovered_ ? " GNOMErush_up" : "")} style={ContsPfpStyle} />);
+                            return (<Image key={ind} src={fetchContributor(ent).link_to_img} className={ind.toString() + contsPfpClass + (_is_being_hovered_ ? " GNOMERush_up " : "")} style={contsPfpStyle} />);
                         })}
                     </div>
                 </div>
             </div>
+            <div className={commonDivClass + detailsClass} style={detailsStyle}>
+                <h3 className={headerClass} style={headerStyle} >Details</h3>
+                <p>
+                    {details_1}
+                </p>
+            </div>
         </div>
     );
-};
+});
+{/*
+*/
+}
 
 export default Project; 

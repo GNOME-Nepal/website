@@ -1,36 +1,68 @@
 .GNOMEproject_div_pos {
     display: flex;
-    justify-content: center;
-    height: 35rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 30rem;
     width: 100%;
     padding: 2rem 0rem 2rem 0rem;
 }
 
-.GNOMEproject_make_pos_rel {
-    position: relative;
-}
-
-.GNOMEproject_main_img {
-    height: 30rem;
+.GNOMEDivSize {
     width: 30rem;
+    height: 25rem;
 }
 
-.GNOMEcenter_div {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* specifically for one element */
-.GNOMEIncZIND {
-    z-index: 2;
+.GNOMEDivCommonProps {
+    padding: 4px;
+    margin: 8px;
+    background-color: white;
 }
 
 .GNOMEbox-shadow {
-    box-shadow: 5px 6px 20px gray;
+    box-shadow: 2px 4px 8px rgb(10, 10, 10);
 }
 
-.GNOMEconts_pfp {
+.GNOMEGiveAnimation {
+    animation: GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) 2s infinite forwards;
+}
+
+.GNOMEPosRel {
+    position: relative;
+}
+
+.GNOMEProjImg {
+    /* opacity: 1; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 0;
+}
+
+.GNOMEHide {
+    opacity: 0;
+    transition: opacity 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.GNOMEDivHide {
+    display: none;
+}
+
+.GNOMEContributorClass {
+    position: absolute;
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: GNOMEanimate 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards;
+}
+
+.GNOMEConts_PFP {
     width: 2rem;
     height: 2rem;
     transform: translateY(20rem);
@@ -41,36 +73,179 @@
     right: 0; */
 }
 
-.GNOMErush_up {
+.GNOMERush_up {
     transform: translateY(0);
     opacity: 1;
     transition: transform 1.4s ease-out, opacity 0.8s ease-out;
 }
 
-.GNOMEhide {
-    opacity: 0;
-    animation: GNOMEreceed 2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    /* transition: background-color 3s ease-in 5s; */
-    /* background: white; */
-    transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1) 1.2s, animation 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.GNOMEunderline-effect {
+.GNOMEUnderline-effect {
     width: 3rem !important;
     height: 1.5px !important;
     background-color: white;
     transition: width 0.9s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
 }
 
-.GNOMEupdate_bg {
-    width: 100%;
-    height: 100%;
-    background-size: 400% 400%;
+/* TIMED ANIMATION FOR THE PROJECT */
+
+.GNOMEMainAnimateCOMPLETED {
     animation:
-    GNOMEanimate 6s cubic-bezier(0.215, 0.610, 0.355, 1) 2 forwards;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    /* background-color: cyan;
-    transition: background-color 0.1s ease-out 12.01s; */
+        GNOMEMainAnimationCOMPLETED 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEMainExitAnimationCOMPLETED 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEDetailsAnimateCOMPLETED {
+    animation:
+        GNOMEDetailsAnimation 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards,
+        GNOMEDetailsExitAnimation 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEMoreDetailsAnimateCOMPLETED {
+    animation:
+        GNOMEMoreDetailsAnimation 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards,
+        GNOMEMoreDetailsExitAnimation 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEMainAnimateINPROGRESS {
+    animation:
+        GNOMEMainAnimationINPROGRESS 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEMainExitAnimationINPROGRESS 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEDetailsAnimateINPROGRESS {
+    animation:
+        GNOMEDetailsAnimation 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards,
+        GNOMEDetailsExitAnimation 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEMoreDetailsAnimateINPROGRESS {
+    animation:
+        GNOMEMoreDetailsAnimation 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards,
+        GNOMEMoreDetailsExitAnimation 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEMainAnimateABAN {
+    animation:
+        GNOMEMainAnimationABAN 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEMainExitAnimationABAN 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEDetailsAnimateABAN {
+    animation:
+        GNOMEDetailsAnimation 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards,
+        GNOMEDetailsExitAnimation 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+.GNOMEMoreDetailsAnimateABAN {
+    animation:
+        GNOMEMoreDetailsAnimation 4s cubic-bezier(0.215, 0.610, 0.355, 1) 1 forwards,
+        GNOMEanimate 20s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards,
+        GNOMEMoreDetailsExitAnimation 18s cubic-bezier(0.215, 0.610, 0.355, 1) 14s 1 forwards;
+}
+
+@keyframes GNOMEMainAnimationCOMPLETED {
+    0% {
+        transform: translateY(-1000rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes GNOMEMainExitAnimationCOMPLETED {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1000rem);
+    }
+}
+
+@keyframes GNOMEMainAnimationINPROGRESS {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes GNOMEMainExitAnimationINPROGRESS {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes GNOMEMainAnimationABAN {
+    0% {
+        transform: translateY(1000rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes GNOMEMainExitAnimationABAN {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(1000rem);
+    }
+}
+
+@keyframes GNOMEDetailsAnimation {
+    0% {
+        transform: translateX(-1000rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes GNOMEDetailsExitAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1000rem);
+    }
+}
+
+@keyframes GNOMEMoreDetailsAnimation {
+    0% {
+        transform: translateX(1000rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes GNOMEMoreDetailsExitAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(1000rem);
+    }
 }
 
 @keyframes GNOMEanimate {
@@ -109,11 +284,71 @@
     }
 }
 
+@media screen and (min-width: 480px) {
+    .GNOMEproject_div_pos {
+        height: auto;
+    }
+
+    .GNOMESmallerText {
+        font-size: smaller !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .GNOMEMoreDets {
+        display: none;
+    }
+
+    /* .GNOMEProjImg
+    {
+        height: fit-content;
+    } */
+}
+
+@media screen and (max-width: 400px) {
+    .GNOMEDets {
+        display: none;
+    }
+}
+
+/* --------------- */
+
+/* specifically for one element */
+/* .GNOMEIncZIND {
+    z-index: 2;
+} */
+
+.GNOMEupdate_bg {
+    width: 100%;
+    height: 100%;
+    background-size: 400% 400%;
+    animation:
+        GNOMEanimate 6s cubic-bezier(0.215, 0.610, 0.355, 1) 2 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* background-color: cyan;
+    transition: background-color 0.1s ease-out 12.01s; */
+}
+
 @keyframes GNOMEreceed {
 
-    0%,
+    0% {
+        background-color: rgb(255, 0, 255);
+    }
+
+    25% {
+        background-color: rgb(0, 255, 255);
+    }
+
+    50% {
+        background-color: rgb(255, 255, 0);
+    }
+
+    75% {
+        background-color: rgb(255, 255, 255);
+    }
+
     100% {
-        background-color: transparent;
+        background-color: unset;
     }
 }
 
