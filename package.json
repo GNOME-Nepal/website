@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm:start:vite\" \"npm:start:docusaurus\"",
+    "start:vite": "vite",
+    "start:docusaurus": "cd docusaurus && yarn start",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -21,6 +23,7 @@
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "concurrently": "^9.0.1",
     "embla-carousel-react": "^8.1.6",
     "lucide-react": "^0.407.0",
     "react": "^18.3.1",
