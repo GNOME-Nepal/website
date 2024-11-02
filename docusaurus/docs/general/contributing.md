@@ -19,7 +19,7 @@ Thank you for showing an interest in contributing to GNOME-Nepal! All kinds of c
 
 ## Code of Conduct
 
-Please read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to abide by its terms.
+Please read and adhere to our [Code of Conduct](code_of_conduct.md). By participating, you agree to abide by its terms.
 
 ## How to Contribute
 
@@ -96,7 +96,7 @@ If you encounter any issues, please report them using the [Issue Tracker](https:
 
 ## Style Guide
 
-Please follow the project's style guide to ensure consistency. This includes code formatting, naming conventions, and documentation standards. Refer to the [Style Guide](STYLE_GUIDE.md) for more information.
+Please follow the project's style guide to ensure consistency. This includes code formatting, naming conventions, and documentation standards. Refer to the [Style Guide](style_guide.md) for more information.
 
 ## Code Reviews
 
@@ -104,7 +104,7 @@ All submissions, including pull requests, are reviewed. We aim to provide feedba
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the project's [LICENSE](LICENSE).
+By contributing, you agree that your contributions will be licensed under the project's [LICENSE](license.md).
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 slug: /
 title: About
+sidebar_position: 2
 ---
 
 
