@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { addEmail, getBaseId, getEmails } from "@/lib/function";
 import { useToast } from "@/hooks/use-toast";
 import { RefreshCw } from "lucide-react";
-
+import { isValidEmail } from "@/lib/utils";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const Newsletter = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isValidEmail()) {
+    if (!isValidEmail(email)) {
       toast({
         title: "Error",
         description: "Please enter a valid email",
@@ -23,7 +23,7 @@ const Newsletter = () => {
     try {
       setLoading(true);
       const res = await getBaseId();
-      const baseid = res.bases[0]?.id;
+      const baseid = res.bases?.[0]?.id;
       const emails = await getEmails(baseid);
       const found = emails.records?.find(
         (record) => record.fields.Email === email,
@@ -34,7 +34,11 @@ const Newsletter = () => {
           description: (
             <pre className="w-[340px] rounded-md bg-slate-950 p-2">
               <code className="text-white">
-                {JSON.stringify(msg("Email already Exist", 201),null,2)}
+                {JSON.stringify(
+                  msg("You are already subscribed!", 201),
+                  null,
+                  2,
+                )}
               </code>
             </pre>
           ),
@@ -55,9 +59,9 @@ const Newsletter = () => {
             </pre>
           ),
         });
-        setLoading(false);
-        setEmail("");
       }
+      setLoading(false);
+      setEmail("");
     } catch (error) {
       toast({
         title: "Error",
@@ -74,10 +78,6 @@ const Newsletter = () => {
       message,
       code,
     };
-  };
-  const isValidEmail = () => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
   };
 
   return (

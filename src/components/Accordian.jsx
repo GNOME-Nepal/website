@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import ArrowIcon from '../assets/ArrowIcon';
+import { ArrowIcon } from '@/assets/icons';
 
 const Accordion = ({ items, className, ...props }) => {
     const [activeIndex, setActiveIndex] = useState(0);
