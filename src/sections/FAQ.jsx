@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Accordian from "../components/Accordian";
-import ArrowIcon from "../assets/ArrowIcon";
 import clsx from "clsx";
 import SectionObserver from "@/components/Observer";
 import { useTheme } from "@/components/theme-provider";
+import { ArrowIcon } from "@/assets/icons";
 
 const faqs = [
   {
@@ -41,7 +41,7 @@ const FAQItem = ({ question, onClick, isActive }) => {
         {
           "bg-slate-200": theme === "light" && isActive,
           "bg-gray-700": theme === "dark" && isActive,
-        }
+        },
       )}
       onClick={onClick}
     >
@@ -52,7 +52,7 @@ const FAQItem = ({ question, onClick, isActive }) => {
             {
               "bg-[purple]": isActive,
               "bg-[#D19DE2]": !isActive,
-            }
+            },
           )}
         />
         <span
@@ -116,7 +116,7 @@ const FAQDesktop = () => {
           {
             "bg-[#fafbff]": theme === "light",
             "bg-gray-900": theme === "dark",
-          }
+          },
         )}
       >
         {activeIndex !== null && (
