@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Links from "./Links";
+import Links, {OddLink} from "./Links";
 import { ModeToggle } from "./mode-toggle";
 import Diya from "./Diya";
 import Banner from "./Banner";
@@ -15,13 +15,13 @@ const Navbar = () => {
     ? "items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
     : "items-center justify-between w-full hidden lg:flex lg:w-auto lg:order-1";
 
-  const links = [
-    { to: "#home", text: "Home" },
-    { to: "#aboutus", text: "About us" },
-    { to: "#events", text: "Events" },
-    { to: "#contributors", text: "Contributors" },
-    { to: "#faq", text: "FAQ" },
-  ];
+    const links = [
+      { to: "/#home", text: "Home" },
+      { to: "/#aboutus", text: "About us" },
+      { to: "/#events", text: "Events" },
+      { to: "/#contributors", text: "Contributors" },
+      { to: "/#faq", text: "FAQ" },
+    ];
 
   return (
     <>
@@ -92,6 +92,7 @@ const Navbar = () => {
                 {links.map((link, index) => (
                   <Links key={index} to={link.to} text={link.text} />
                 ))}
+                <OddLink to="/projects" text="Projects" />
                 <a
                   href="https://discord.com/invite/tpsVFJN8WC"
                   target="_blank"
