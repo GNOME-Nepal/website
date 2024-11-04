@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm:start:vite\" \"npm:start:docusaurus\"",
     "start:vite": "vite",
     "start:docusaurus": "cd docusaurus && yarn start",
-    "build": "vite build && cd docusaurus && npm run build && mkdir -p ../dist/docs && cp -R build/* ../dist/docs",
+    "build": "vite build && cd docusaurus && npm install && npm run build && mkdir -p ../dist/docs && cp -R build/* ../dist/docs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --port 5173"
   },
