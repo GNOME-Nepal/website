@@ -1,3 +1,7 @@
+---
+title: License
+---
+
 MIT License
 
 Copyright (c) 2024 GNOME Nepal
