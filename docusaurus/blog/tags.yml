@@ -1,19 +1,9 @@
-facebook:
-  label: Facebook
+opensource:
+  label: Opensource
   permalink: /facebook
-  description: Facebook tag description
+  description: Opensource tag description
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+gnome:
+  label: GNOME
+  permalink: /gnome
+  description: GNOME tag description

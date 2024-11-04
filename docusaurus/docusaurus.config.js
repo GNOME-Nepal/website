@@ -8,9 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  title: "GNOME Nepal",
+  tagline: "Foster open-source community in Nepal",
+  favicon: "img/favicon.svg",
   url: "https://nepal.gnome.org",
   baseUrl: "/docs/",
   organizationName: "GNOME Nepal",
@@ -51,14 +51,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
       navbar: {
         title: "GNOME Nepal Docs",
-        logo: {
-          alt: "GNOME Nepal Logo",
-          src: "img/logo.svg",
-        },
         items: [
           {
             type: "docSidebar",
