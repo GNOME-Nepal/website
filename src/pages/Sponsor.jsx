@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const sponsor_url = import.meta.env.VITE_SPONSOR_URL;
 
 const Sponsor = () => {
-    useEffect(() => {
-      window.location.href = sponsor_url;
-    }, []);
+  useEffect(() => {
+    window.location.href = sponsor_url;
+  }, []);
 
-    return;
-}
+  return;
+};
 
 export default Sponsor;

@@ -35,7 +35,7 @@ const SectionObserver = ({ id, className, ...rest }) => {
     return () => {
       intersectionObserver.unobserve(sectionElement);
     };
-  }, []);
+  }, [id, navigate]);
 
   return (
     <section

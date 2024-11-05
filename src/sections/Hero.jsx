@@ -1,9 +1,7 @@
-import React from "react";
 import bgGnomeNepal from "../assets/imgs/upper_section.svg";
 import bgGnomeNepalMobile from "../assets/imgs/upper_section_mobile.svg";
 import SectionObserver from "@/components/Observer";
 import Image from "@/components/Image";
-import Diya from "@/components/Diya";
 
 const Hero = () => {
   return (

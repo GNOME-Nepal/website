@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Accordian from "../components/Accordian";
 import clsx from "clsx";
 import SectionObserver from "@/components/Observer";
@@ -137,7 +137,7 @@ const FAQDesktop = () => {
   );
 };
 
-const FAQ = () => {
+const Faq = () => {
   return (
     <SectionObserver id="faq">
       <div className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-4">
@@ -156,4 +156,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

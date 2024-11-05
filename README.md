@@ -7,7 +7,6 @@
   </a>
 </p>
 
-
 <p align="center">
 <a href="https://opensource.org/license/mit">
   <img src="https://img.shields.io/badge/License-MIT%20-blue.svg" alt="License">
@@ -21,7 +20,6 @@
   </strong>
   
 </div>
-
 
 <div class="flex" align="center">
   <br />
@@ -54,38 +52,38 @@ To install and run the GNOME Nepal website locally, follow these steps:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/GNOME-Nepal/website.git
-    ```
+   ```bash
+   git clone https://github.com/GNOME-Nepal/website.git
+   ```
 
 2. Navigate to the project directory:
 
-    ```bash
-    cd website
-    ```
+   ```bash
+   cd website
+   ```
 
 3. Install the dependencies:
 
-    ```bash
-    yarn install
-    ```
-     ```bash
-    npm i 
-    ```
+   ```bash
+   yarn install
+   ```
+
+   ```bash
+   npm i
+   ```
 
 4. Start the development server:
 
-    ```bash
-    yarn run dev
-    ```
+   ```bash
+   yarn run dev
+   ```
 
-    
-
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 # Contributing
+
 We welcome contributions to enhance this project! Whether you're fixing bugs, adding new features, or improving documentation, your help is appreciated.
 
 For detailed guidelines, check out our contributing [guidelines](CONTRIBUTING.md).
@@ -93,10 +91,3 @@ For detailed guidelines, check out our contributing [guidelines](CONTRIBUTING.md
 ## License
 
 This project is licensed under the MIT License.
-
-
-
-
-
-
-
