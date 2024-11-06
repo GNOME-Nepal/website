@@ -5,7 +5,6 @@ date: "2024-11-04"
 tags: [opensource]
 ---
 
-
 Docusaurus makes it super simple to create a site that combines both project documentation and a blog, perfect for open-source projects or any organized knowledge base.
 
 <!-- truncate -->
@@ -36,18 +35,19 @@ Docusaurus makes it super simple to create a site that combines both project doc
    ```javascript
    module.exports = {
      mySidebar: [
-       'getting-started',
+       "getting-started",
        {
-         type: 'category',
-         label: 'Guides',
-         items: ['setup-guide', 'features'],
+         type: "category",
+         label: "Guides",
+         items: ["setup-guide", "features"],
        },
      ],
    };
    ```
-### Previewing Your Docs
-Add your content on the respective file then to preview your changes, start the site locally with yarn run dev. This command will launch both the main site and the docs section in parallel. Then, visit http://localhost:5173/blog to see docs site in the browser.
 
+### Previewing Your Docs
+
+Add your content on the respective file then to preview your changes, start the site locally with yarn run dev. This command will launch both the main site and the docs section in parallel. Then, visit http://localhost:5173/blog to see docs site in the browser.
 
 ### Wrapping Up
 

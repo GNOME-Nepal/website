@@ -9,7 +9,13 @@
     "start:docusaurus": "cd docusaurus && yarn start",
     "build": "vite build && cd docusaurus && npm install && npm run build && mkdir -p ../dist/docs && cp -R build/* ../dist/docs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --port 5173"
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "check-lint": "npm run lint-staged",
+    "lint-staged": "lint-staged",
+    "format-check": "prettier --check .",
+    "format": "prettier --write .",
+    "preview": "vite preview --port 5173",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -38,12 +44,25 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.4.38",
+    "prettier": "3.3.3",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -33,7 +33,7 @@ export const contributors = [
   },
 ];
 
-const draftContributors = [
+export const draftContributors = [
   {
     name: "Manjul Tamrakar",
     photo: "/contributors/c1.jpg",
@@ -126,7 +126,7 @@ export const events = [
   },
 ];
 
-const draftEvents = [
+export const draftEvents = [
   {
     title: "Software Freedom Day 2024",
     date: "Sep 21, 2024",

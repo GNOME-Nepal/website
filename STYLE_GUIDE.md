@@ -3,6 +3,7 @@
 This style guide provides guidelines for writing and formatting code, commit messages, and branch names to ensure consistency and maintainability across the project.
 
 ## Table of Contents
+
 - [General Guidelines](#general-guidelines)
 - [Commit Message Conventions](#commit-message-conventions)
 - [Branch Naming Conventions](#branch-naming-conventions)
@@ -66,7 +67,6 @@ docs/improve-readme
 ## Code Formatting
 
 Consistent code formatting improves readability and maintainability. We use Prettier to format our code automatically. You can use the default Prettier configuration for React.js projects.
-
 
 ---
 

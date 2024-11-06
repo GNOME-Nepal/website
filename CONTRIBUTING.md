@@ -3,6 +3,7 @@
 Thank you for showing an interest in contributing to GNOME-Nepal! All kinds of contributions are valuable to us. In this guide, we will cover how you can quickly onboard and make your first contribution.
 
 ## Table of Contents
+
 - [Code of Conduct](#code-of-conduct)
 - [How to Contribute](#how-to-contribute)
 - [Getting Started](#getting-started)
@@ -20,6 +21,7 @@ Please read and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By particip
 ## How to Contribute
 
 You can contribute in several ways:
+
 - Reporting bugs
 - Suggesting features or enhancements
 - Writing or improving documentation
@@ -31,12 +33,14 @@ You can contribute in several ways:
    Fork the repository to your GitHub account by clicking the "Fork" button on the repository page.
 
 2. **Clone the forked repository:**
+
    ```bash
    git clone https://github.com/GNOME-Nepal/website.git
    cd website
    ```
 
 3. **Set up the upstream remote:**
+
    ```bash
    git remote add upstream https://github.com/GNOME-Nepal/website.git
    ```
@@ -45,9 +49,11 @@ You can contribute in several ways:
    ```bash
    git checkout -b your-branch-name
    ```
+
 ## Development Workflow
 
 1. **Keep your fork up to date:**
+
    ```bash
    git fetch upstream
    git checkout main
@@ -58,9 +64,10 @@ You can contribute in several ways:
    Implement your changes in the relevant files.
 
 3. **Test your changes:**
-    Ensure your changes work as intended and do not introduce new issues.
+   Ensure your changes work as intended and do not introduce new issues.
 
 4. **Commit your changes:**
+
    ```bash
    git add .
    git commit -m "Description of the changes"
@@ -85,6 +92,7 @@ You can contribute in several ways:
 ## Reporting Issues
 
 If you encounter any issues, please report them using the [Issue Tracker](https://github.com/GNOME-Nepal/website/issues). When reporting an issue, please include:
+
 - A clear and descriptive title
 - A detailed description of the problem
 - Steps to reproduce the issue
@@ -105,4 +113,3 @@ By contributing, you agree that your contributions will be licensed under the pr
 ---
 
 Thank you for your interest in contributing! If you have any questions, feel free to reach out to the maintainers or open an issue for assistance.
-

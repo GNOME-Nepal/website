@@ -1,6 +1,4 @@
-import React from 'react'
-
-const Banner = ({message}) => {
+const Banner = ({ message }) => {
   return (
     <>
       <div className="hidden lg:block bg-orange-500 text-primary-foreground p-[8px] text-center text-md z-999">
@@ -10,6 +8,6 @@ const Banner = ({message}) => {
       </div>
     </>
   );
-}
+};
 
-export default Banner
+export default Banner;

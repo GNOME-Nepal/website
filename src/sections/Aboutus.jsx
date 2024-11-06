@@ -1,7 +1,6 @@
 import Image from "@/components/Image";
 import SectionObserver from "@/components/Observer";
 import { ChevronRight } from "lucide-react";
-import React from "react";
 
 const Aboutus = () => {
   const missions = [
@@ -33,8 +32,8 @@ const Aboutus = () => {
           <h3 className="text-2xl font-bold">Our Vision</h3>
           <p className="lg:text-lg">
             To encourage the use of GNOME and related open-source projects in
-            Nepal and empower the local contributors to represent Nepal's Open
-            source internationally.
+            Nepal and empower the local contributors to represent Nepal&apos;s
+            Open source internationally.
           </p>
 
           <h3 className="text-2xl font-bold">Our Mission</h3>

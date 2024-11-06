@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'Pre-commit hook started...'
+echo 'Linting and testing files'
+
+# Check ESLint Standards
+npm run check-lint ||
+    (
+        echo 'ESLint check failed. Please fix the issues and try again.'
+        false
+    )
+
+# If everything passes... Now we can commit
+echo 'All checks passed. Begin Commenting :)'

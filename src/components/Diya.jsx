@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 
-const Diya = ({ side }) => {
+const Diya = () => {
   const [open, setOpen] = useState(localStorage.getItem("diya") === "true");
 
   const ignite = () => {
@@ -9,10 +9,9 @@ const Diya = ({ side }) => {
   };
 
   //save the diya state in local storage
-   React.useEffect(() => {
-        localStorage.setItem("diya", open);
-   }, [open]);
-
+  React.useEffect(() => {
+    localStorage.setItem("diya", open);
+  }, [open]);
 
   return (
     <>

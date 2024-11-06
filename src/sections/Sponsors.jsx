@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Sponsors = () => {
   const scrollRef = useRef(null);
@@ -22,7 +22,6 @@ const Sponsors = () => {
     if (!scrollContainer) return;
 
     const scrollWidth = scrollContainer.scrollWidth;
-    const clientWidth = scrollContainer.clientWidth;
 
     let scrollPosition = 0;
     const scroll = () => {

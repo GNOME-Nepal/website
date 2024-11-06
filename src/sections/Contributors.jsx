@@ -1,4 +1,3 @@
-import React from "react";
 import ContributorsDetails from "../components/ContributorsDetails";
 import SectionObserver from "@/components/Observer";
 
