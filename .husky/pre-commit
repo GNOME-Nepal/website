@@ -1,21 +1,15 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo '-----------------------------------------------------------------------'
-echo '-- 🏗️👷 Checking formats, testing and building your project before committing  --'
-echo '-----------------------------------------------------------------------'
+echo 'Pre-commit hook started...'
+echo 'Linting and testing files'
 
 # Check ESLint Standards
 npm run check-lint ||
     (
-        echo '----------------------------------------------------------------------'
-        echo '🤯🥶 Formatting and Linting checks failed. Make the required changes listed above, add changes and try to commit again.'
-        echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        echo 'ESLint check failed. Please fix the issues and try again.'
         false
     )
 
 # If everything passes... Now we can commit
-echo ' ------------------------------------------------------------'
-echo '|        ✅✅✅✅ Yeppie, all test passed!!                     |'
-echo '|        😁🤗 Begin comitting...... 👍👍                      |'
-echo ' ------------------------------------------------------------'
+echo 'All checks passed. Begin Commenting :)'
