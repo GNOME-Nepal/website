@@ -4,11 +4,11 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   // uncomment the following lines to enable proxy in local development
-  // server: {
-  //   proxy: {
-  //     "/docs": "http://localhost:3000",
-  //   },
-  // },
+  server: {
+    proxy: {
+      "/docs": "http://localhost:3000",
+    },
+  },
   plugins: [react()],
   resolve: {
     alias: {

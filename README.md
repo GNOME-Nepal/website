@@ -65,11 +65,11 @@ To install and run the GNOME Nepal website locally, follow these steps:
 3. Install the dependencies:
 
    ```bash
-   yarn install
+   yarn install && cd docusaurus && yarn install
    ```
 
    ```bash
-   npm i
+   npm i && cd docusaurus && npm i
    ```
 
 4. Start the development server:
@@ -81,6 +81,9 @@ To install and run the GNOME Nepal website locally, follow these steps:
    ```bash
    npm run dev
    ```
+---
+> - Main site: `http://localhost:5173`.
+> - Docs site: `http://localhost:5173/docs`.
 
 # Contributing
 

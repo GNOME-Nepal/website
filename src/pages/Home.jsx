@@ -2,7 +2,7 @@ import Hero from "../sections/Hero";
 import {
   Aboutus,
   Contributors,
-  FAQ,
+  Faq,
   Events,
   Newsletter,
   Sponsors,
@@ -16,7 +16,7 @@ const Home = () => {
         <Aboutus />
         <Events />
         <Contributors />
-        <FAQ />
+        <Faq />
         <Newsletter />
         <Sponsors />
       </div>
