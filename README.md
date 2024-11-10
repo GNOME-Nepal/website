@@ -81,7 +81,9 @@ To install and run the GNOME Nepal website locally, follow these steps:
    ```bash
    npm run dev
    ```
+
 ---
+
 > - Main site: `http://localhost:5173`.
 > - Docs site: `http://localhost:5173/docs`.
 
