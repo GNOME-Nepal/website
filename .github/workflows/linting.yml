@@ -1,4 +1,4 @@
-name: Linter
+name: Lint and Build
 
 on:
     pull_request:
@@ -6,8 +6,8 @@ on:
             - "**"
 
 jobs:
-    run:
-        name: Linter
+    build-website:
+        name: Check Standard and Build Website
         runs-on: ubuntu-latest
 
         steps:
@@ -29,3 +29,31 @@ jobs:
             - name: Run Linter
               run:  
                 npm run lint
+
+            - name: Build Website
+              run:  
+                npm run build
+
+    build-docs:
+        name: Build Docs
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v4
+
+            - name: Set Node.js version
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 22
+
+            - name: Cd to docusaurus
+              run: cd ./docusaurus
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build Docs
+              run:  
+                npm run build
+
