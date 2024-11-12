@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { addEmail, getBaseId, getEmails } from "@/lib/function";
 import { useToast } from "@/hooks/use-toast";
-import { RefreshCw } from "lucide-react";
+// import { RefreshCw } from "lucide-react";
 import { isValidEmail } from "@/lib/utils";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e) => {
@@ -20,65 +19,24 @@ const Newsletter = () => {
       });
       return;
     }
-    try {
-      setLoading(true);
-      const res = await getBaseId();
-      const baseid = res.bases?.[0]?.id;
-      const emails = await getEmails(baseid);
-      const found = emails.records?.find(
-        (record) => record.fields.Email === email,
-      );
-      if (found) {
-        toast({
-          title: "Response",
-          description: (
-            <pre className="w-[340px] rounded-md bg-slate-950 p-2">
-              <code className="text-white">
-                {JSON.stringify(
-                  msg("You are already subscribed!", 201),
-                  null,
-                  2,
-                )}
-              </code>
-            </pre>
-          ),
-        });
-        setLoading(false);
-        setEmail("");
-        return;
-      }
-      const resStatus = await addEmail(baseid, email);
-      if (resStatus === 200) {
-        toast({
-          title: "Response",
-          description: (
-            <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-              <code className="text-white">
-                {JSON.stringify(msg("Subscribed ✅", 200), null, 2)}
-              </code>
-            </pre>
-          ),
-        });
-      }
-      setLoading(false);
-      setEmail("");
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong",
-      });
-      setLoading(false);
-      setEmail("");
-      console.log(error);
-    }
+    // toast({
+    //   title: "Response",
+    //   description: (
+    //     <pre className="w-[340px] rounded-md bg-slate-950 p-2">
+    //       <code className="text-white">
+    //         {JSON.stringify(msg("You are already subscribed!", 201), null, 2)}
+    //       </code>
+    //     </pre>
+    //   ),
+    // });
   };
 
-  const msg = (message, code) => {
-    return {
-      message,
-      code,
-    };
-  };
+  // const msg = (message, code) => {
+  //   return {
+  //     message,
+  //     code,
+  //   };
+  // };
 
   return (
     <section
@@ -135,12 +93,13 @@ const Newsletter = () => {
                         padding: "12px 24px",
                         borderRadius: "8px",
                       }}
-                      disabled={loading}
+                      // disabled={loading}
                     >
-                      {loading && (
+                      {/* {loading && (
                         <RefreshCw className="h-4 w-4 animate-spin" />
-                      )}
-                      {loading ? "Loading" : "Subscribe"}
+                      )} */}
+                      {/* {loading ? "Loading" : "Subscribe"} */}
+                      Subscribe
                     </Button>
                   </div>
                 </form>
