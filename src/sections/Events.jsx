@@ -4,7 +4,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import SectionObserver from "@/components/Observer";
 import { Calendar, UsersRound } from "lucide-react";
-import { events } from "@/data/data";
 import {
   MapPinIcon,
   TwitterIcon,
@@ -41,9 +40,6 @@ const Events = () => {
   };
 
   const speakersList = getSpeakers();
-
-  console.log(data);
-
   return (
     <SectionObserver id="events">
       <section id="events" className="justify-center">
@@ -360,7 +356,7 @@ const Events = () => {
                         RSVP
                       </a>
                     </Button>
-                    {events[expandedCard].calendar && (
+                    {data[expandedCard].calendar && (
                       <Button variant="secondary">
                         <a
                           target="_blank"
