@@ -29,7 +29,7 @@ const ContributorsDetails = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading our builders</div>;
+    return <div>Loading....</div>;
   }
 
   function getBlogUrl(blog) {

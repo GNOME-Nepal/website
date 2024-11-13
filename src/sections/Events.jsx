@@ -356,7 +356,7 @@ const Events = () => {
                         RSVP
                       </a>
                     </Button>
-                    {data[expandedCard].calendar && (
+                    {data[expandedCard].add_to_calender_url && (
                       <Button variant="secondary">
                         <a
                           target="_blank"
