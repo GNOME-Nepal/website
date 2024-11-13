@@ -4,33 +4,7 @@ import clsx from "clsx";
 import SectionObserver from "@/components/Observer";
 import { useTheme } from "@/components/theme-provider";
 import { ArrowIcon } from "@/assets/icons";
-
-const faqs = [
-  {
-    question: "What is GNOME Nepal",
-    answer:
-      "GNOME Nepal is a local chapter of the GNOME Foundation in Nepal whose main motive is to encourage the use of GNOME & related open-source projects.",
-  },
-  {
-    question: "How can I join this community?",
-    answer:
-      "Join our community on Discord! It is completely free and open to everyone.",
-  },
-  {
-    question: "What is Open Source?",
-    answer:
-      "Open source software is software whose code is publicly available, allowing anyone to view, modify, and distribute it freely.",
-  },
-  {
-    question: "Can I Contribute to the project?",
-    answer:
-      "Absolutely! We welcome contributions from everyone. To get started, check out our GitHub organization. If you have any questions or need help, feel free to join our community on Discord. You can connect with other contributors, ask questions, and collaborate with the team.",
-  },
-  {
-    question: "Are there any exciting events coming up?",
-    answer: "Check out upcoming events in the events section.",
-  },
-];
+import { useFaqs } from "@/hooks/useFaqs";
 
 const FAQItem = ({ question, onClick, isActive }) => {
   const { theme } = useTheme();
@@ -85,10 +59,10 @@ const FAQList = ({ faqs, activeIndex, setActiveIndex }) => {
         "bg-gray-800": theme === "dark",
       })}
     >
-      {faqs.map((faq, index) => (
+      {faqs?.map((faq, index) => (
         <FAQItem
           key={index}
-          question={faq.question}
+          question={faq?.question}
           onClick={() => setActiveIndex(index)}
           isActive={activeIndex === index}
         />
@@ -97,7 +71,7 @@ const FAQList = ({ faqs, activeIndex, setActiveIndex }) => {
   );
 };
 
-const FAQDesktop = () => {
+const FAQDesktop = ({ faqs }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { theme } = useTheme();
 
@@ -122,13 +96,13 @@ const FAQDesktop = () => {
         {activeIndex !== null && (
           <div>
             <h2 className="text-2xl font-semibold mb-2">
-              {faqs[activeIndex].question}
+              {faqs[activeIndex]?.question}
             </h2>
             <p
               className="text-lg"
               style={{ color: theme === "light" ? "gray" : "white" }}
             >
-              {faqs[activeIndex].answer}
+              {faqs[activeIndex]?.answer}
             </p>
           </div>
         )}
@@ -138,6 +112,8 @@ const FAQDesktop = () => {
 };
 
 const Faq = () => {
+  const { data } = useFaqs();
+  const faqs = data || [];
   return (
     <SectionObserver id="faq">
       <div className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-4">
@@ -150,7 +126,7 @@ const Faq = () => {
         <h1 className="text-2xl font-bold my-2 block lg:hidden">FAQs</h1>
 
         <Accordian items={faqs} className="block lg:hidden lg:mt-8" />
-        <FAQDesktop />
+        <FAQDesktop faqs={faqs} />
       </div>
     </SectionObserver>
   );

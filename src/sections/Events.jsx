@@ -4,7 +4,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import SectionObserver from "@/components/Observer";
 import { Calendar, UsersRound } from "lucide-react";
-import { events } from "@/data/data";
 import {
   MapPinIcon,
   TwitterIcon,
@@ -12,18 +11,39 @@ import {
   LinkedinIcon,
   ClockIcon,
 } from "@/assets/icons";
+import { useEvents } from "@/hooks/useEvents";
 
 const Events = () => {
   const [expandedCard, setExpandedCard] = useState(0);
   const [activeTab, setActiveTab] = useState("event-details");
+  const { data } = useEvents();
+
   const handleCardClick = (index) => {
     setExpandedCard(index);
   };
 
+  const getSpeakers = () => {
+    let speakers = [];
+    data?.map((item) =>
+      item.schedules?.map((schedule) =>
+        schedule.speakers?.map((speaker) => speakers.push(speaker)),
+      ),
+    );
+
+    const uniqueSpeakers = new Map();
+    speakers.forEach((item) => {
+      uniqueSpeakers.set(item.name, item);
+    });
+
+    speakers = Array.from(uniqueSpeakers.values());
+    return speakers;
+  };
+
+  const speakersList = getSpeakers();
   return (
     <SectionObserver id="events">
       <section id="events" className="justify-center">
-        {events.length > 0 ? (
+        {data?.length > 0 ? (
           <div className="flex flex-col md:flex-row md:gap-4 h-content mt-2">
             <div className="flex flex-col items-center md:items-start w-full md:w-1/3 bg-background">
               <div className="text-red-400  font-medium rounded-[50px] text-center py-2  bg-red-100 dark:bg-[#a41b0e21] dark:text-[#D72323] border-r-[50%] w-60">
@@ -32,7 +52,7 @@ const Events = () => {
               <div className="md:text-left text-center mt-2 mb-4">
                 <h2 className="text-3xl font-bold">Events Calendar</h2>
               </div>
-              {events.map((event, index) => (
+              {data.map((event, index) => (
                 <div
                   key={index}
                   className={`bg-card p-4 rounded-lg shadow-md cursor-pointer transition-all hover:shadow-lg ${
@@ -45,10 +65,19 @@ const Events = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-lg font-semibold">{event.title}</h3>
-                      <p className="text-muted">{event.date}</p>
+                      <p className="text-muted">
+                        {event.start_date} to {event.end_date}
+                      </p>
                     </div>
                   </div>
-                  <p className="line-clamp-2">{event.description}</p>
+                  <p className="line-clamp-2">
+                    {
+                      new DOMParser().parseFromString(
+                        event.description,
+                        "text/html",
+                      ).body.textContent
+                    }
+                  </p>
                 </div>
               ))}
             </div>
@@ -61,7 +90,7 @@ const Events = () => {
                         Event Details
                       </div>
                       <h2 className="text-3xl font-bold">
-                        {events[expandedCard].title}
+                        {data[expandedCard].title}
                       </h2>
                     </div>
                   </div>
@@ -178,23 +207,37 @@ const Events = () => {
                     </TabsList>
                     <TabsContent value="event-details">
                       <div className="mt-4">
-                        <p>{events[expandedCard].description}</p>
+                        <p>
+                          {
+                            new DOMParser().parseFromString(
+                              data[expandedCard].description,
+                              "text/html",
+                            ).body.textContent
+                          }
+                        </p>
                         <div className="mt-4 flex items-center gap-4">
                           <div className="flex items-center gap-2">
                             <MapPinIcon className="w-5 h-5 text-muted-foreground" />
-                            <span>{events[expandedCard].location}</span>
+                            <a
+                              href={
+                                data[expandedCard].location.google_maps_location
+                              }
+                            >
+                              <span>{data[expandedCard].location.name}</span>
+                            </a>
                           </div>
-                          {events[expandedCard].time !== "" && (
-                            <div className="flex items-center gap-2">
-                              <ClockIcon className="w-5 h-5 text-muted-foreground" />
-                              <span>{events[expandedCard].time}</span>
-                            </div>
-                          )}
+                          {data[expandedCard].time !== "" ||
+                            (undefined && (
+                              <div className="flex items-center gap-2">
+                                <ClockIcon className="w-5 h-5 text-muted-foreground" />
+                                <span>{data[expandedCard].time}</span>
+                              </div>
+                            ))}
                         </div>
                         <div className="mt-4">
                           <h3 className="text-lg font-semibold">Hot Topics</h3>
                           <div className="flex flex-wrap gap-2 mt-2">
-                            {events[expandedCard].hotTopics.map(
+                            {data[expandedCard].hot_topics.map(
                               (topic, index) => (
                                 <div
                                   key={index}
@@ -210,7 +253,7 @@ const Events = () => {
                     </TabsContent>
                     <TabsContent value="schedule">
                       <div className="mt-4 max-h-64 overflow-y-auto">
-                        {events[expandedCard].schedule.length === 0 ? (
+                        {data[expandedCard].schedules.length === 0 ? (
                           <div className="flex flex-col items-center text-center justify-center h-52">
                             <Calendar className="h-12 w-12 text-muted-foreground mb-4" />
                             <h2 className="text-lg font-semibold mb-2">
@@ -222,30 +265,31 @@ const Events = () => {
                           </div>
                         ) : (
                           <div className="grid grid-cols-2 gap-4">
-                            {events[expandedCard].schedule.map(
-                              (item, index) => (
-                                <div
-                                  key={index}
-                                  className="bg-muted p-4 rounded-lg relative overflow-visible	"
-                                >
-                                  <span className="absolute top-[-5px] right-0 text-xl">
-                                    {item.emoji}
-                                  </span>
-                                  <div className="font-semibold">
-                                    {item.time}
-                                  </div>
-                                  <div className="text-sm text-stone-600">
-                                    {item.event}
-                                  </div>
+                            {data[expandedCard].schedules.map((item, index) => (
+                              <div
+                                key={index}
+                                className="bg-muted p-4 rounded-lg relative"
+                              >
+                                <span className="absolute top-[3px] right-[4px] text-xl">
+                                  {item.emoji}
+                                </span>
+                                <div className="font-semibold">
+                                  {item.start_time} to {item.end_time}
                                 </div>
-                              ),
-                            )}
+                                <div className="text-sm text-stone-600">
+                                  {item.description}
+                                </div>
+                                <div className="text-sm text-stone-600">
+                                  By {item.speakers.map((a) => a.name)}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         )}
                       </div>
                     </TabsContent>
                     <TabsContent value="speakers">
-                      {events[expandedCard].speakers.length === 0 ? (
+                      {speakersList?.length === 0 ? (
                         <div className="flex flex-col items-center text-center justify-center h-52">
                           <UsersRound className="h-12 w-12 text-muted-foreground mb-4" />
                           <h2 className="text-lg font-semibold mb-2">
@@ -256,70 +300,68 @@ const Events = () => {
                           </p>
                         </div>
                       ) : (
-                        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 max-h-64 overflow-y-auto">
-                          {events[expandedCard].speakers.map(
-                            (speaker, index) => (
-                              <div
-                                key={index}
-                                className="flex items-start gap-4"
-                              >
-                                <Avatar className="w-12 h-12 border">
-                                  <AvatarImage src="/placeholder-user.jpg" />
-                                  <AvatarFallback>
-                                    {speaker.name.charAt(0)}
-                                  </AvatarFallback>
-                                </Avatar>
-                                <div className="space-y-1">
-                                  <div className="font-semibold">
-                                    {speaker.name}
-                                  </div>
-                                  <div className="text-sm text-muted-foreground">
-                                    {speaker.profession}
-                                  </div>
-                                  <div className="flex items-center gap-2">
-                                    {speaker.twitter && (
-                                      <div className="flex items-center gap-2 text-muted-foreground">
-                                        <a
-                                          href={speaker.twitter}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="hover:underline"
-                                        >
-                                          <TwitterIcon className="w-4 h-4" />
-                                        </a>
-                                      </div>
-                                    )}
+                        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 max-h-64 overflow-y-auto">
+                          {speakersList?.map((speaker, index) => (
+                            <div key={index} className="flex items-start gap-4">
+                              <Avatar className="w-12 h-12 border">
+                                <AvatarImage src="/placeholder-user.jpg" />
+                                <AvatarFallback>
+                                  {speaker.name.charAt(0)}
+                                </AvatarFallback>
+                              </Avatar>
+                              <div className="space-y-1">
+                                <div className="font-semibold">
+                                  {speaker.name}
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  {speaker.profession}
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  {speaker.twitter && (
+                                    <div className="flex items-center gap-2 text-muted-foreground">
+                                      <a
+                                        href={speaker.twitter}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:underline"
+                                      >
+                                        <TwitterIcon className="w-4 h-4" />
+                                      </a>
+                                    </div>
+                                  )}
 
-                                    {speaker.linkedin && (
-                                      <div className="flex items-center gap-2 text-muted-foreground">
-                                        <a
-                                          href={speaker.linkedin}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="hover:underline"
-                                        >
-                                          <LinkedinIcon className="w-4 h-4" />
-                                        </a>
-                                      </div>
-                                    )}
-                                  </div>
+                                  {speaker.linkedin && (
+                                    <div className="flex items-center gap-2 text-muted-foreground">
+                                      <a
+                                        href={speaker.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:underline"
+                                      >
+                                        <LinkedinIcon className="w-4 h-4" />
+                                      </a>
+                                    </div>
+                                  )}
                                 </div>
                               </div>
-                            ),
-                          )}
+                            </div>
+                          ))}
                         </div>
                       )}
                     </TabsContent>
                   </Tabs>
                   <div className="mt-4 flex gap-2">
                     <Button>
-                      <a target="_blank" href={events[expandedCard].rsvp}>
+                      <a target="_blank" href={data[expandedCard].rsvp_url}>
                         RSVP
                       </a>
                     </Button>
-                    {events[expandedCard].calendar && (
+                    {data[expandedCard].add_to_calender_url && (
                       <Button variant="secondary">
-                        <a target="_blank" href={events[expandedCard].calendar}>
+                        <a
+                          target="_blank"
+                          href={data[expandedCard].add_to_calender_url}
+                        >
                           Add to Calendar
                         </a>
                       </Button>

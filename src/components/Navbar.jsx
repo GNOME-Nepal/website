@@ -1,11 +1,9 @@
 import { useState } from "react";
 import Links from "./Links";
 import { ModeToggle } from "./mode-toggle";
-import Diya from "./Diya";
-import Banner from "./Banner";
 
 const Navbar = () => {
-  const diya = localStorage.getItem("diya") === "true";
+  // const diya = localStorage.getItem("diya") === "true";
   const [open, setOpen] = useState(false);
   const openNav = () => {
     setOpen(!open);
@@ -27,15 +25,15 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed w-full z-50 top-0 start-0 border-b border-gray-300 bg-background dark:bg-gray-900">
-        <Banner
+        {/* <Banner
           message={
             diya
               ? "🪔 Happy Tihar and Diwali to Everyone 🪔"
               : "🪔 Happy Tihar and Diwali to Everyone 🪔 [Tap Diya to ignite]"
           }
-        />
+        /> */}
         <div className="px-8 md:px-14 lg:px-28">
-          <Diya side="left" />
+          {/* <Diya side="left" /> */}
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
             <a
               href=""
