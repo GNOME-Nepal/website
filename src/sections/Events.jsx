@@ -65,7 +65,7 @@ const Events = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-lg font-semibold">{event.title}</h3>
-                      <p className="text-muted">
+                      <p className="dark:text-black text-muted">
                         {event.start_date} to {event.end_date}
                       </p>
                     </div>

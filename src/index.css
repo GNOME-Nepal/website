@@ -59,6 +59,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: all 0.3s ease-in-out;
+}
+
 @layer base {
   * {
     @apply border-border;
