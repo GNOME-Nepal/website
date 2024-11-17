@@ -207,14 +207,14 @@ const Events = () => {
                     </TabsList>
                     <TabsContent value="event-details">
                       <div className="mt-4">
-                        <p>
-                          {
-                            new DOMParser().parseFromString(
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: new DOMParser().parseFromString(
                               data[expandedCard].description,
                               "text/html",
-                            ).body.textContent
-                          }
-                        </p>
+                            ).body.innerHTML,
+                          }}
+                        />
                         <div className="mt-4 flex items-center gap-4">
                           <div className="flex items-center gap-2">
                             <MapPinIcon className="w-5 h-5 text-muted-foreground" />
