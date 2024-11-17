@@ -45,7 +45,7 @@ const Events = () => {
       <section id="events" className="justify-center">
         {data?.length > 0 ? (
           <div className="flex flex-col md:flex-row md:gap-4 h-content mt-2">
-            <div className="flex flex-col items-center md:items-start w-full md:w-1/3 bg-background">
+            <div className="gap-2 flex flex-col items-center md:items-start w-full md:w-1/3 bg-background">
               <div className="text-red-400  font-medium rounded-[50px] text-center py-2  bg-red-100 dark:bg-[#a41b0e21] dark:text-[#D72323] border-r-[50%] w-60">
                 Upcoming Events
               </div>
@@ -65,7 +65,7 @@ const Events = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-lg font-semibold">{event.title}</h3>
-                      <p className="text-muted">
+                      <p>
                         {event.start_date} to {event.end_date}
                       </p>
                     </div>
