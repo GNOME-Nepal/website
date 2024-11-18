@@ -12,11 +12,13 @@ import {
   ClockIcon,
 } from "@/assets/icons";
 import { useEvents } from "@/hooks/useEvents";
+import { useTheme } from "@/components/theme-provider";
 
 const Events = () => {
   const [expandedCard, setExpandedCard] = useState(0);
   const [activeTab, setActiveTab] = useState("event-details");
   const { data } = useEvents();
+  const { theme } = useTheme();
 
   const handleCardClick = (index) => {
     setExpandedCard(index);
@@ -25,8 +27,8 @@ const Events = () => {
   const getSpeakers = () => {
     let speakers = [];
     data?.map((item) =>
-      item.schedules?.map((schedule) =>
-        schedule.speakers?.map((speaker) => speakers.push(speaker)),
+      item?.schedules?.map((schedule) =>
+        schedule?.speakers?.map((speaker) => speakers.push(speaker)),
       ),
     );
 
@@ -65,7 +67,14 @@ const Events = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-lg font-semibold">{event.title}</h3>
-                      <p>
+                      <p
+                        style={{
+                          color:
+                            theme === "light" || index === expandedCard
+                              ? "gray"
+                              : "white",
+                        }}
+                      >
                         {event.start_date} to {event.end_date}
                       </p>
                     </div>
@@ -222,6 +231,7 @@ const Events = () => {
                               href={
                                 data[expandedCard].location.google_maps_location
                               }
+                              target="_blank"
                             >
                               <span>{data[expandedCard].location.name}</span>
                             </a>

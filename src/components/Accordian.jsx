@@ -16,7 +16,7 @@ const Accordion = ({ items, className }) => {
         className,
       )}
     >
-      {items.map((item, index) => (
+      {items?.map((item, index) => (
         <div key={index} className="">
           <button
             className="w-full p-4 text-left"
