@@ -12,13 +12,16 @@ const Aboutus = () => {
 
   return (
     <SectionObserver id="aboutus">
-      <div id="aboutus-wrapper" className="flex flex-col 2xl:mt-10">
+      <div
+        id="aboutus-wrapper"
+        className="flex flex-col 2xl:mt-10 lg:pt-10 pt-4"
+      >
         <div className="relative image rounded-lg">
           <Image
             srcSet="/aboutus-small.jpg 400w, /aboutus-medium.jpg 800w, /aboutus.jpg 1200w"
             src="/aboutus.jpg"
             className="object-contain w-full h-full rounded-lg"
-            alt="Gnome Nepal Team gathering in one palce"
+            alt="Gnome Nepal Team gathering in one place"
           />
         </div>
         <div className="about flex flex-col md:gap-4 gap-2 lg:pt-8 pt-4">
