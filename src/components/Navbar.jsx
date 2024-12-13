@@ -59,7 +59,7 @@ const Navbar = () => {
               >
                 <button
                   type="button"
-                  className="text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-opacity-90 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-3 py-2 border border-transparent whitespace-nowrap"
+                  className="hidden md:flex text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-gray-200 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 border-2 border-[var(--foreground)] dark:border-[var(--primary-foreground)]"
                 >
                   Become a Member!
                 </button>
@@ -122,7 +122,7 @@ const Navbar = () => {
                 >
                   <button
                     type="button"
-                    className="w-full text-center text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-opacity-90 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-3 py-2 border border-transparent whitespace-nowrap"
+                    className="md:hidden mt-4 mx-auto flex text-[var(--primary-foreground)] bg-[var(--primary)] hover:bg-gray-200 dark:text-[var(--primary)] dark:bg-[var(--primary-foreground)] dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 border-2 border-[var(--foreground)] dark:border-[var(--primary-foreground)]"
                     onClick={() => setOpen(false)}
                   >
                     Become a Member!
