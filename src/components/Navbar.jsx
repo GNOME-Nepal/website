@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Links from "./Links";
 import { ModeToggle } from "./mode-toggle";
+import Banner from "./Banner";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [showUpperLayer, setShowUpperLayer] = useState(true);
+  const banner_data = {
+    emoji: "🚀",
+    message:
+      "We are organizing UbuCon 2025! Volunteer registration is now open.",
+    color: "bg-blue-400",
+    button: {
+      text: "Apply Here",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdgYpJJjErK9W5Pjw4GmMStXUcrmngfPteR_BpvY5awxzj5aQ/viewform",
+    },
+  };
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -18,9 +30,28 @@ const Navbar = () => {
     { to: "/docs", text: "Docs" },
   ];
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setShowUpperLayer(currentScrollY < lastScrollY || currentScrollY === 0);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="fixed w-full z-50 top-0 left-0 border-b border-gray-300 bg-background dark:bg-gray-900">
+      {/* Main Navbar */}
+      <nav
+        className={`fixed w-full z-40 left-0 border-b border-gray-300 bg-background dark:bg-gray-900 transition-[top] duration-300`}
+      >
+        <Banner data={banner_data} show={showUpperLayer} />
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto flex items-center justify-between py-3">
             {/* Logo Section */}
@@ -133,8 +164,9 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+
       {/* Spacer to prevent content from being hidden under the fixed navbar */}
-      <div className="mt-16"></div>
+      <div className="mt-20"></div>
     </>
   );
 };
