@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
+import { SiGnome } from "react-icons/si";
+import { FaArrowRight } from "react-icons/fa";
 import Links from "./Links";
 import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [showUpperLayer, setShowUpperLayer] = useState(true);
+
+  // dynamic announcement text and redirection link
+  const announcementText = "We're organizing UbuCon 2025!";
+  const redirectLink = "ubconsiteURL";
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -38,20 +44,39 @@ const Navbar = () => {
     <>
       {/* Upper Layer */}
       <div
-        className={`fixed w-full z-50 top-0 left-0 bg-white text-black py-2 px-3  transition-transform duration-300 ${
-          showUpperLayer ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed w-full z-50 top-0 left-0 bg-white text-black py-2 px-3 transition-transform duration-300 ${showUpperLayer ? "translate-y-0" : "-translate-y-full"}`}
       >
-        <div className="max-w-screen-xl mx-auto flex justify-center items-center">
-          <span className="text-sm font-medium">Welcome to GNOME Nepal!</span>
+        <div className="max-w-screen-xl mx-auto relative flex items-center">
+          {/* Left Side: Logo*/}
+          <a
+            href="/"
+            className="absolute left-0 flex items-center space-x-2 pl-4"
+          >
+            <span
+              className="text-xl sm:text-2xl font-semibold"
+              style={{ color: "var(--text-color)" }}
+            >
+              <SiGnome />
+            </span>
+          </a>
+
+          {/* Center: Annonuncement*/}
+          <div className="flex-1 text-center px-16">
+            <span className="text-sm font-medium">{announcementText}</span>
+          </div>
+
+          {/* Right Side: redirection URL with arrow Icon for mobile responsiveness */}
+          <div className="absolute right-0 pr-4 text-sm text-blue-600 hover:underline mt-1">
+            <a href={redirectLink} target="_blank" rel="noopener noreferrer">
+              <FaArrowRight className="inline-block ml-1" />
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Main Navbar */}
       <nav
-        className={`fixed w-full z-40 left-0 border-b border-gray-300 bg-background dark:bg-gray-900 transition-[top] duration-300 ${
-          showUpperLayer ? "top-[40px]" : "top-0"
-        }`}
+        className={`fixed w-full z-40 left-0 border-b border-gray-300 bg-background dark:bg-gray-900 transition-[top] duration-300 ${showUpperLayer ? "top-[40px]" : "top-0"}`}
       >
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto flex items-center justify-between py-3">
@@ -165,6 +190,7 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+
       {/* Spacer to prevent content from being hidden under the fixed navbar */}
       <div className="mt-20"></div>
     </>
