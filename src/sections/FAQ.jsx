@@ -113,43 +113,46 @@ const FAQDesktop = ({ faqs }) => {
 
 const Faq = () => {
   const { data } = useFaqs();
-  const faqs = data || [];
+  const items = [
+    {
+      question: "What is GNOME Nepal?",
+      answer:
+        "GNOME Nepal is an open-source organization focused on promoting collaboration and open-source culture in Nepal.",
+    },
+    {
+      question: "How can I join this community?",
+      answer: "You can join us by connecting through our Discord!",
+    },
+    {
+      question: "What is open source?",
+      answer:
+        "Open-source software is software made available under a license that allows users to freely use, study, modify, and share its source code.",
+    },
+    {
+      question: "Can I contribute to the organization?",
+      answer: "Absolutely, we welcome your contributions!",
+    },
+    {
+      question: "Are there any exciting events?",
+      answer:
+        "Check out the Events section to stay updated on our upcoming events.",
+    },
+  ];
+  const faqs = data || items;
   return (
     <SectionObserver id="faq">
-      {data?.length > 0 ? (
-        <div className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-4">
-          <div className="text-[purple] text-sm md:text-lg font-medium rounded-[50px] text-center py-2 p-4 bg-[#e7cdf0] border-r-[50%]">
-            Something you are wondering
-          </div>
-          <h1 className="text-4xl font-bold my-2 hidden lg:block">
-            Frequently Asked Questions
-          </h1>
-          <h1 className="text-2xl font-bold my-2 block lg:hidden">FAQs</h1>
-
-          <Accordian items={faqs} className="block lg:hidden lg:mt-8" />
-          <FAQDesktop faqs={faqs} />
+      <div className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-4">
+        <div className="text-[purple] text-sm md:text-lg font-medium rounded-[50px] text-center py-2 p-4 bg-[#e7cdf0] border-r-[50%]">
+          Something you are wondering
         </div>
-      ) : (
-        <div className="min-h-[40vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-4">
-          <div className="text-[purple] text-sm md:text-lg font-medium rounded-[50px] text-center py-2 p-4 bg-[#e7cdf0] border-r-[50%]">
-            Something you are wondering
-          </div>
-          <h1 className="text-4xl font-bold my-2 hidden lg:block">
-            Frequently Asked Questions
-          </h1>
-          <h1 className="text-2xl font-bold my-2 block lg:hidden">FAQs</h1>
+        <h1 className="text-4xl font-bold my-2 hidden lg:block">
+          Frequently Asked Questions
+        </h1>
+        <h1 className="text-2xl font-bold my-2 block lg:hidden">FAQs</h1>
 
-          <Accordian items={faqs} className="block lg:hidden lg:mt-8" />
-          <div className="bg-card p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-full mt-10">
-            <h3 className="text-muted-foreground text-lg font-semibold ">
-              No FAQs right now
-            </h3>
-            <p className="text-muted-foreground mt-2 text-center">
-              Please contact us directly if any questions.
-            </p>
-          </div>
-        </div>
-      )}
+        <Accordian items={faqs} className="block lg:hidden lg:mt-8" />
+        <FAQDesktop faqs={faqs} />
+      </div>
     </SectionObserver>
   );
 };
