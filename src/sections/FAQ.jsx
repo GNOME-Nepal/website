@@ -138,7 +138,7 @@ const Faq = () => {
         "Check out the Events section to stay updated on our upcoming events.",
     },
   ];
-  const faqs = data || items;
+  const faqs = data?.length > 0 ? data : items;
   return (
     <SectionObserver id="faq">
       <div className="min-h-[100vh] w-full h-full items-center justify-center flex flex-col lg:items-start px-4 md:px-0 py-4">
