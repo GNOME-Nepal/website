@@ -15,8 +15,8 @@ export default function Router() {
       element: <Sponsor />,
     },
     {
-      path: "*", // Catch-all route for unmatched paths
-      element: <NotFound />,
+      path: "*", // Catch-all route for unmatched non-hash routes
+      element: <NotFound />, // Display 404 page for invalid non-hash routes
     },
   ]);
 }
