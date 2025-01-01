@@ -8,13 +8,13 @@ const Navbar = () => {
   const [showUpperLayer, setShowUpperLayer] = useState(true);
   const banner_data = {
     emoji: "🚀",
-    message:
-      "We are organizing UbuCon 2025! Volunteer registration is now open.",
+    message: "",
     color: "bg-blue-400",
     button: {
-      text: "Apply Here",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSdgYpJJjErK9W5Pjw4GmMStXUcrmngfPteR_BpvY5awxzj5aQ/viewform",
+      text: "",
+      link: "",
     },
+    show: false,
   };
 
   const toggleMenu = () => {
@@ -51,7 +51,9 @@ const Navbar = () => {
       <nav
         className={`fixed w-full z-40 left-0 border-b border-gray-300 bg-background dark:bg-gray-900 transition-[top] duration-300`}
       >
-        <Banner data={banner_data} show={showUpperLayer} />
+        {banner_data.show && (
+          <Banner data={banner_data} show={showUpperLayer} />
+        )}
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="max-w-screen-xl mx-auto flex items-center justify-between py-3">
             {/* Logo Section */}
