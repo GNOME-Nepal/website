@@ -3,8 +3,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { RefreshCw } from "lucide-react";
-import { isValidEmail } from "@/lib/utils";
 import { useNewsletter } from "@/hooks/useNewsletter";
+
+// Enhanced email validation utility
+const emailValidation = (email) => {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+};
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -12,45 +17,50 @@ const Newsletter = () => {
 
   const { mutate, isPending } = useNewsletter();
 
+  // Centralized response handler for toasts
+  const handleToast = (type, title, description) => {
+    toast({
+      title,
+      description: (
+        <pre className="w-[340px] rounded-md bg-slate-950 p-2">
+          <code className="text-white">{description}</code>
+        </pre>
+      ),
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isValidEmail(email)) {
+
+    // Enhanced validation
+    if (!emailValidation(email)) {
       toast({
         title: "Error",
-        description: "Please enter a valid email",
+        description: "Please enter a valid email address.",
       });
       return;
     }
+
     mutate(email, {
       onSuccess: () => {
         setEmail("");
-        toast({
-          title: "Response",
-          description: (
-            <pre className="w-[340px] rounded-md bg-slate-950 p-2">
-              <code className="text-white">
-                {JSON.stringify({ msg: "Subscribed ✅", code: 200 }, null, 2)}
-              </code>
-            </pre>
-          ),
-        });
+        handleToast(
+          "success",
+          "Response",
+          JSON.stringify({ msg: "Subscribed ✅", code: 200 }, null, 2),
+        );
       },
       onError: (error) => {
         if (error?.status === 400) {
-          toast({
-            title: "Response",
-            description: (
-              <pre className="w-[340px] rounded-md bg-slate-950 p-2">
-                <code className="text-white">
-                  {JSON.stringify(
-                    { msg: "You are already subscribed!", code: 201 },
-                    null,
-                    2,
-                  )}
-                </code>
-              </pre>
+          handleToast(
+            "info",
+            "Response",
+            JSON.stringify(
+              { msg: "You are already subscribed!", code: 201 },
+              null,
+              2,
             ),
-          });
+          );
         } else {
           toast({
             title: "Error",
@@ -109,7 +119,11 @@ const Newsletter = () => {
                     <Button
                       type="button"
                       onClick={handleSubmit}
-                      className={`w-full sm:w-auto flex items-center justify-center text-center {'hover:opacity-90' : 'opacity-50 cursor-not-allowed'}`}
+                      className={`w-full sm:w-auto flex items-center justify-center text-center ${
+                        isPending
+                          ? "opacity-50 cursor-not-allowed"
+                          : "hover:opacity-90"
+                      }`}
                       style={{
                         backgroundColor: "var(--button-background)",
                         color: "var(--button-text)",
