@@ -73,7 +73,7 @@ const config = {
         logo:{
           alt:"Gnome Nepal logo",
           src :"../public/images/logo.png",
-          href: "https://gnome.org.np",
+          href: "https://nepal.gnome.org/",
         },
         links: [
           {
