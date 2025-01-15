@@ -70,6 +70,11 @@ const config = {
       },
       footer: {
         style: "dark",
+        logo:{
+          alt:"Gnome Nepal logo",
+          src :"img/logo.png",
+          href: "https://nepal.gnome.org/",
+        },
         links: [
           {
             title: "Docs",
@@ -89,15 +94,15 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discord.com/invite/tpsVFJN8WC",
               },
               {
                 label: "Linkedin",
-                href: "https://twitter.com/docusaurus",
+                href: "https://np.linkedin.com/company/gnomenepal",
               },
               {
                 label: "Instagram",
-                href: "https://twitter.com/docusaurus",
+                href: "https://www.instagram.com/gnomenepal/",
               },
             ],
           },
