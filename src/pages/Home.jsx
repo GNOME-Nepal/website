@@ -6,6 +6,7 @@ import {
   Events,
   Newsletter,
   Sponsors,
+  Gallery,
 } from "../sections";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <Events />
         <Contributors />
         <Faq />
+        <Gallery />
         <Newsletter />
         <Sponsors />
       </div>
