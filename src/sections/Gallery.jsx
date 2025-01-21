@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -120,6 +121,9 @@ const GalleryDialog = ({
       <DialogContent className="max-w-4xl outline-none">
         <DialogHeader>
           <DialogTitle>{selectedItem.title}</DialogTitle>
+          <DialogDescription className="hidden">
+            {selectedItem.title}
+          </DialogDescription>
         </DialogHeader>
         <div className="relative">
           {/* Active Image */}
@@ -218,8 +222,38 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Scrollable Gallery Container */}
-        <div className="gallery-scroll flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide">
+        {/* Scrollable Gallery Container for mobile */}
+        <div className="flex gallery-scroll overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide md:hidden">
+          {filteredItems.map((item) => (
+            <Card
+              key={item.id}
+              onClick={() => handleOpenGallery(item)}
+              className="snap-center overflow-hidden cursor-pointer min-w-[280px] h-[360px]"
+            >
+              <div className="relative">
+                <div className="h-1/2">
+                  <img
+                    src={item.card}
+                    alt={item.title}
+                    className="w-full aspect-video object-cover"
+                  />
+                </div>
+                <div className="bg-card h-1/2 p-4">
+                  <CardTitle className="text-lg mb-2">{item.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {item.description}
+                  </p>
+                  <div className="flex items-center text-sm text-primary">
+                    View Gallery ({item.images.length} images) →
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Scrollable Gallery Container for desktop */}
+        <div className="hidden gallery-scroll md:flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide">
           {filteredItems.map((item) => (
             <Card
               key={item.id}
