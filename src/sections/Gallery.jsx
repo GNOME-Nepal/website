@@ -11,89 +11,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-
-const categories = [
-  { id: "all", label: "GNOME NEPAL" },
-  { id: "meetup", label: "CHIYA GHAR MEETUP" },
-  { id: "conference", label: "UBUCON 2025" },
-  { id: "hackathon", label: "HACKATHON 2025" },
-];
-
-const galleryItems = [
-  {
-    id: 1,
-    title: "CHIYA GHAR MEETUP 2024",
-    description:
-      "Our monthly community meetup at Chiya Ghar, sharing ideas over tea and snacks.",
-    card: "https://placehold.co/600x400/667/fff?text=Meetup+1",
-    category: "meetup",
-    images: [
-      "https://placehold.co/600x400/667/fff?text=Meetup+1",
-      "https://placehold.co/600x400/667/fff?text=Meetup+2",
-      "https://placehold.co/600x400/667/fff?text=Meetup+3",
-      "https://placehold.co/600x400/667/fff?text=Meetup+4",
-      "https://placehold.co/600x400/667/fff?text=Meetup+5",
-    ],
-  },
-  {
-    id: 2,
-    title: "UBUCON ASIA 2025",
-    description: "Preparing for the upcoming Ubuntu Conference in Kathmandu.",
-    card: "https://placehold.co/600x400/446/fff?text=Conference",
-    category: "conference",
-    images: [
-      "https://placehold.co/600x400/446/fff?text=Conference+1",
-      "https://placehold.co/600x400/446/fff?text=Conference+2",
-      "https://placehold.co/600x400/446/fff?text=Conference+3",
-      "https://placehold.co/600x400/446/fff?text=Conference+4",
-      "https://placehold.co/600x400/446/fff?text=Conference+5",
-    ],
-  },
-  {
-    id: 3,
-    title: "OPEN SOURCE HACKATHON",
-    description:
-      "Students and professionals collaborating on open source projects.",
-    card: "https://placehold.co/600x400/664/fff?text=Hackathon",
-    category: "hackathon",
-    images: [
-      "https://placehold.co/600x400/664/fff?text=Hackathon+1",
-      "https://placehold.co/600x400/664/fff?text=Hackathon+2",
-      "https://placehold.co/600x400/664/fff?text=Hackathon+3",
-      "https://placehold.co/600x400/664/fff?text=Hackathon+4",
-      "https://placehold.co/600x400/664/fff?text=Hackathon+5",
-    ],
-  },
-  {
-    id: 4,
-    title: "GNOME CONTRIBUTION WORKSHOP",
-    description:
-      "Learning how to contribute to GNOME projects and meet maintainers.",
-    card: "https://placehold.co/600x400/466/fff?text=Workshop",
-    category: "all",
-    images: [
-      "https://placehold.co/600x400/466/fff?text=Workshop+1",
-      "https://placehold.co/600x400/466/fff?text=Workshop+2",
-      "https://placehold.co/600x400/466/fff?text=Workshop+3",
-      "https://placehold.co/600x400/466/fff?text=Workshop+4",
-      "https://placehold.co/600x400/466/fff?text=Workshop+5",
-    ],
-  },
-  {
-    id: 5,
-    title: "WEEKEND CHIYA MEETUP",
-    description: "Casual weekend meetup discussing latest in open source.",
-    card: "https://placehold.co/600x400/646/fff?text=Meetup+2",
-    category: "meetup",
-    images: [
-      "https://placehold.co/600x400/646/fff?text=Meetup+2",
-      "https://placehold.co/600x400/646/fff?text=Meetup+3",
-      "https://placehold.co/600x400/646/fff?text=Meetup+4",
-      "https://placehold.co/600x400/646/fff?text=Meetup+5",
-      "https://placehold.co/600x400/646/fff?text=Meetup+6",
-    ],
-  },
-];
+import { categories, galleryItems } from "@/constants/gallery";
+import Image from "@/components/Image";
 
 const GalleryDialog = ({
   openDialog,
@@ -128,7 +47,7 @@ const GalleryDialog = ({
         <div className="relative">
           {/* Active Image */}
           <div className="relative aspect-video mb-4 overflow-hidden">
-            <img
+            <Image
               key={selectedImageIndex}
               src={selectedItem.images[selectedImageIndex]}
               alt={`${selectedItem.title} - Image ${selectedImageIndex + 1}`}
@@ -165,7 +84,7 @@ const GalleryDialog = ({
                 )}
                 onClick={() => setSelectedImageIndex(index)}
               >
-                <img
+                <Image
                   src={image}
                   alt={`${selectedItem.title} - Thumbnail ${index + 1}`}
                   className="object-cover w-full h-full rounded-lg"
@@ -262,7 +181,7 @@ const Gallery = () => {
             >
               <div className="flex h-[400px] relative">
                 <div className="w-[300px] shrink-0 relative z-10">
-                  <img
+                  <Image
                     src={item.card}
                     alt={item.title}
                     className="object-cover w-full h-full"
