@@ -70,6 +70,11 @@ const config = {
       },
       footer: {
         style: "dark",
+        logo:{
+          alt: "GNOME Nepal Logo",
+          src: "img/logo.png",
+          href: "https://nepal.gnome.org",
+        },
         links: [
           {
             title: "Docs",
