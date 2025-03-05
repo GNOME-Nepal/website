@@ -16,7 +16,7 @@ const SectionObserver = ({ id, className, ...rest }) => {
     // threshold ?: number | number[];
     const intersectionOptions = {
       root: null,
-      threshold: 0.6, // this means 60% viewable
+      threshold: 0.53, //this means 53% viewable
     };
 
     const intersectionObserver = new IntersectionObserver((entries) => {
