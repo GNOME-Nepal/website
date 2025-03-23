@@ -4,6 +4,11 @@ opensource:
   description: Opensource tag description
 
 gnome:
-  label: GNOME
+  label: Gnome
   permalink: /gnome
   description: GNOME tag description
+
+ubucon:
+  label: Ubucon
+  permalink: /ubucon
+  description: Ubucon tag description
