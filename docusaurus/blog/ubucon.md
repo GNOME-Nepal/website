@@ -3,14 +3,13 @@ title: "Discover, Connect, Celebrate: UbuCon Asia 2025 in Nepal"
 authors: utsavdotdev
 date: "2025-03-23"
 tags: [ubucon,gnome,opensource]
-image: img/ubucon/og.png
+image: ./img/og.png
 ---
 
 UbuCon Asia 2025 marks Nepal’s first international open-source conference, uniting developers, tech leaders, and enthusiasts to collaborate and innovate.
 
 <!-- truncate -->
-
-
+![UbuCon Asia 2025](./img/og.png)
 ## What is UbuCon?
 
 **UbuCon Asia** is a community-organized conference dedicated to Ubuntu, the popular open-source operating system. It brings together Ubuntu enthusiasts, engineers, creators, researchers, entrepreneurs, and contributors across Asia. These events provide a platform to connect, exchange knowledge, and inspire each other.
