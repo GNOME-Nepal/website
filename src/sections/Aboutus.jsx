@@ -19,7 +19,7 @@ export default function OrganizationInfo() {
 
       {/* Navigation Tabs */}
       <div className="flex justify-center mb-6">
-        <div className="bg-black dark:bg-white rounded-full p-1 inline-flex shadow-lg border border-gray-200 dark:border-gray-700">
+        <div className="bg-[#f9f9f9] dark:bg-black rounded-full p-1 inline-flex shadow-lg border border-gray-200 dark:border-gray-700">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -27,8 +27,8 @@ export default function OrganizationInfo() {
               className={cn(
                 "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
                 activeTab === tab.id
-                  ? "bg-white dark:bg-black text-black dark:text-white shadow-md"
-                  : "text-white dark:text-black hover:bg-gray-800/50 dark:hover:bg-gray-200/50",
+                  ? "bg-black dark:bg-[#f9f9f9] text-[#f9f9f9] dark:text-black shadow-md"
+                  : "text-black dark:text-[#f9f9f9] hover:bg-gray-200/50 dark:hover:bg-gray-800/50",
               )}
             >
               {tab.label}
@@ -43,7 +43,7 @@ export default function OrganizationInfo() {
         <div
           className={cn(
             "p-6 rounded-lg border shadow-lg relative overflow-hidden transition-all duration-500",
-            "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300 md:col-span-1",
+            "bg-[#f9f9f9] dark:bg-black text-black dark:text-[#f9f9f9] border-gray-300 dark:border-gray-700 md:col-span-1",
             activeTab === "who"
               ? "transform scale-105 z-10 shadow-xl ring-2 ring-blue-500"
               : "opacity-80",
@@ -63,7 +63,7 @@ export default function OrganizationInfo() {
         <div
           className={cn(
             "p-6 rounded-lg border shadow-lg relative overflow-hidden transition-all duration-500",
-            "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300 md:col-span-2",
+            "bg-[#f9f9f9] dark:bg-black text-black dark:text-[#f9f9f9] border-gray-300 dark:border-gray-700 md:col-span-2",
             activeTab === "mission"
               ? "transform scale-105 z-10 shadow-xl ring-2 ring-blue-500"
               : "opacity-80",
@@ -87,7 +87,7 @@ export default function OrganizationInfo() {
       <div
         className={cn(
           "p-6 rounded-lg border shadow-lg relative overflow-hidden transition-all duration-500 mt-6",
-          "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300",
+          "bg-[#f9f9f9] dark:bg-black text-black dark:text-[#f9f9f9] border-gray-300 dark:border-gray-700",
           activeTab === "vision"
             ? "transform scale-105 z-10 shadow-xl ring-2 ring-blue-500"
             : "opacity-80",
