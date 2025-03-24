@@ -13,7 +13,7 @@ export default function OrganizationInfo() {
   const [activeTab, setActiveTab] = useState("who");
 
   return (
-    <div className="w-full mx-auto relative">
+    <div className="w-full mx-auto relative px-4 sm:px-6 lg:px-8">
       {/* Shine Effect Behind Containers */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10 rounded-3xl blur-3xl"></div>
 
@@ -38,12 +38,12 @@ export default function OrganizationInfo() {
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Who we are */}
         <div
           className={cn(
             "p-6 rounded-lg border shadow-lg relative overflow-hidden transition-all duration-500",
-            "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300 col-span-1",
+            "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300 md:col-span-1",
             activeTab === "who"
               ? "transform scale-105 z-10 shadow-xl ring-2 ring-blue-500"
               : "opacity-80",
@@ -63,7 +63,7 @@ export default function OrganizationInfo() {
         <div
           className={cn(
             "p-6 rounded-lg border shadow-lg relative overflow-hidden transition-all duration-500",
-            "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300 col-span-2",
+            "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300 md:col-span-2",
             activeTab === "mission"
               ? "transform scale-105 z-10 shadow-xl ring-2 ring-blue-500"
               : "opacity-80",
@@ -86,7 +86,7 @@ export default function OrganizationInfo() {
       {/* Our Vision */}
       <div
         className={cn(
-          "p-6 rounded-lg border shadow-lg md:col-span-2 relative overflow-hidden transition-all duration-500 mt-6",
+          "p-6 rounded-lg border shadow-lg relative overflow-hidden transition-all duration-500 mt-6",
           "bg-black dark:bg-white text-white dark:text-black border-gray-700 dark:border-gray-300",
           activeTab === "vision"
             ? "transform scale-105 z-10 shadow-xl ring-2 ring-blue-500"
