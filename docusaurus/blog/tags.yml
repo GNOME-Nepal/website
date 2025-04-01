@@ -1,14 +1,22 @@
-opensource:
-  label: Opensource
-  permalink: /facebook
-  description: Opensource tag description
-
-gnome:
-  label: Gnome
-  permalink: /gnome
-  description: GNOME tag description
-
-ubucon:
-  label: Ubucon
-  permalink: /ubucon
-  description: Ubucon tag description
+{
+  "opensource": {
+    "label": "Opensource",
+    "permalink": "/opensource",
+    "description": "Opensource tag description"
+  },
+  "gnome": {
+    "label": "GNOME",
+    "permalink": "/gnome",
+    "description": "GNOME tag description"
+  },
+  "ubucon": {
+    "label": "Ubucon",
+    "permalink": "/ubucon",
+    "description": "Ubucon tag description"
+  },
+  "discord": {
+    "label": "Discord",
+    "permalink": "/discord",
+    "description": "Discord tag description"
+  }
+}
