@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import NavFoot from "./layout/NavFoot";
-import { Hero, Sponsor } from "./pages";
+import { Home, Sponsor, Ubucon, Tickets } from "./pages";
 import NotFound from "./pages/NotFound";
 
 export default function Router() {
@@ -8,7 +8,14 @@ export default function Router() {
     {
       path: "/",
       element: <NavFoot />,
-      children: [{ path: "", element: <Hero /> }],
+      children: [{ path: "", element: <Home /> }],
+    },
+    {
+      path: "/ubucon",
+      children: [
+        { path: "", element: <Ubucon /> },
+        { path: "tickets", element: <Tickets /> },
+      ],
     },
     {
       path: "/sponsor",

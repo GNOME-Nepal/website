@@ -8,6 +8,12 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
+        ubuntu: {
+          orange: "#E95420",
+          light: "#F8F8F8",
+          grey: "#F2F2F2",
+          dark: "#333333",
+        },
         black: "#1E1E1E",
         white: "#FFFFFF",
         orange: {
@@ -60,6 +66,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        "grid-pattern": "url('/grid-pattern.svg')",
       },
       borderRadius: {
         xl: `calc(var(--radius) + 4px)`,

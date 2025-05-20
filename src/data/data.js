@@ -288,3 +288,45 @@ export const draftEvents = [
     calendar: "",
   },
 ];
+
+export const tickets = [
+  {
+    type: "BASIC",
+    name: "Early Bird	",
+    price: "3500",
+    description: "Essential access to keynotes & expo",
+    features: [
+      "Access to all keynotes",
+      "Expo hall access",
+      "Community networking",
+    ],
+    highlight: false,
+  },
+  {
+    type: "STANDARD",
+    name: "Professional Pass",
+    price: "3500",
+    description: "Full access to talks & workshops",
+    features: [
+      "All Community Pass benefits",
+      "Access to all workshops",
+      "Conference swag bag",
+      "Lunch & refreshments",
+    ],
+    highlight: true,
+    popular: true,
+  },
+  {
+    type: "BASIC",
+    name: "Student",
+    price: "2500",
+    description: "All-inclusive experience + VIP perks",
+    features: [
+      "All Professional Pass benefits",
+      "Exclusive VIP lounge access",
+      "Speaker dinner invitation",
+      "1-year Ubuntu Pro subscription",
+    ],
+    highlight: false,
+  },
+];

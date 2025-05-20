@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm:start:vite\" \"npm:start:docusaurus\"",
+    "dev": "concurrently \"npm:start:vite --host\" \"npm:start:docusaurus\"",
     "start:vite": "vite",
     "start:docusaurus": "cd docusaurus && yarn start",
     "build": "vite build && cd docusaurus && npm install && npm run build && mkdir -p ../dist/docs && cp -R build/* ../dist/docs",
