@@ -2,7 +2,7 @@
 import React from "react";
 
 const TALLY_SRC = "https://tally.so/widgets/embed.js";
-const TALLY_FORM_URL = "https://tally.so/r/w551JP?transparentBackground=1";
+const TALLY_FORM_URL = "https://tally.so/r/w25o9M?transparentBackground=1";
 
 const Tickets = () => {
   React.useEffect(() => {
@@ -48,6 +48,13 @@ const Tickets = () => {
       marginHeight="0"
       marginWidth="0"
       title="Registration form"
+      style={{
+        background: "#fff", // Ensures iframe background is always white
+        minHeight: "100vh",
+        minWidth: "100vw",
+        display: "block",
+      }}
+      sandbox="allow-scripts allow-same-origin allow-forms"
     ></iframe>
   );
 };

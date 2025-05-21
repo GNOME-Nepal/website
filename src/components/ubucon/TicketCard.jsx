@@ -33,8 +33,8 @@ const TicketCard = ({
           <div className="relative">
             {/* Popular Tag */}
             {popular && (
-              <div className="absolute -right-12 top-2 bg-[#E95420] text-white text-[11px] py-1 px-12 font-medium transform rotate-45 z-10">
-                Popular
+              <div className="absolute -right-12 top-2 bg-[#E95420] text-white text-[11px] py-1 px-12 font-medium transform rotate-45 z-10 font-poppins">
+                Value
               </div>
             )}
 

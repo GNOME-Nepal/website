@@ -10,8 +10,12 @@ const HeroSection = () => {
       <section className="relative z-10 min-h-screen py-8 px-4 sm:py-12 sm:px-6 md:px-8">
         {/* Logo */}
         <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex items-center">
-          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#E95420] rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg sm:text-xl">U</span>
+          <div className="w-16 h-16 sm:w-12 sm:h-12 rounded-full flex items-center justify-center">
+            <img
+              src="/ulogo.png"
+              alt="UbuCon Asia Logo"
+              className="w-full h-full"
+            />
           </div>
           <span className="ml-3 font-bold text-lg sm:text-xl hidden sm:block">
             UbuCon Asia 2025
