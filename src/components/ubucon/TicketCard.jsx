@@ -18,7 +18,7 @@ const TicketCard = ({
       <div
         key={index}
         className={`transition-all duration-500 ease-in-out cursor-pointer
-                   z-${20 - index * 15} scale-95
+                   z-${20 - index * 15} scale-90
                   `}
         onMouseEnter={() => setActiveCard(index)}
         onMouseLeave={() => setActiveCard(null)}

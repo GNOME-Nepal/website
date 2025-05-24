@@ -23,7 +23,7 @@ const HeroSection = () => {
         </div>
 
         {/* Content Container */}
-        <div className="container mx-auto max-w-7xl mt-24 sm:mt-22 md:mt-32">
+        <div className="container mx-auto max-w-7xl mt-24 sm:mt-22 md:mt-24">
           {/* Mobile-first layout - stacked on mobile, side-by-side on desktop */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
             {/* Hero Content */}
@@ -52,18 +52,35 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="mb-6 sm:mb-8">
+              <div
+                className="md:mt-32 md:ml-12 relative flex"
+                style={{ minHeight: 120 }}
+              >
                 <NavLink to="/ubucon/tickets">
-                  <button className="bg-[#E95420] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium hover:bg-[#C7431D] transition-all transform hover:scale-105 flex items-center">
+                  <button className="bg-[#E95420] text-white px-6 sm:px-8 py-3 sm:py-3 rounded-xl text-base sm:text-lg font-medium hover:bg-[#C7431D] transition-all transform hover:scale-105 flex items-center z-10 relative shadow-xl shadow-[#E95420]/30 ring-2 ring-[#E95420]/30">
                     Buy Tickets Now
                     <ChevronRight className="ml-2 w-5 h-5" />
                   </button>
                 </NavLink>
+                <div
+                  className="hidden lg:block absolute left-[-75px] top-[40px] -translate-y-2/3 z-[-999]"
+                  style={{ width: 220, height: 220 }}
+                >
+                  <img
+                    src="/mascot.png"
+                    alt="Mascot holding button"
+                    className="w-full h-full scale-x-[-1] pointer-events-none select-none"
+                    draggable={false}
+                    style={{
+                      filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.10))",
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
             {/* Right Content - Symmetrical Card Stack */}
-            <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
+            <div className="w-full lg:w-1/2 mt-4">
               <div className="relative flex items-center justify-center">
                 {/* Card Stack Container */}
                 <div className="relative w-full max-w-md mx-auto">
