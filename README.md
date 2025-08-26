@@ -46,7 +46,7 @@ To run the GNOME Nepal website locally, you need to have the following software 
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 
-## Installation
+## Installations
 
 To install and run the GNOME Nepal website locally, follow these steps:
 
@@ -56,20 +56,19 @@ To install and run the GNOME Nepal website locally, follow these steps:
    git clone https://github.com/GNOME-Nepal/website.git
    ```
 
-2. Navigate to the project directory:
+2. Navigates to the project directory:
 
    ```bash
    cd website
    ```
 
-3. Install the dependencies:
+3. Install the dependenciess:
 
    ```bash
    yarn install && cd docusaurus && yarn install
    ```
 
-   ```bash
-   npm i && cd docusaurus && npm i
+    i && cd docusaurus && npm i
    ```
 
 4. Start the development server:
