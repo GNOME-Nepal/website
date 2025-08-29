@@ -57,6 +57,19 @@ UbuCon Asia 2025 is set to deliver an exciting and diverse lineup of programs de
 
 - **Community Showcases**: Discover innovative projects and success stories from across the Ubuntu community.
 
+## Why you should Attend UbuCon?
+- **Expand Your Network**: Meet developers, contributors, and open-source leaders from around the world.
+
+- **Learn from the Best**: Gain knowledge through expert talks, workshops, and hands-on sessions.
+
+- **Showcase Your Work**: Share your ideas, projects, and experiences with a global audience.
+
+- **Build New Skills**: Improve your technical and professional skills in a supportive environment.
+
+- **Be Part of a Global Movement**: Join a community that believes in collaboration, innovation, and open technology.
+
+- **Enjoy the Experience**: Connect, collaborate, and celebrate with the Ubuntu community.
+
 ## Who Attends UbuCon Asia
 
 UbuCon Asia brings together a wide range of participants from various industries and backgrounds:
@@ -84,7 +97,7 @@ UbuCon Asia 2025 offers multiple ways for you to jump in and make a difference:
 - **Speak or Present**: Got a cool project, fresh ideas, or unique insights? This is your moment to shine! Apply to give a talk, run a workshop, or show off your work during the community showcase.
 
 :::info
-UbuCon Asia 2025 Call for Proposals is now open! Apply here: [CFP Portal](https://events.canonical.com/event/127/abstracts/).
+UbuCon Asia 2025 Call for Proposals is closed!.
 :::
 
 ## Sponsorship & Community Partnerships
