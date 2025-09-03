@@ -77,6 +77,21 @@ const config = {
         },
         links: [
           {
+            title: "GNOME Nepal",
+            items: [
+              {
+                label: "Home",
+                to: "/",
+              },
+              {
+                label: "About Us",
+                to: "/about",
+              }, {
+                label: "FAQ",
+                to: "/faq",
+              },
+            ],
+          },{
             title: "Docs",
             items: [
               {
