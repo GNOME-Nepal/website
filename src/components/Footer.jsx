@@ -27,7 +27,7 @@ const Footer = () => {
               <ul className="flex flex-wrap justify-center gap-4 text-sm">
                 <li>
                   <a
-                    href="https://github.com/GNOME-Nepal/website/blob/main/CODE_OF_CONDUCT.md"
+                    href="/docs/general/code_of_conduct"
                     className="text-gray-300 transition-colors"
                   >
                     Code of Conduct
@@ -43,7 +43,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/GNOME-Nepal/website/blob/main/CONTRIBUTING.md"
+                    href="/docs/general/contributing"
                     className="text-gray-300 transition-colors"
                   >
                     Contributing Guidelines
