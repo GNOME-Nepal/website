@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "GNOME Nepal",
   tagline: "Foster open-source community in Nepal",
-  favicon: "asset/favicon.svg",
+  favicon: "img/favicon.svg",
   url: "https://nepal.gnome.org",
   baseUrl: "/docs/",
   organizationName: "GNOME Nepal",
@@ -72,7 +72,7 @@ const config = {
         style: "dark",
         logo: {
           alt: "GNOME Nepal Logo",
-          src: "asset/logo.png",
+          src: "img/logo.png",
           href: "https://nepal.gnome.org",
         },
         links: [
