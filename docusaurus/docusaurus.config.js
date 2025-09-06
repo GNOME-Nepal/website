@@ -81,14 +81,14 @@ const config = {
             items: [
               {
                 label: "Home",
-                to: "https://nepal.gnome.org/#home",
+                href: "https://nepal.gnome.org/#home",
               },
               {
                 label: "About Us",
                 to: "/docs/",
               }, {
                 label: "FAQ",
-                to: "https://nepal.gnome.org/#faq",
+                href: "https://nepal.gnome.org/#faq",
               },
             ],
           },{
