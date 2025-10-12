@@ -21,7 +21,9 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
+plugins:[['@easyops-cn/docusaurus-search-local',{
+  hashed: true,
+}]],
   presets: [
     [
       "classic",
