@@ -21,7 +21,14 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
+  plugins: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -86,12 +93,14 @@ const config = {
               {
                 label: "About Us",
                 to: "/docs/",
-              }, {
+              },
+              {
                 label: "FAQ",
                 href: "https://nepal.gnome.org/#faq",
               },
             ],
-          },{
+          },
+          {
             title: "Docs",
             items: [
               {

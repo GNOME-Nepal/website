@@ -8,13 +8,13 @@ const Navbar = () => {
   const [showUpperLayer, setShowUpperLayer] = useState(true);
   const banner_data = {
     emoji: "🚀",
-    message: "We are organizing UbuCon Asia 2025! Grab Your Spot",
-    color: "bg-ubuntu-orange",
+    message: "",
+    color: "",
     button: {
-      text: "Buy Tickets",
-      link: "/ubucon",
+      text: "",
+      link: "",
     },
-    show: true,
+    show: false,
   };
 
   const toggleMenu = () => {

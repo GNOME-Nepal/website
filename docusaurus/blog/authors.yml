@@ -19,3 +19,13 @@ MrBashyal:
     github: Prarambha369
     linkedin: MisterBashyal
     stackoverflow: 30064140
+
+Aaditya:
+  name: Aaditya Singh
+  title: Python Backend Software Developer.
+  url:  https://github.com/YoungGunner14
+  image_url: https://github.com/YoungGunner14.png
+  page: true
+  socials:
+    github: YoungGunner14
+    linkedin: aaditya-singh14

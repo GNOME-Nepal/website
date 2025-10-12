@@ -1,6 +1,6 @@
 ---
 title: "GNOME Asia Summit 2024 Bengaluru : A Fusion of GNOME, Fedora & Ubuntu"
-author: "Aaditya Singh"
+authors: Aaditya
 date: "2025-5-16"
 tags: ["travel", "community","conference","gnomeasia"]
 ---
