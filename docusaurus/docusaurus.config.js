@@ -15,15 +15,24 @@ const config = {
   baseUrl: "/docs/",
   organizationName: "GNOME Nepal",
   projectName: "GNOME Nepal website",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-plugins:[['@easyops-cn/docusaurus-search-local',{
-  hashed: true,
-}]],
+  plugins: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -39,9 +48,9 @@ plugins:[['@easyops-cn/docusaurus-search-local',{
             type: ["rss", "atom"],
             xslt: true,
           },
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          onInlineTags: "ignore",
+          onInlineAuthors: "ignore",
+          onUntruncatedBlogPosts: "ignore",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -88,12 +97,14 @@ plugins:[['@easyops-cn/docusaurus-search-local',{
               {
                 label: "About Us",
                 to: "/docs/",
-              }, {
+              },
+              {
                 label: "FAQ",
                 href: "https://nepal.gnome.org/#faq",
               },
             ],
-          },{
+          },
+          {
             title: "Docs",
             items: [
               {

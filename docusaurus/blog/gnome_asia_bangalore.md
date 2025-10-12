@@ -5,9 +5,12 @@ date: "2025-5-16"
 tags: ["travel", "community","conference","gnomeasia"]
 ---
 
-![GNOME Asia Summit Bangalore Banner](asset/GNOMEAsia.png)
-
 GNOME Asia Summit 2024 in Bengaluru marked a significant milestone in my journey as a GNOME contributor. Having previously experienced the excitement of the GNOME Asia Summit in Nepal as a local organizer, this time, I had the incredible honor of attending as a speaker.
+
+<!-- truncate -->
+
+
+![GNOME Asia Summit Bangalore Banner](asset/GNOMEAsia.png)
 
 As an active GNOME contributor and community lead at GNOME Nepal, I am passionate about community building. My talk, titled “*Build a GNOME Community? Yes, You Can*” focused on inspiring and motivating the audience in Bengaluru to launch initiatives of their own. I shared insights on common challenges, actionable solutions, and the steps that can make the process of building communities easier.
 
