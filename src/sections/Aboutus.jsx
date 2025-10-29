@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 
 const tabs = [
   { id: "who", label: "Who we are?" },
-  { id: "vision", label: "Our Vision" },
   { id: "mission", label: "Our Mission" },
+  { id: "vision", label: "Our Vision" },
 ];
 
 export default function OrganizationInfo() {
@@ -97,8 +97,8 @@ export default function OrganizationInfo() {
         <h2 className="text-3xl font-bold mb-4 relative">Our Vision</h2>
         <p className="relative">
           To encourage the use of GNOME and related open-source projects in
-          Nepal and empower the local contributors to represent Nepal's Open
-          source internationally.
+          Nepal and empower the local contributors to represent Nepal&apos;s
+          Open source internationally.
         </p>
       </div>
     </div>
