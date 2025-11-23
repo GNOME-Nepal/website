@@ -34,16 +34,28 @@ export default function NavigationTabs({
   onTabChange,
   className = "",
 }) {
+  // Default activeTab to first tab's id if not provided
+  const safeActiveTab = typeof activeTab !== "undefined"
+    ? activeTab
+    : (tabs.length > 0 ? tabs[0].id : "");
+  // Default onTabChange to a no-op function if not provided
+  const safeOnTabChange = typeof onTabChange === "function"
+    ? onTabChange
+    : () => {};
+  // Warn if tabs are present but activeTab is missing
+  if (tabs.length > 0 && typeof activeTab === "undefined") {
+    console.warn("NavigationTabs: 'activeTab' prop is missing. Defaulting to first tab.");
+  }
   return (
     <div className={cn("flex justify-center mb-6", className)}>
       <div className="bg-[#f9f9f9] dark:bg-black rounded-full p-1 inline-flex shadow-lg border border-gray-200 dark:border-gray-700">
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            onClick={() => onTabChange(tab.id)}
+            onClick={() => safeOnTabChange(tab.id)}
             className={cn(
               "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
-              activeTab === tab.id
+              safeActiveTab === tab.id
                 ? "bg-black dark:bg-[#f9f9f9] text-[#f9f9f9] dark:text-black shadow-md"
                 : "text-black dark:text-[#f9f9f9] hover:bg-gray-200/50 dark:hover:bg-gray-800/50",
             )}
