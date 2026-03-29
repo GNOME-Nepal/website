@@ -38,8 +38,8 @@ const Navbar = () => {
       text: "Join Discord",
       external: true,
     },
-    { to: "/session-request", text: "Request a Session", external: true },
-    { to: "/sponsor", text: "Become a Sponsor", external: true },
+    { to: "/session-request", text: "Request a Session", external: false },
+    { to: "/sponsor", text: "Become a Sponsor", external: false },
   ];
 
   useEffect(() => {
