@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import NavFoot from "./layout/NavFoot";
-import { Hero, Sponsor } from "./pages";
+import { Hero, Sponsor, CoreTeamForm } from "./pages";
 import NotFound from "./pages/NotFound";
 import SessionRequestForm from "./pages/SessionRequestForm";
 
@@ -22,6 +22,10 @@ export default function Router() {
     {
       path: "/session-request",
       children: [{ path: "", element: <SessionRequestForm /> }],
+    },
+    {
+      path: "/coreteam",
+      children: [{ path: "", element: <CoreTeamForm /> }],
     },
   ]);
 }
