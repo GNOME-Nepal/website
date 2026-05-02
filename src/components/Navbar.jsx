@@ -40,6 +40,7 @@ const Navbar = () => {
     },
     { to: "/session-request", text: "Request a Session", external: false },
     { to: "/sponsor", text: "Become a Sponsor", external: false },
+    { to: "/coreteam", text: "Core Team Application", external: false },
   ];
 
   useEffect(() => {
